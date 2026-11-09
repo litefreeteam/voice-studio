@@ -1,0 +1,3 @@
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+23 3 * * * root /root/.acme.sh/acme.sh --renew --domain voice.freeteam.top --ecc --home /root/.acme.sh >> /var/log/nginx/shengyue-acme.log 2>&1

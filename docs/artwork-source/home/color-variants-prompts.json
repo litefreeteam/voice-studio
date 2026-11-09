@@ -1,0 +1,28 @@
+{
+  "mode": "built-in image_gen",
+  "date": "2026-10-11",
+  "assets": [
+    {
+      "name": "short-video-apricot",
+      "base": "short-video",
+      "source": "/Users/bingzhang/.codex/generated_images/01a12924-2039-7281-996e-7db5ba573a2c/exec-69d26ace-d6ad-47e5-9595-36fb9d451f44.png",
+      "prompt": "Use case: precise-object-edit. Asset type: existing homepage card illustration, color-only art direction revision. Input image 1 is the EDIT TARGET. Recolor this exact illustration to a distinct warm apricot, soft terracotta and creamy ivory palette. Change the large lavender backdrop to a light peach-apricot solid backdrop (#f7e3d3 family), the purple microphone and phone frame to soft muted terracotta / warm peach, and the film strip to warm brown; keep subtle champagne-gold metallic details naturally gold, cream play triangle creamy ivory, sunset warm peach and mountain landscape muted earthy slate / sage. Flowers can be warm dried florals. Maintain original relative object positions, exact subjects, camera framing, 3:2 landscape aspect ratio, all geometry, intricate mesh and paper-clay watercolor texture, soft shadows and quiet premium feel. This should clearly read as an APRICOT card when placed next to a mint-teal card and a lilac card. Keep soft low saturation, but sufficiently colored for instant differentiation. Change ONLY the color palette and related lighting tint; do not add/remove/move/crop objects. No text, no letters, no UI, no border, no watermark.",
+      "projectSource": "docs/artwork-source/home/short-video-apricot.png",
+      "output": "ui/assets/home/short-video-apricot.webp",
+      "width": 800,
+      "height": 533,
+      "conversion": "cwebp resize 800 × 533, quality 88, method 6"
+    },
+    {
+      "name": "podcast-mint",
+      "base": "podcast",
+      "source": "/Users/bingzhang/.codex/generated_images/01a12924-2039-7281-996e-7db5ba573a2c/exec-e05cc601-5391-4d11-b353-b9bb454b88d2.png",
+      "prompt": "Use case: precise-object-edit. Asset type: existing homepage card illustration, color-only art direction revision. Input image 1 is the EDIT TARGET. Recolor this exact illustration to a distinct fresh mint, muted eucalyptus teal, creamy ivory and champagne-gold palette. Change the large lavender backdrop and desk to a very light mint-teal solid backdrop (#dcefe8 family), the right purple microphone and foreground purple headphones to muted eucalyptus teal (#72a99a family); retain the left microphone in warm ivory and metallic bands and details naturally champagne gold. Change the ribbons to mint with a little ivory. Books and botanical details should harmonize in muted sage / cream. Preserve the sleeping cream cat, cup and plants, original relative object positions, exact subjects, camera framing, 3:2 landscape aspect ratio, all geometry, intricate mesh and paper-clay watercolor texture, soft shadows and quiet premium feel. This should clearly read as a MINT TEAL card when placed next to an apricot card and a lilac card. Keep soft low saturation but sufficiently colored for instant differentiation. Change ONLY the color palette and related lighting tint; do not add/remove/move/crop objects. No text, no letters, no UI, no border, no watermark.",
+      "projectSource": "docs/artwork-source/home/podcast-mint.png",
+      "output": "ui/assets/home/podcast-mint.webp",
+      "width": 800,
+      "height": 533,
+      "conversion": "cwebp resize 800 × 533, quality 88, method 6"
+    }
+  ]
+}

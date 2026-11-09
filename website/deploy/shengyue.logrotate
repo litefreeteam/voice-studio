@@ -1,0 +1,13 @@
+/var/log/nginx/shengyue*.log {
+    daily
+    rotate 14
+    missingok
+    notifempty
+    compress
+    delaycompress
+    create 0640 www www
+    sharedscripts
+    postrotate
+        /www/server/nginx/sbin/nginx -s reopen >/dev/null 2>&1 || true
+    endscript
+}

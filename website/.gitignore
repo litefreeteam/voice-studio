@@ -1,0 +1,5 @@
+node_modules/
+dist/
+public/downloads/
+.qa/
+paypal-data/

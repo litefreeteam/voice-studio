@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <radialGradient id="lavender" cx="0" cy="0" r="1" gradientTransform="translate(1470 80) rotate(137) scale(1050 720)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d8c9f5" stop-opacity=".64"/>
+      <stop offset="1" stop-color="#f8f7fc" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rose" cx="0" cy="0" r="1" gradientTransform="translate(50 920) rotate(-34) scale(940 620)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e9d9ef" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#f8f7fc" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ribbon" x1="0" y1="930" x2="1600" y2="750" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#cbb8e9" stop-opacity=".04"/>
+      <stop offset=".35" stop-color="#bfa8e7" stop-opacity=".2"/>
+      <stop offset=".7" stop-color="#d6c5f2" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#b9a5e2" stop-opacity=".25"/>
+    </linearGradient>
+    <linearGradient id="line" x1="140" y1="1000" x2="1470" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c1aadd" stop-opacity=".35"/>
+      <stop offset=".45" stop-color="#c1aadd" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#b8a0e1" stop-opacity=".27"/>
+    </linearGradient>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#a58cc8" fill-opacity=".16"/></pattern>
+    <radialGradient id="fade" cx="0" cy="0" r="1" gradientTransform="translate(1400 160) scale(370 290)" gradientUnits="userSpaceOnUse"><stop stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient>
+    <mask id="dot-fade"><rect width="1600" height="1000" fill="url(#fade)"/></mask>
+  </defs>
+  <path fill="url(#lavender)" d="M0 0h1600v1000H0z"/>
+  <path fill="url(#rose)" d="M0 0h1600v1000H0z"/>
+  <path fill="url(#dots)" mask="url(#dot-fade)" d="M0 0h1600v1000H0z"/>
+  <path d="M-160 870C160 660 314 1030 656 878C1000 726 1140 732 1770 990L1740 1140C1260 856 1040 826 716 976C360 1140 160 822-120 1030Z" fill="url(#ribbon)"/>
+  <g stroke="url(#line)" stroke-width="1">
+    <path d="M-120 908C210 686 344 1080 710 900C1060 728 1270 790 1730 1030"/>
+    <path d="M-120 926C210 704 344 1098 710 918C1060 746 1270 808 1730 1048"/>
+    <path d="M-120 944C210 722 344 1116 710 936C1060 764 1270 826 1730 1066"/>
+    <path d="M1170-130C1020 46 1320 210 1510 118C1660 46 1730 120 1770 250"/>
+    <path d="M1196-130C1046 46 1346 210 1536 118C1686 46 1756 120 1796 250"/>
+    <path d="M1222-130C1072 46 1372 210 1562 118C1712 46 1782 120 1822 250"/>
+  </g>
+  <ellipse cx="1540" cy="870" rx="240" ry="240" stroke="#c2afe1" stroke-opacity=".16"/>
+  <ellipse cx="1540" cy="870" rx="268" ry="268" stroke="#c2afe1" stroke-opacity=".09"/>
+</svg>

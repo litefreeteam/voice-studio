@@ -1,0 +1,19 @@
+{
+  "engine": "standard",
+  "language": "English",
+  "project": "Lesson introduction",
+  "rows": [
+    {
+      "text": "First, look at the length and width of the rectangle.",
+      "speaker": "Aiden",
+      "emotion": "natural",
+      "filename": "lesson-01"
+    },
+    {
+      "text": "Now write the formula for its area.",
+      "speaker": "Ryan",
+      "emotion": "natural",
+      "filename": "lesson-02"
+    }
+  ]
+}

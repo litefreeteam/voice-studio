@@ -1,0 +1,25 @@
+{
+  "generator": "imagegen built-in",
+  "reference": "user-provided settings and help UI",
+  "date": "2026-10-12",
+  "assets": [
+    {
+      "file": "hero.png",
+      "dimensions": [
+        2120,
+        742
+      ],
+      "transparent": true,
+      "prompt": "Transparent desktop voice studio settings header artwork. Pale lavender laptop with white vertical audio waveform, sheer lavender ribbon waves across the bottom, precise handwritten Good Voice / Better You at upper right. Wide 3.4:1 composition, laptop middle-right, low contrast soft 3D rendering, clear left text space. Illustration only, no UI, cards, borders or watermark."
+    },
+    {
+      "file": "device.png",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "transparent": true,
+      "prompt": "Single photorealistic modern silver laptop, centered frontal view from slightly above, entirely visible, black bezel, vivid purple/pink/blue curved abstract wallpaper. Soft studio lighting, subtle shadow. Horizontal 4:3 transparent canvas with safe margins, readable at 108 × 78 CSS pixels. No text, brands, logos, watermark, extra objects, or cropping."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+[Unit]
+Description=Shengyue PayPal webhook receiver
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=shengyue-paypal
+Group=shengyue-paypal
+WorkingDirectory=/opt/shengyue-paypal/current
+EnvironmentFile=/etc/shengyue-paypal.env
+EnvironmentFile=-/etc/shengyue-paypal-mail.env
+ExecStart=/opt/shengyue-node/bin/node --max-old-space-size=128 /opt/shengyue-paypal/current/server.mjs
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=35
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+MemoryLimit=256M
+
+[Install]
+WantedBy=multi-user.target

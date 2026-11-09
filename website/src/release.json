@@ -1,0 +1,12 @@
+{
+  "version": "0.4.8",
+  "edition": "free",
+  "sha256": {
+    "Shengyue-0.4.8-mac-arm64.dmg": "f96edf355b67c4d0f8741c0f1148382d31817bda83a2986033fe4d7b3935557d",
+    "Shengyue-0.4.8-mac-arm64.zip": "532e7973d5c1b226bf049bfb9fbba5b14b64a883c5fad2d0376e4256099d577c",
+    "Shengyue-0.4.8-mac-x64.dmg": "430fc33d3828efee66904b03a7f2372853d5c874817c56d36eb639457bc3c1fd",
+    "Shengyue-0.4.8-mac-x64.zip": "dfa9a5add3e93aa7b79f1499f9ba249aedd48e51fe78a4075497c9a8c3406e58",
+    "Shengyue-0.4.8-windows-setup.exe": "25981e749328996344b43e5d7aec7907e6ccb8385d68729c35042dbde7c57556",
+    "Shengyue-0.4.8-win-x64.zip": "66c3c00029863cdb9584e205234ff7b75b53afee1c55625a7eb568fc8ba61471"
+  }
+}

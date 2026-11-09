@@ -1,0 +1,19 @@
+{
+  "engine": "standard",
+  "language": "Chinese",
+  "project": "冒险对白",
+  "rows": [
+    {
+      "text": "我们终于到了！",
+      "speaker": "Vivian",
+      "emotion": "happy",
+      "filename": "girl-01"
+    },
+    {
+      "text": "大家先休息一下。",
+      "speaker": "Uncle_Fu",
+      "emotion": "natural",
+      "filename": "male-01"
+    }
+  ]
+}

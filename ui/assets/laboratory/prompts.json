@@ -1,0 +1,50 @@
+{
+  "mode": "built-in image_gen",
+  "styleReference": "Existing homepage watercolor paper-clay illustrations and four laboratory card palettes",
+  "assets": [
+    {
+      "id": "variants",
+      "prompt": "Use case: stylized-concept. Asset type: one final landscape 3:2 illustration for a feature card in Shengyue, a Chinese local voice creation desktop app. This is a standalone bitmap illustration, not a UI mockup. Style: exquisite handcrafted 3D watercolor paper-clay miniature, tactile fine paper grain, matte rounded ceramic and paper surfaces, delicately hand-painted details, calm polished editorial quality. Match a cozy pastel voice studio product: muted lavender, creamy ivory, dusty peach, sage/mint, with restrained champagne-gold highlights. Soft diffuse studio daylight, gentle grounded contact shadows, no hard horizon. Compact centered object group, all essential subjects inside middle 75% of frame, generous empty margin on every side, elevated three-quarter view. The scene should communicate the feature immediately at card size. No typography, no letters, no numbers, no logos, no watermark, no interface, no diagram labels, no photorealism, no shiny plastic, no clutter. Subject: one ivory manuscript sheet standing on a low lavender desk plinth, with a few abstract embossed horizontal strokes rather than writing. A single flowing lavender sound ribbon branches gently from the manuscript into THREE small studio microphones arranged in a graceful fan, each subtly different in lavender, cream and dusty peach. A few tiny sound-wave curves above the microphones convey one script spoken in multiple voices. Keep the manuscript and three microphones clearly legible, balanced and uncrowded. Background: very pale lavender #f5f0ff; lavender is the dominant accent.",
+      "generatedSource": "/Users/bingzhang/.codex/generated_images/01a12ac5-cc8a-7873-a1d3-3a9aa7c4c6fb/exec-73d78ad4-b4a8-4d1d-a762-59b1989cf122.png",
+      "projectSource": "docs/artwork-source/laboratory/variants.png",
+      "output": "ui/assets/laboratory/variants.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 40126,
+      "conversion": "Pillow LANCZOS resize, WebP quality 88, method 6"
+    },
+    {
+      "id": "comic",
+      "prompt": "Use case: stylized-concept. Asset type: one final landscape 3:2 illustration for a feature card in Shengyue, a Chinese local voice creation desktop app. This is a standalone bitmap illustration, not a UI mockup. Style: exquisite handcrafted 3D watercolor paper-clay miniature, tactile fine paper grain, matte rounded ceramic and paper surfaces, delicately hand-painted details, calm polished editorial quality. Match a cozy pastel voice studio product: muted lavender, creamy ivory, dusty peach, sage/mint, with restrained champagne-gold highlights. Soft diffuse studio daylight, gentle grounded contact shadows, no hard horizon. Compact centered object group, all essential subjects inside middle 75% of frame, generous empty margin on every side, elevated three-quarter view. The scene should communicate the feature immediately at card size. No typography, no letters, no numbers, no logos, no watermark, no interface, no diagram labels, no photorealism, no shiny plastic, no clutter. Subject: a small open pop-up comic book on a warm cream base. Two friendly miniature storybook animals, a pale cream deer with tiny antlers and a small caramel bear, emerge from the two facing pages and face one another in a lively conversation. Above them float two simple rounded blank speech bubbles, one with subtle sculptural sound-wave curves instead of words. A little terracotta microphone rests unobtrusively beside the book. Communicate turning written character dialogue and comic pictures into a voiced short play. Cozy and charming, tasteful miniature illustration rather than a childish sticker. Background: very pale warm apricot #fff2e8; muted terracotta and cream are dominant with small lavender details.",
+      "generatedSource": "/Users/bingzhang/.codex/generated_images/01a12ac5-cc8a-7873-a1d3-3a9aa7c4c6fb/exec-b2195762-348a-4571-ac00-a8ad68c27618.png",
+      "projectSource": "docs/artwork-source/laboratory/comic.png",
+      "output": "ui/assets/laboratory/comic.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 77492,
+      "conversion": "Pillow LANCZOS resize, WebP quality 88, method 6"
+    },
+    {
+      "id": "family",
+      "prompt": "Use case: stylized-concept. Asset type: one final landscape 3:2 illustration for a feature card in Shengyue, a Chinese local voice creation desktop app. This is a standalone bitmap illustration, not a UI mockup. Style: exquisite handcrafted 3D watercolor paper-clay miniature, tactile fine paper grain, matte rounded ceramic and paper surfaces, delicately hand-painted details, calm polished editorial quality. Match a cozy pastel voice studio product: muted lavender, creamy ivory, dusty peach, sage/mint, with restrained champagne-gold highlights. Soft diffuse studio daylight, gentle grounded contact shadows, no hard horizon. Compact centered object group, all essential subjects inside middle 75% of frame, generous empty margin on every side, elevated three-quarter view. The scene should communicate the feature immediately at card size. No typography, no letters, no numbers, no logos, no watermark, no interface, no diagram labels, no photorealism, no shiny plastic, no clutter. Subject: a warm intimate bedtime-story miniature on an open ivory storybook with mint page edges. Two gentle stylized human clay figures, a parent and a young child, sit close together, the parent holding a small open book while the child listens under a soft sage blanket. Their faces are simple sweet sculpted details, natural hands and proportions. A small mint recording microphone beside the book sends a delicate curved sound ribbon toward a floating cream crescent moon and two pale gold stars. Communicate a familiar family voice telling a personalized bedtime story. Peaceful loving domestic mood, a tiny night-sky suggestion while the overall image stays light and airy. Background: very pale mint #edf8f1; sage/mint and creamy ivory dominate with very small lavender details.",
+      "generatedSource": "/Users/bingzhang/.codex/generated_images/01a12ac5-cc8a-7873-a1d3-3a9aa7c4c6fb/exec-9757211a-82cd-4008-8ff7-9c66571ae337.png",
+      "projectSource": "docs/artwork-source/laboratory/family.png",
+      "output": "ui/assets/laboratory/family.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 59418,
+      "conversion": "Pillow LANCZOS resize, WebP quality 88, method 6"
+    },
+    {
+      "id": "buttons",
+      "prompt": "Use case: stylized-concept. Asset type: one final landscape 3:2 illustration for a feature card in Shengyue, a Chinese local voice creation desktop app. This is a standalone bitmap illustration, not a UI mockup. Style: exquisite handcrafted 3D watercolor paper-clay miniature, tactile fine paper grain, matte rounded ceramic and paper surfaces, delicately hand-painted details, calm polished editorial quality. Match a cozy pastel voice studio product: muted lavender, creamy ivory, dusty peach, sage/mint, with restrained champagne-gold highlights. Soft diffuse studio daylight, gentle grounded contact shadows, no hard horizon. Compact centered object group, all essential subjects inside middle 75% of frame, generous empty margin on every side, elevated three-quarter view. The scene should communicate the feature immediately at card size. No typography, no letters, no numbers, no logos, no watermark, no interface, no diagram labels, no photorealism, no shiny plastic, no clutter. Subject: a beautifully folded blush-pink greeting card half emerging from a cream envelope with a tiny champagne-gold heart seal. Beside it, three large rounded tactile voice buttons on a small rose-colored pad, showing sculptural universally recognizable symbols: a play triangle, a heart, and a musical sound-wave shape, without lettering. A soft rose sound ribbon curls out of the open greeting card toward the buttons, and one restrained ivory bow suggests a thoughtful gift. Communicate clickable sound bites and a greeting card that speaks warm wishes. Refined contemporary stationery, friendly and celebratory without confetti clutter. Background: very pale rose #fcedf3; dusty rose, cream and restrained pale gold dominate with a touch of lavender.",
+      "generatedSource": "/Users/bingzhang/.codex/generated_images/01a12ac5-cc8a-7873-a1d3-3a9aa7c4c6fb/exec-d23a8e67-3876-44a0-8edf-87a21672baf5.png",
+      "projectSource": "docs/artwork-source/laboratory/buttons.png",
+      "output": "ui/assets/laboratory/buttons.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 61726,
+      "conversion": "Pillow LANCZOS resize, WebP quality 88, method 6"
+    }
+  ]
+}

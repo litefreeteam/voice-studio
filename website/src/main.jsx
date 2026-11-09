@@ -1,0 +1,16 @@
+import React from "react";
+import { createRoot, hydrateRoot } from "react-dom/client";
+import { localeFromPath } from "./i18n.mjs";
+import { App } from "./App.jsx";
+import "./styles.css";
+
+const root = document.getElementById("root");
+const app = (
+  <React.StrictMode>
+    <App locale={localeFromPath(window.location.pathname)} />
+  </React.StrictMode>
+);
+
+// Production includes the same complete HTML for people and crawlers.
+if (root.hasChildNodes()) hydrateRoot(root, app);
+else createRoot(root).render(app);

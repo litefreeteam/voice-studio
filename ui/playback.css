@@ -1,0 +1,27 @@
+/* The same compact equalizer lives in every active play button's icon slot. */
+.sound-feedback .sound-wave{display:none;position:absolute;inset:0;margin:auto;align-items:center;justify-content:center;gap:2px;width:16px;height:15px;max-width:100%;max-height:100%;pointer-events:none}
+.sound-feedback .sound-wave>i{display:block;flex:1;max-width:2.5px;height:100%;border-radius:3px;background:currentColor;transform-origin:center;transform:scaleY(.45);will-change:transform}
+.sound-feedback .sound-wave>i:nth-child(2){transform:scaleY(.9)}.sound-feedback .sound-wave>i:nth-child(3){transform:scaleY(.65)}.sound-feedback .sound-wave>i:nth-child(4){transform:scaleY(.35)}
+.sound-feedback>.sound-symbol{position:relative;flex-shrink:0}
+.sound-feedback[data-sound-inserted=true]>.sound-symbol{width:15px;height:15px;margin-right:6px;vertical-align:-2px}
+.sound-feedback[data-sound-state=playing]>.sound-symbol,.sound-feedback[data-sound-state=loading]>.sound-symbol{display:inline-block!important;mask:none!important;background:transparent!important;font-size:0;animation:none!important;border:0!important;box-shadow:none!important}
+.sound-feedback[data-sound-state=playing]>.sound-symbol::before,.sound-feedback[data-sound-state=loading]>.sound-symbol::before{display:none!important}
+.sound-feedback[data-sound-state=playing] .sound-wave{display:flex}
+.sound-feedback[data-sound-state=playing] .sound-wave>i{animation:sound-level .82s cubic-bezier(.4,0,.6,1) infinite alternate}
+.sound-feedback[data-sound-state=playing] .sound-wave>i:nth-child(2){animation-delay:-.43s;animation-duration:.68s}
+.sound-feedback[data-sound-state=playing] .sound-wave>i:nth-child(3){animation-delay:-.18s;animation-duration:.91s}
+.sound-feedback[data-sound-state=playing] .sound-wave>i:nth-child(4){animation-delay:-.58s;animation-duration:.73s}
+.sound-feedback[data-sound-state=loading]>.sound-symbol::after{content:"";display:block;position:absolute;inset:0;margin:auto;width:12px;height:12px;border:1.5px solid currentColor;border-right-color:transparent;border-radius:50%;animation:sound-loading .8s linear infinite}
+.sound-feedback[data-sound-state=playing]{outline-offset:3px}
+.sound-feedback>.clip-play-symbol{width:19px;height:18px}
+.sound-feedback>*{pointer-events:none}
+.sound-native-source{display:none!important}
+.sound-transport{display:flex;align-items:center;gap:11px;min-width:0;padding:10px 12px;border:1px solid #e7dff0;border-radius:11px;background:#faf7fe;color:#9b7bb2}
+.sound-transport>.sound-media-toggle{display:inline-flex;align-items:center;justify-content:center;gap:0;white-space:nowrap;padding:7px 11px;font-size:11px;border-color:#e4d6ef;background:#fff;color:#8f6ea7}
+.sound-media-seek{flex:1;min-width:30px;height:4px;accent-color:#a384c0}
+.sound-media-time{font-size:10px;color:#a48eb4;white-space:nowrap;font-variant-numeric:tabular-nums}
+#recording-dialog .sound-transport{margin-top:15px}
+@keyframes sound-level{0%{transform:scaleY(.25)}45%{transform:scaleY(.85)}100%{transform:scaleY(.5)}}
+@keyframes sound-loading{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.sound-feedback .sound-wave>i,.sound-feedback[data-sound-state=loading]>.sound-symbol::after{animation:none!important;will-change:auto}}
+@media(max-width:600px){.sound-transport{flex-wrap:wrap;gap:8px}.sound-transport>.sound-media-toggle{padding-inline:8px}}

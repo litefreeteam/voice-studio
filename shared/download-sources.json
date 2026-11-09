@@ -1,0 +1,25 @@
+{
+  "schema": "shengyue-downloads-1",
+  "models": [
+    { "id": "modelscope", "label": "声悦定制资源", "url": "https://modelscope.cn" },
+    { "id": "hf-mirror", "label": "声悦定制资源", "url": "https://hf-mirror.com" },
+    { "id": "huggingface", "label": "声悦定制资源", "url": "https://huggingface.co" }
+  ],
+  "python": [
+    { "id": "npmmirror", "label": "声悦定制资源", "url": "https://registry.npmmirror.com/-/binary/python-build-standalone" },
+    { "id": "astral", "label": "声悦定制资源", "url": "https://releases.astral.sh/github/python-build-standalone/releases/download" },
+    { "id": "github", "label": "声悦定制资源", "url": "https://github.com/astral-sh/python-build-standalone/releases/download" }
+  ],
+  "packages": [
+    { "id": "tsinghua", "label": "声悦定制资源", "url": "https://pypi.tuna.tsinghua.edu.cn/simple" },
+    { "id": "aliyun", "label": "声悦定制资源", "url": "https://mirrors.aliyun.com/pypi/simple" },
+    { "id": "pypi", "label": "声悦定制资源", "url": "https://pypi.org/simple" }
+  ],
+  "pythonVersion": "3.12.13",
+  "pythonBuild": "20260325",
+  "pythonTargets": {
+    "mac-arm64": "aarch64-apple-darwin",
+    "mac-x64": "x86_64-apple-darwin",
+    "win-x64": "x86_64-pc-windows-msvc"
+  }
+}

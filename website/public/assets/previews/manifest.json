@@ -1,0 +1,341 @@
+{
+  "schema": "shengyue-previews-1",
+  "items": {
+    "preset:Vivian": {
+      "file": "Vivian.mp3",
+      "text": "沿着这条小巷往前走，拐角是一家刚开门的面包店。窗边那只晒太阳的小猫，一听见纸袋响，就竖起了耳朵。",
+      "duration": 10.8,
+      "language": "Chinese",
+      "fingerprint": "69ab54ca60890d1e5f16d20636a50849e30f7c6c8358d0816f23788ebad5234d",
+      "sha256": "cb95bce2951c61a0422f54cefa30c4f5d0a9ddb5cdb7f473a44c74e913e977ef"
+    },
+    "preset:Serena": {
+      "file": "Serena.mp3",
+      "text": "小兔子把最后一颗星星放进了口袋，轻轻关上窗。森林安静下来，只有月亮还守在树梢，陪着大家慢慢入睡。",
+      "duration": 17.44,
+      "language": "Chinese",
+      "fingerprint": "c6e561f543fc32041c85af95ea9e3efdb5dace43dbaacf202128c87a5a0dd764",
+      "sha256": "c5a1b9ce6c9f06e49a2211e34089094d42e7cbfb171f21a44c3c42bf54ef392a"
+    },
+    "preset:Uncle_Fu": {
+      "file": "Uncle_Fu.mp3",
+      "text": "老屋的门推开时，铰链发出熟悉的轻响。父亲还坐在窗边，手里的那本书，停在我离开时的那一页。",
+      "duration": 13.6,
+      "language": "Chinese",
+      "fingerprint": "36af719f682a8485ab9570337365d723fb33dbf3d4bbd4165d8116fe021003dd",
+      "sha256": "c23bf26f8943d37aba5d3749bbfa94e33e410eedb8f073ba35969c0cf70c0c6b"
+    },
+    "preset:Dylan": {
+      "file": "Dylan.mp3",
+      "text": "这家藏在胡同里的小面馆，拢共就六张桌子。面一端上来，先拌匀了再吃，芝麻酱的香味一下就出来了。",
+      "duration": 9.44,
+      "language": "Chinese",
+      "fingerprint": "2c82f1210512fa8f2770779edbb36fc21c16ae1fae151f84cf2415698fac79b5",
+      "sha256": "01ef4ed7899a75a032c387d0f49700810955d8d9de20f5c1063878217ceba7b8"
+    },
+    "preset:Eric": {
+      "file": "Eric.mp3",
+      "text": "面条煮好以后，加一勺辣椒油，再撒点葱花。喜欢吃酸的，可以放一点醋，拌匀了就能开吃。",
+      "duration": 9.92,
+      "language": "Chinese",
+      "fingerprint": "ecece663df1af7489bbd2315745d223609dad992977eaca15c6647ef9a1bf66a",
+      "sha256": "e5ada9af2f6635b0151564d0dbce7f775c1dbe23a17eaf28aa3f7354f2b4d009"
+    },
+    "preset:Ryan": {
+      "file": "Ryan.mp3",
+      "text": "The last train had already left when he reached the station. Under the clock, a small brown suitcase waited all alone.",
+      "duration": 7.04,
+      "language": "English",
+      "fingerprint": "52a444d14bedf8d910705bfba765ae9d97953da8135988f4d911248d01f9f1aa",
+      "sha256": "092ff80007db9992c81145011f32c9d728892ebd7be9d2f450d72a477413f993"
+    },
+    "preset:Aiden": {
+      "file": "Aiden.mp3",
+      "text": "Could you tell me how to get to the library? Go straight ahead, then turn left at the next street.",
+      "duration": 5.04,
+      "language": "English",
+      "fingerprint": "c3776bb7ead80a50d563c59d54ccf13fc68d1dd4656477ea52451d50a088b926",
+      "sha256": "e0d575c59012bebd72d9ec3a326ee29a112f7e9f2cb2b3c97cd754583a781f2a"
+    },
+    "preset:Ono_Anna": {
+      "file": "Ono_Anna.mp3",
+      "text": "古い本を開くと、小さな地図が落ちてきました。地図の端には、まだ誰も知らない村の名前が書かれていました。",
+      "duration": 9.84,
+      "language": "Japanese",
+      "fingerprint": "66b0e749564e8f46c25c87a5b9542943f7a9b5e018516222d567f305a7860901",
+      "sha256": "6dc2816cf86ab68bd90216e69a4a359c8f8584fa85de81116d4588a226735cd4"
+    },
+    "preset:Sohee": {
+      "file": "Sohee.mp3",
+      "text": "작은 토끼는 창문을 열고 밤하늘의 별을 바라봤어요. 가장 밝은 별을 보며 소원을 빈 뒤, 포근한 이불 속으로 들어갔어요.",
+      "duration": 14.88,
+      "language": "Korean",
+      "fingerprint": "ec376b794e4c4ffbdf54cfd244edeec9d1a49970443ee5b9c7f3877477b60506",
+      "sha256": "80e52fa51165145ff8e3b4cd0ba06e839700f6e15b4284f336b5fd7145e932a3"
+    },
+    "design:grandpa": {
+      "file": "grandpa.mp3",
+      "text": "那时候，村口还没有这座桥。每到放学，孩子们就挽起裤脚，踩着河里的石头，一步一步走回家。",
+      "duration": 8.5,
+      "language": "Chinese",
+      "fingerprint": "641665a309166ffc316b4db542516e763ee2743d5a39e7381766487ff8349d98",
+      "sha256": "af1e6871a25cf2e168062ea81ddf61d6ac7944555d68e09b1b5aed8e5a82997a"
+    },
+    "design:grandma": {
+      "file": "grandma.mp3",
+      "text": "小熊把被角掖好，给身边的小兔子留了半个枕头。窗外落起细细的雨，两个好朋友挨在一起，很快就睡着了。",
+      "duration": 11.28,
+      "language": "Chinese",
+      "fingerprint": "dd0d04628b22c9f5ba65129a5882a2773f6a08390111dcbb047d24b54f80b05f",
+      "sha256": "f29ab0f0631f74b8b2e6fcfe5a8277777d13bfd599a9c2611fae14ac93bb0315"
+    },
+    "design:story-male": {
+      "file": "story-male.mp3",
+      "text": "他在旧书里发现了一张没有署名的地图。地图的尽头，是一座从未在旅途中听说过的小镇。",
+      "duration": 7.6,
+      "language": "Chinese",
+      "fingerprint": "d4e826f436a52377cafeaf0482755ffbf4c1bd81f05230bf34e9a5e13bca8d41",
+      "sha256": "3ae342c366e69f74a9c0a7785c44dad62bc391e9d3da7ac7743c24feca3a1d18"
+    },
+    "design:story-female": {
+      "file": "story-female.mp3",
+      "text": "她推开窗，院子里的栀子花已经开了。风翻动桌上的信纸，那句没来得及说出口的话，终于有了回音。",
+      "duration": 10.21,
+      "language": "Chinese",
+      "fingerprint": "1d3cc69d78824fb383e0b9d7bdabcb328638b7af549551cf5f4396eb45ca59a3",
+      "sha256": "047837c830703c446973cd4831212e42abb3094a5e48846af56d31db2007f04f"
+    },
+    "design:hero": {
+      "file": "hero.mp3",
+      "text": "城门撑不了多久了。你带大家从北边的小路撤离，我留下来守住这里，天亮以后在山口会合。",
+      "duration": 8.61,
+      "language": "Chinese",
+      "fingerprint": "71020e4b6c8b889a8561a12657af078b460df7a8e81be488a1493012d0ba55c2",
+      "sha256": "43ba7936e139555f04f9abcc3a231fd3ffcce142db695496938701f3934cb278"
+    },
+    "design:heroine": {
+      "file": "heroine.mp3",
+      "text": "等等，墙上的符号和地图对上了。先别碰那块石板，让我看看机关连在哪里，我们一定能找到出口。",
+      "duration": 9.2,
+      "language": "Chinese",
+      "fingerprint": "e79e19417df9ab6454647ea8cbdcf2bd40f07f232432e65274afbed2b990e4c1",
+      "sha256": "d9f11f23a63c39a9a1ecfc71c984ca1508ae8600a08ad837b1036b7d3986bc54"
+    },
+    "design:mascot": {
+      "file": "mascot.mp3",
+      "text": "找到啦！最后一颗星星藏在蘑菇后面。快把它放进小篮子，我们就能打开通往糖果森林的大门啦！",
+      "duration": 9.15,
+      "language": "Chinese",
+      "fingerprint": "25b6d0b5955a5173f6e334ca23c0ecbacb6cdbf193f0889b72bf23c363fec44e",
+      "sha256": "5ae254d628a7aed32fce52cc9b9c5bec92f255f4368efa1d75e81028cc90f5d4"
+    },
+    "design:robot": {
+      "file": "robot.mp3",
+      "text": "路线已更新。前方路口向右转，沿走廊直行二十米，您要找的会议室就在左手边。",
+      "duration": 8.72,
+      "language": "Chinese",
+      "fingerprint": "9107c8b8b575e185b5a36c61950fa612c17c33774799b52f1649bd60164a5d19",
+      "sha256": "2468a776cf0897eb9041272ea72eb3d80e0244105dc6328798da5c4fef9b82c2"
+    },
+    "design:teacher-female": {
+      "file": "teacher-female.mp3",
+      "text": "把一个苹果平均分成四份，每一份就是四分之一。拿走其中的两份，也就是四分之二，正好等于二分之一。",
+      "duration": 11.44,
+      "language": "Chinese",
+      "fingerprint": "f3f7c9b3f40eaa5ad92d0ec0caea26a771fe12fbf9aaabcc177aa6c426ebe216",
+      "sha256": "eefa5946792782df3fc7e4da6e16279ac5f349a8cc2a226cc70fa0d92b3e8702"
+    },
+    "design:teacher-male": {
+      "file": "teacher-male.mp3",
+      "text": "水受热后会变成水蒸气，这个过程叫作汽化。烧水时，壶口冒出的白雾，其实是水蒸气遇冷形成的小水滴。",
+      "duration": 13.16,
+      "language": "Chinese",
+      "fingerprint": "8939c200d14b70aad248c364816516a71cb9a760b5610cefaa146bc3e9bc57de",
+      "sha256": "92b217c2ceeb79fda71202b90ea7a05a526e7a625492f1d7e019dda609283b03"
+    },
+    "design:training-female": {
+      "file": "training-female.mp3",
+      "text": "收到新任务后，先在协作表中写清负责人和完成时间。如果进度受阻，请把具体问题记录下来，并及时告诉项目负责人。",
+      "duration": 10.45,
+      "language": "Chinese",
+      "fingerprint": "44f7f6d8c38aa8ec5059c635bd075bb2acaf5783a8d01121bfaf2cb556534de6",
+      "sha256": "0da5103b22f9644742ba5bd7730bec952ffba274f30d0825a7bce0ddd3e368ab"
+    },
+    "design:science-male": {
+      "file": "science-male.mp3",
+      "text": "为什么雨后容易看到彩虹？阳光进入小水滴时会发生折射，不同颜色的光偏转角度不同，于是分成了彩色的光带。",
+      "duration": 11.52,
+      "language": "Chinese",
+      "fingerprint": "74cc9fc85f708a116cf89daa43cd25ee0c402d62a84722da9754732b29c68bd2",
+      "sha256": "238fb19e8838657c10c6c6c47635ddc28a6a18bfcb7a345a17cdd9947a2015c4"
+    },
+    "design:tutorial-female": {
+      "file": "tutorial-female.mp3",
+      "text": "先打开设置，找到保存位置。确认文件夹后，点击完成，就可以继续下一步了。",
+      "duration": 7.68,
+      "language": "Chinese",
+      "fingerprint": "931d43349418d6bf19547ecd2164a5356f6032cf8268aca86869b081f43a57d5",
+      "sha256": "a949958ad4c5a8f530c10fbe8c2b33dff4aa5b960653ac3b9497bd04990872c6"
+    },
+    "design:documentary-male": {
+      "file": "documentary-male.mp3",
+      "text": "清晨的第一缕光，落在古老的街道上。人们在日常的往来中，续写着这座城市的故事。",
+      "duration": 9.27,
+      "language": "Chinese",
+      "fingerprint": "da55d51b4d5bf4201e2aee8b953764c994472e7bb98c72e514d25836fab89552",
+      "sha256": "4f445f8a79833b4afc946d381c9c0cdde446bacf85713737ace3c30c00209128"
+    },
+    "design:podcast-female": {
+      "file": "podcast-female.mp3",
+      "text": "我发现，越是把日程排满，越容易觉得什么都没做好。后来我每天只留三件重要的事，反而能按时下班了。",
+      "duration": 9.1,
+      "language": "Chinese",
+      "fingerprint": "18bbb5560445676e5c1a60e4a0d548f9ecfe5269ec6c9d6d1b959aef27cef3ce",
+      "sha256": "f596957b6bc6214391ac27ae8d9985d3d23ff1fb3c9f5d01355ab9864f4d2ed4"
+    },
+    "design:podcast-male": {
+      "file": "podcast-male.mp3",
+      "text": "我也试过把所有事情都记下来，结果清单越写越长。后来每天先做最重要的一件，心里反而踏实了不少。",
+      "duration": 10.88,
+      "language": "Chinese",
+      "fingerprint": "8785700f784cdc57a95354b8ddfce865c7f6c19314d8413ae91e869a3aa7bade",
+      "sha256": "ea1bbdb23850c8885f7ae9298822b705e85a70e18f46fe9e50ca902e63a85922"
+    },
+    "design:commerce-female": {
+      "file": "commerce-female.mp3",
+      "text": "钥匙、耳机总在桌上找不到？把这个小收纳盒放在门边，回家顺手一放，第二天出门就不用翻包了。",
+      "duration": 10.17,
+      "language": "Chinese",
+      "fingerprint": "843b3f9ff22feb038b2f560198781be7d952b56cb62ef588e1b1074409ab49ec",
+      "sha256": "3ada8ba1e55d749b0a9e1ffa687a1d6a3e3bbacfd07d3a2cc91b7b8e33cbb76e"
+    },
+    "design:brand-male": {
+      "file": "brand-male.mp3",
+      "text": "一块木头，经过打磨，留下温润的纹理。从桌角的弧度，到手掌碰到的每一处表面，我们都认真做好。",
+      "duration": 12.56,
+      "language": "Chinese",
+      "fingerprint": "be72da3c7c5708ebb91e0b157baf6e4a2c5c463bf600942cf61ff52494d08b5c",
+      "sha256": "8d8c8d7f26c1b7ce83792f13fedf65898b1106be7e52805e91da60870b3fbef0"
+    },
+    "design:service-female": {
+      "file": "service-female.mp3",
+      "text": "您预约的图书已送达，请在三天内携带借阅证，到一楼服务台领取。图书馆今天开放至晚上九点。",
+      "duration": 10.25,
+      "language": "Chinese",
+      "fingerprint": "9fa2be4d7c59e945b0c82427aa27829af48afdd1ec2270e716ec7eca24bc5522",
+      "sha256": "16bcd08e7c8bfa74fd1e3ab28f618cc61d100c78aa88efdf520017827dee8ff4"
+    },
+    "design:meditation-female": {
+      "file": "meditation-female.mp3",
+      "text": "把注意力轻轻放回此刻。感受一次自然的呼吸，让肩膀慢慢放松下来。",
+      "duration": 9.67,
+      "language": "Chinese",
+      "fingerprint": "915f8d89d36faac9fd9151ef54743c762b0c763a3e237c4ef039627ed9edf742",
+      "sha256": "2e5a7fcfa958e61ef64e5a7589f6a0a4985d69a5c8d4e0147fc7944ff9eaaa9c"
+    },
+    "design:youth-female": {
+      "file": "youth-female.mp3",
+      "text": "走吧，今天的天气这么好。我们去看看新开的书店，也许会遇见喜欢的故事。",
+      "duration": 6.64,
+      "language": "Chinese",
+      "fingerprint": "0fc6c156e197b5e15f9e3f9ae6ef40c5503fc6ff46198074decf90f5a1771213",
+      "sha256": "fd3768a4fd7906d653f4675564e84dd8ddb423e4d2c86b0447e7426cd921d13b"
+    },
+    "design:storybook-female": {
+      "file": "storybook-female.mp3",
+      "text": "小狐狸捡到了一片会发光的叶子。它小心地捧着，想把这份惊喜带给森林里的朋友。",
+      "duration": 7.84,
+      "language": "Chinese",
+      "fingerprint": "edc495ba3c48ef058197f6c441e1a7762ff14a7ce77fb08e3b2c36db3ad87204",
+      "sha256": "fb1ad88c0e2c434a0b447814a78827b2e74e2e8d330d3dbd72ae1735026799cb"
+    },
+    "design:clear-male": {
+      "file": "clear-male.mp3",
+      "text": "冰箱里的食物，为什么要留一点空隙？因为冷空气需要流动，塞得太满，反而会让里面的食物降温更慢。",
+      "duration": 8.98,
+      "language": "Chinese",
+      "fingerprint": "77182d5c8201921ad76b9e9e575128e47cd49e2a446d41879a6dac3db92fec1a",
+      "sha256": "c1d8b1576a47530fa0d2a3a9f11a78b6c719f2928b69826268b865a38ca6d2ca"
+    },
+    "design:warm-male": {
+      "file": "warm-male.mp3",
+      "text": "末班车驶过桥头，车窗里映着万家灯火。他把给女儿买的那本书抱在怀里，想到家，嘴角便慢慢扬了起来。",
+      "duration": 10.7,
+      "language": "Chinese",
+      "fingerprint": "3326305dd00e3d9a96f03425e30980d845556023eeb06fcc1b22f1ec30717953",
+      "sha256": "0d07290bbca836f06ee741227bb0bca62f8ccd9e839083666dda2768e285077e"
+    },
+    "design:steady-male": {
+      "file": "steady-male.mp3",
+      "text": "推开窗，新风穿过整间屋子。从第一道密封，到每一次安静开合，让舒适落在生活的每一处细节里。",
+      "duration": 9.2,
+      "language": "Chinese",
+      "fingerprint": "99829ae92164d4ae4ad1b277816aa90d9fdb19e799fee960289a1f92d7d4395c",
+      "sha256": "c1efd98f7a7706bd48d7fcaf5417040fa647a9bbaec5d69aaa69c9e51bf016d3"
+    },
+    "design:clear-female": {
+      "file": "clear-female.mp3",
+      "text": "长方形的面积等于长乘宽。比如这张卡片，长六厘米，宽四厘米，面积就是六乘四，等于二十四平方厘米。",
+      "duration": 11.13,
+      "language": "Chinese",
+      "fingerprint": "a14d659694e604bd15e6e48149567aa5c9913935c2c98d983ea33a257f5bb644",
+      "sha256": "d71a682a3f1bb01d1bf1467ead53f238470d3095e17c26e4d9118153e1c3d3d1"
+    },
+    "design:warm-female": {
+      "file": "warm-female.mp3",
+      "text": "今天的事情终于忙完了。要不要一起出去走走？路口新开了一家小店，我们可以顺便看看。",
+      "duration": 7.992,
+      "language": "Chinese",
+      "fingerprint": "7b320bba35c7f978f26bd5d7197671e5a01eab6102ec3380e1340efc832d70bb",
+      "sha256": "602f4a2dd6fc70bb75f4e18897f9d7b1652dd66343a31d6c39c4131a1b3886c5"
+    },
+    "design:elegant-female": {
+      "file": "elegant-female.mp3",
+      "text": "早晨，磨好的咖啡粉遇上热水，香气慢慢舒展开来。给忙碌的一天留几分钟，从一杯认真冲泡的咖啡开始。",
+      "duration": 10.88,
+      "language": "Chinese",
+      "fingerprint": "46439a663dc4629d654aae34cf77d66e5db2d667d25a2c78aedfea56520320f0",
+      "sha256": "273c9711f681695fb1f15ba7e9dba730d0ecdde24d9689e3b29f34680e91c106"
+    },
+    "design:boy-clear": {
+      "file": "boy-clear.mp3",
+      "text": "你看，我把小飞机拼好啦！等会儿我们去院子里，看看它能不能飞得更远。",
+      "duration": 7.488,
+      "language": "Chinese",
+      "fingerprint": "767b0fa2ede7d7680eef3c6c584ccc048e291511cf4d408185e12c59b56ffc44",
+      "sha256": "0368e830c2800b1dfdc7e0ee5f6153e3c2bbb66e0414e53a1b3daf047f8cd0a0"
+    },
+    "design:girl-clear": {
+      "file": "girl-clear.mp3",
+      "text": "今天老师夸我的画好看，我开心极了！放学以后，我还想画一只戴帽子的小猫。",
+      "duration": 7.728,
+      "language": "Chinese",
+      "fingerprint": "55934caf85c377ec2cd7c55528a9a9267a86517934a67f60906f0dc2d31670cf",
+      "sha256": "03f4b8f89a717fffec94581f6bcc98d0a025396cd4128465acfc0a6871f2d29d"
+    },
+    "design:boy-soft": {
+      "file": "boy-soft.mp3",
+      "text": "妈妈，你看！这是我的小火车。呜呜，开到小熊家啦，我们一起去玩吧！",
+      "duration": 7.416,
+      "language": "Chinese",
+      "fingerprint": "1bf74fef6add2bd5699457aacb2d29149a5e151b78f5c3a2d8f7b5143a7aa2d2",
+      "sha256": "6f08e29070436cbb96fd79f1b284acee210197444aaa0e89658eb56bd8b474eb"
+    },
+    "design:girl-soft": {
+      "file": "girl-soft.mp3",
+      "text": "我的小兔子藏在哪里呀？哦，找到啦！我要抱着它，一起听睡前的小故事。",
+      "duration": 8.688,
+      "language": "Chinese",
+      "fingerprint": "6fd24f7ea17c3deea196cbe264e0fc15ca89ccd32d733e1bf4c48ea7ba7d2ae9",
+      "sha256": "d8112c0d5c9da62f058b196c2d41dabc9ec2a586e7bd5512ea0a23a1c967ae64"
+    },
+    "design:youth-male": {
+      "file": "youth-male.mp3",
+      "text": "别着急，我们再试一次。刚才已经找到关键步骤了，这一次一定会更顺利。",
+      "duration": 8.208,
+      "language": "Chinese",
+      "fingerprint": "95dc6249cf2f49e2fdf39ad5e64c3c9f63db489ca7dd014166e16dab6b6e14a4",
+      "sha256": "53ea092e38a9227e799481b3cbcfb4c3dd5b4db34bc3efee12b013a5bf07ab63"
+    }
+  }
+}

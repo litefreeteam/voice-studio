@@ -1,0 +1,26 @@
+node_modules/
+.venv/
+release/
+.test-data/
+__pycache__/
+*.pyc
+resources/uv/
+resources/windows/*.exe
+resources/windows/*.tmp
+.DS_Store
+.seller/
+*.activation.txt
+.env
+.env.*
+!.env.example
+models/
+runtime/
+outputs/
+*.log
+
+# Local credentials and signing material (public verification keys are source files).
+signing-key.pem
+*-private.pem
+*.key
+*.p12
+*.pfx

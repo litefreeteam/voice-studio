@@ -1,0 +1,392 @@
+{
+  "generator": "imagegen built-in",
+  "kind": "original fictional character illustrations",
+  "assets": [
+    {
+      "id": "Vivian",
+      "name": "知夏",
+      "file": "assets/portraits/Vivian.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 15528,
+      "sha256": "9187f4d8ebc9973da66c3ca0b6b37a91fc4ff7cf2212b2336295331624a84120"
+    },
+    {
+      "id": "Serena",
+      "name": "温宁",
+      "file": "assets/portraits/Serena.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 14812,
+      "sha256": "27c516d6c1ffe9e8f8b80bbcedd2ddd81361cf4f11c91642ab403790b231cee5"
+    },
+    {
+      "id": "Uncle_Fu",
+      "name": "远山",
+      "file": "assets/portraits/Uncle_Fu.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 13442,
+      "sha256": "4023227d2a69572d34c4c3df4dabba355f31ee2fab7ab9f1c63877576d3d5ca1"
+    },
+    {
+      "id": "Dylan",
+      "name": "景川",
+      "file": "assets/portraits/Dylan.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 14320,
+      "sha256": "2009ab1c68f242511a4c468cde6044d1ec9c6ff8792b54271141532027b2d853"
+    },
+    {
+      "id": "Eric",
+      "name": "阿成",
+      "file": "assets/portraits/Eric.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 17102,
+      "sha256": "f90dc273b55cbb4eab2b5a9a837dc2ced0ecd7c10beec06770123fa53044cc55"
+    },
+    {
+      "id": "Ryan",
+      "name": "莱恩",
+      "file": "assets/portraits/Ryan.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 13802,
+      "sha256": "2f7f8ddb7f9c8193c2ef296b177b2062fb4adce17292613edd7f5fadcafcb55f"
+    },
+    {
+      "id": "Aiden",
+      "name": "艾登",
+      "file": "assets/portraits/Aiden.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 14202,
+      "sha256": "d2b6f991d12ec22b46070b725b5a0b202f9e62723242609e654774e8bc4f93ae"
+    },
+    {
+      "id": "Ono_Anna",
+      "name": "杏奈",
+      "file": "assets/portraits/Ono_Anna.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 15788,
+      "sha256": "7604c58471e69306e45db53fe63d04087261d01237ffdfdda94f72afc613c366"
+    },
+    {
+      "id": "Sohee",
+      "name": "素熙",
+      "file": "assets/portraits/Sohee.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 16392,
+      "sha256": "4fcacbf49bd89fdd660d71d58dbc5d4b531086bc0db5d5dbc6d5f5a0a2eea7c1"
+    },
+    {
+      "id": "boy-clear",
+      "name": "乐乐",
+      "file": "assets/portraits/boy-clear.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 16566,
+      "sha256": "b9e6b52939063d28445b0164ed5024ff1f5feb909ab3fe27673e148139dc7ec4"
+    },
+    {
+      "id": "girl-clear",
+      "name": "小雨",
+      "file": "assets/portraits/girl-clear.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 15726,
+      "sha256": "142ef7839e2457872e2b34065e89294eee26a99585c10ae22febfc5cfccb07c1"
+    },
+    {
+      "id": "boy-soft",
+      "name": "豆豆",
+      "file": "assets/portraits/boy-soft.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 14404,
+      "sha256": "8d1b03345a0674ccc23e004491d558dafecd3774105a7002be629b875fa5c103"
+    },
+    {
+      "id": "girl-soft",
+      "name": "果果",
+      "file": "assets/portraits/girl-soft.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 20332,
+      "sha256": "3b7427d7a90418c81d4ec4537b15b0ca8731eeefc5e6d2790e7c4b1726a0e600"
+    },
+    {
+      "id": "grandpa",
+      "name": "松爷爷",
+      "file": "assets/portraits/grandpa.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 17206,
+      "sha256": "31cceae786e366bff6249bfb2a8d4f76cbf7b856f40567f3e834b44b700aca92"
+    },
+    {
+      "id": "grandma",
+      "name": "林奶奶",
+      "file": "assets/portraits/grandma.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 15470,
+      "sha256": "dae767fa9450ba0cf93edf9bb8fb22846ef6f1018ede13f7e3d41a80a3257011"
+    },
+    {
+      "id": "story-male",
+      "name": "墨白",
+      "file": "assets/portraits/story-male.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 16610,
+      "sha256": "2671ad48572e12d9320753abfc954395e301f21821c9ed9cf7e5a0d312eb95fc"
+    },
+    {
+      "id": "story-female",
+      "name": "听澜",
+      "file": "assets/portraits/story-female.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 16314,
+      "sha256": "7472a83d9af3431b3348b0dbef470b53fa257e511a264b8757fdb0a476cda627"
+    },
+    {
+      "id": "hero",
+      "name": "陆沉",
+      "file": "assets/portraits/hero.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 16172,
+      "sha256": "7132fccfbb81c1c7cf3e0baba35c738b086db6ae5333977408130b028e75e69d"
+    },
+    {
+      "id": "heroine",
+      "name": "星遥",
+      "file": "assets/portraits/heroine.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 18536,
+      "sha256": "4e295f71e48bc8fcee2ad37eaa57687c50d990980303b723e327520ff785888c"
+    },
+    {
+      "id": "mascot",
+      "name": "团团",
+      "file": "assets/portraits/mascot.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 11570,
+      "sha256": "05ea80f1ad74f9bd964b267536996941ddefe04ea4acbd029060248b6ee6372e"
+    },
+    {
+      "id": "robot",
+      "name": "小智",
+      "file": "assets/portraits/robot.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 10510,
+      "sha256": "18489530e7494ed244f1d1fc9d2f87547795a400594994e4b88ecdf1b45cb3b0"
+    },
+    {
+      "id": "voice-studio",
+      "file": "assets/illustrations/voice-studio.webp",
+      "width": 640,
+      "height": 427,
+      "bytes": 18708,
+      "sha256": "16798edf0f740d542bd49469cdf1d33582cd860ee1382c985dc28de542e0c5f0"
+    },
+    {
+      "id": "teacher-female",
+      "name": "知微",
+      "file": "assets/portraits/teacher-female.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 23354,
+      "sha256": "4cbea594a387936636bd6bd08a320db7d66a56842e9836e730113cdb0c7be165"
+    },
+    {
+      "id": "teacher-male",
+      "name": "明哲",
+      "file": "assets/portraits/teacher-male.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 19490,
+      "sha256": "8e261b216fe0b0b996ee6a7f46b7d359463ee0a40080d7b477c589fd46d3f7b0"
+    },
+    {
+      "id": "training-female",
+      "name": "予安",
+      "file": "assets/portraits/training-female.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 15718,
+      "sha256": "bf408e1d86cdc5afef1de2fb8ed5a440ae4c11422e3010494efa7befa9044a25"
+    },
+    {
+      "id": "science-male",
+      "name": "星衡",
+      "file": "assets/portraits/science-male.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 19494,
+      "sha256": "e31ca06bce3b2491a360d58f5eca79acd5d513fe3481efe9dfa37d7dfe1cb8df"
+    },
+    {
+      "id": "tutorial-female",
+      "name": "简宁",
+      "file": "assets/portraits/tutorial-female.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 16854,
+      "sha256": "0c2c25b118ef2b0589527c7fd3463b0050cb221f64dfa6b3b0dc2117bfe82411"
+    },
+    {
+      "id": "documentary-male",
+      "name": "纪川",
+      "file": "assets/portraits/documentary-male.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 24992,
+      "sha256": "26ceea65147d82f8fa81eb63ea56a943b6e7398e5471fd5b5deed17bac35ee51"
+    },
+    {
+      "id": "podcast-female",
+      "name": "晚晴",
+      "file": "assets/portraits/podcast-female.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 24144,
+      "sha256": "2b796214dea1604bf04d14d0678de736a50d4c2ac7fa1325e0114458536d67d0"
+    },
+    {
+      "id": "podcast-male",
+      "name": "牧言",
+      "file": "assets/portraits/podcast-male.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 25550,
+      "sha256": "ab30e0926cc09b3b1128fff9ead334ed373bbc338fc6aefb9c1d9405b7e06c44"
+    },
+    {
+      "id": "commerce-female",
+      "name": "甜橙",
+      "file": "assets/portraits/commerce-female.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 22136,
+      "sha256": "ee3719674fac9ac31cf2973c7197f4d056ad6639c2c9fec72dcb40a5defc53ba"
+    },
+    {
+      "id": "brand-male",
+      "name": "朗岳",
+      "file": "assets/portraits/brand-male.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 17250,
+      "sha256": "ede47e7f97a33a9019025acd01b57f5d3977af7ef5ac5ab1f3ede2c838660c5f"
+    },
+    {
+      "id": "service-female",
+      "name": "语棠",
+      "file": "assets/portraits/service-female.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 17924,
+      "sha256": "9fc17b1aa0db7173b9cea6c3ce9d70cce04c399048b8ebea211a534a1734e63e"
+    },
+    {
+      "id": "meditation-female",
+      "name": "静禾",
+      "file": "assets/portraits/meditation-female.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 19106,
+      "sha256": "cecfbb33ff77df1da1fbeea3f649fa80d49e907e82758154c6b5a28f1c923fac"
+    },
+    {
+      "id": "youth-female",
+      "name": "初夏",
+      "file": "assets/portraits/youth-female.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 19052,
+      "sha256": "f30d11ec067a0d569b9acb3a6acfd36c1fea335d187cadba8034436b4a57c746"
+    },
+    {
+      "id": "youth-male",
+      "name": "亦辰",
+      "file": "assets/portraits/youth-male.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 22342,
+      "sha256": "f2493078f73e5be8a556de70120b935aa468491b5fbe02a2a0b36de2ab13647e"
+    },
+    {
+      "id": "storybook-female",
+      "name": "绘音",
+      "file": "assets/portraits/storybook-female.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 24746,
+      "sha256": "99bc38a6574689740cfe463463d995a27c475bc0a13c596681560e96043b3bc6"
+    },
+    {
+      "id": "clear-male",
+      "name": "清舟",
+      "file": "assets/portraits/clear-male.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 17272,
+      "sha256": "a4de19da0e4746f0e8639a03c301255e2a71ac1a36d3f5a55b7a739f18c9140e"
+    },
+    {
+      "id": "warm-male",
+      "name": "怀瑾",
+      "file": "assets/portraits/warm-male.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 21640,
+      "sha256": "cb85f92ea73f97734bbfa010c1a7982fb65ec89f42a50fc012d34bcda6a71ab3"
+    },
+    {
+      "id": "steady-male",
+      "name": "闻岳",
+      "file": "assets/portraits/steady-male.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 20120,
+      "sha256": "04c8e4b5729c0c16d821401f2677ce83bd8d0a8dc082c05828c5f7ea03878334"
+    },
+    {
+      "id": "clear-female",
+      "name": "沐言",
+      "file": "assets/portraits/clear-female.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 18576,
+      "sha256": "332ea9230cd5b2bb6f4950539df3aba1e25f7010e05e65c89f7a22624b13c543"
+    },
+    {
+      "id": "warm-female",
+      "name": "南絮",
+      "file": "assets/portraits/warm-female.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 21452,
+      "sha256": "178c662788d3964a3720a24ccd2c0b9579c9fff1be2ed072b20994be456b174b"
+    },
+    {
+      "id": "elegant-female",
+      "name": "颂雅",
+      "file": "assets/portraits/elegant-female.webp",
+      "width": 384,
+      "height": 384,
+      "bytes": 20462,
+      "sha256": "c1f3a58800b086507fa670b5311deef88c9fd4822db96928f6ac2dfb860ddb67"
+    }
+  ]
+}

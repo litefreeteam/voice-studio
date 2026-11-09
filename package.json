@@ -1,0 +1,196 @@
+{
+  "name": "local-voice-studio",
+  "version": "0.4.8",
+  "description": "声悦：本地多角色配音工作台",
+  "private": true,
+  "main": "desktop/main.cjs",
+  "author": "声悦",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "node scripts/dev-client.mjs",
+    "test": "node scripts/test-license.cjs && node scripts/test-backend.cjs && npm run test:cli && npm run test:consumer && node --test tests/preflight.test.cjs tests/downloads.test.cjs tests/ipc.test.cjs tests/windows-redist.test.cjs && npm run test:audit && npm run test:delivery",
+    "test:session": "node scripts/test-session.mjs",
+    "test:projects": "node --test tests/projects.test.cjs && node scripts/test-project-input.mjs && node scripts/test-project-editor.mjs && node scripts/test-projects.mjs",
+    "test:laboratory": "node --test tests/laboratory.test.cjs && node scripts/test-laboratory.mjs",
+    "test:unattended": "node --test tests/unattended.test.cjs && node scripts/test-unattended.mjs",
+    "test:desktop": "node scripts/smoke-electron.mjs",
+    "resources": "node scripts/download-uv.mjs && npm run resources:win",
+    "resources:win": "node scripts/download-vcredist.mjs",
+    "resources:mac-dmg": "node scripts/prepare-mac-dmg-guide.cjs && swift scripts/prepare-mac-dmg.swift resources/macos",
+    "build:mac": "electron-builder --mac dmg zip --arm64 --x64",
+    "build:win": "electron-builder --win nsis zip --x64",
+    "cli": "node cli/studio.cjs",
+    "test:cli": "node --test tests/cli.test.cjs tests/cli-integration.test.cjs",
+    "test:cli:settings": "node scripts/test-cli-settings.mjs",
+    "test:consumer": "node --test tests/consumer.test.cjs tests/progress.test.cjs tests/recording.test.cjs tests/history.test.cjs tests/jobs.test.cjs tests/deletion.test.cjs tests/session.test.cjs tests/templates.test.cjs tests/projects.test.cjs tests/unattended.test.cjs tests/laboratory.test.cjs tests/text.test.cjs tests/retired-markup.test.cjs tests/usability.test.cjs tests/audio-versions.test.cjs",
+    "test:ui": "node scripts/test-selectors.mjs && node scripts/test-background.mjs && node scripts/test-templates.mjs && node scripts/test-home.mjs",
+    "test:reference": "node --test tests/resources.test.cjs tests/projects.test.cjs tests/laboratory.test.cjs && node scripts/test-reference-expression.mjs",
+    "test:voice:real": "node scripts/test-voice-consistency-real.mjs",
+    "test:home": "node scripts/test-home.mjs",
+    "test:history": "node --test tests/history.test.cjs tests/deletion.test.cjs tests/consumer.test.cjs && node scripts/test-history-bulk.mjs",
+    "test:layout": "node --test tests/window-layout.test.cjs && node scripts/test-layout.mjs",
+    "test:activation": "node scripts/test-activation.mjs",
+    "test:issuer": "node scripts/test-issuer.mjs",
+    "build:mac:arm64": "electron-builder --mac dmg zip --arm64",
+    "build:mac:intel": "electron-builder --mac dmg zip --x64",
+    "test:preflight": "node --test tests/preflight.test.cjs && node scripts/test-preflight.mjs",
+    "test:recording": "node --test tests/recording.test.cjs && node scripts/test-recording.mjs",
+    "test:downloads:real": "node scripts/test-downloads-real.mjs",
+    "test:setup:packaged": "node scripts/test-packaged-setup.mjs",
+    "test:installer:win": "node scripts/test-windows-installer.mjs",
+    "test:security": "node --test tests/security.test.cjs",
+    "test:release-security": "node scripts/test-release-security.mjs",
+    "test:audit": "node --test tests/service-compatibility.test.cjs tests/resources.test.cjs tests/jobs-runtime.test.cjs tests/exports.test.cjs tests/single-instance.test.cjs",
+    "test:resources": "node --test tests/resources.test.cjs && node scripts/test-download-progress.mjs",
+    "test:single-instance": "node scripts/test-single-instance.mjs",
+    "test:delivery": "node --test tests/delivery.test.cjs tests/project-delivery.test.cjs",
+    "test:audio": "node --test tests/audio-versions.test.cjs && node scripts/test-audio-studio.mjs",
+    "test:retirement": "node --test tests/retired-markup.test.cjs && node scripts/test-inline-retirement.mjs"
+  },
+  "devDependencies": {
+    "electron": "44.7.0",
+    "electron-builder": "26.15.3",
+    "playwright": "^1.64.0",
+    "resedit": "1.7.2",
+    "pe-library": "0.4.1"
+  },
+  "build": {
+    "appId": "studio.localvoice.desktop",
+    "productName": "声悦",
+    "asar": true,
+    "files": [
+      "desktop/**/*",
+      "ui/**/*",
+      "package.json",
+      "LICENSE",
+      "THIRD_PARTY_NOTICES.md",
+      "cli/**/*",
+      "backend/**/*",
+      "!backend/**/__pycache__/**",
+      "shared/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/uv",
+        "to": "uv",
+        "filter": [
+          "mac-arm64/uv",
+          "mac-x64/uv",
+          "win-x64/uv.exe",
+          "licenses/*"
+        ]
+      },
+      {
+        "from": "README.md",
+        "to": "README.md"
+      },
+      {
+        "from": "THIRD_PARTY_NOTICES.md",
+        "to": "THIRD_PARTY_NOTICES.md"
+      },
+      {
+        "from": "LICENSE",
+        "to": "LICENSE"
+      },
+      {
+        "from": "VALIDATION.md",
+        "to": "VALIDATION.md"
+      },
+      {
+        "from": "docs/Agent-CLI.md",
+        "to": "docs/Agent-CLI.md"
+      }
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "mac": {
+      "category": "public.app-category.music",
+      "identity": "-",
+      "signIgnore": [
+        "Contents/Resources/uv/(?:mac-arm64/uv|mac-x64/uv)$"
+      ],
+      "hardenedRuntime": true,
+      "extendInfo": {
+        "NSMicrophoneUsageDescription": "用于录制你的声音，录音仅在本机保存，供新文案配音使用。"
+      },
+      "icon": "resources/icon.icns",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "minimumSystemVersion": "14.0.0",
+      "entitlements": "resources/entitlements.mac.plist",
+      "entitlementsInherit": "resources/entitlements.mac.plist"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ],
+      "signAndEditExecutable": false,
+      "icon": "resources/icon.ico"
+    },
+    "artifactName": "Shengyue-${version}-${os}-${arch}.${ext}",
+    "dmg": {
+      "title": "声悦 ${version}",
+      "background": "resources/macos/dmg-background.tiff",
+      "icon": "resources/icon.icns",
+      "iconSize": 96,
+      "iconTextSize": 13,
+      "filesystem": "HFS+",
+      "format": "UDZO",
+      "contents": [
+        {
+          "x": 200,
+          "y": 248,
+          "type": "file"
+        },
+        {
+          "x": 620,
+          "y": 248,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 120,
+          "y": 469,
+          "type": "file",
+          "path": "resources/macos/首次打开说明.html"
+        }
+      ]
+    },
+    "nsis": {
+      "include": "resources/windows/installer.nsh",
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "resources/icon.ico",
+      "uninstallerIcon": "resources/icon.ico",
+      "shortcutName": "声悦",
+      "artifactName": "Shengyue-${version}-windows-setup.${ext}"
+    },
+    "afterPack": "scripts/after-pack.cjs",
+    "afterSign": "scripts/after-sign.cjs",
+    "electronFuses": {
+      "runAsNode": false,
+      "enableNodeOptionsEnvironmentVariable": false,
+      "enableNodeCliInspectArguments": false,
+      "enableEmbeddedAsarIntegrityValidation": true,
+      "onlyLoadAppFromAsar": true
+    },
+    "beforePack": "scripts/before-pack.cjs"
+  },
+  "bin": {
+    "shengyue": "cli/studio.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/litefreeteam/voice-studio.git"
+  },
+  "homepage": "https://github.com/litefreeteam/voice-studio#readme",
+  "bugs": {
+    "url": "https://github.com/litefreeteam/voice-studio/issues"
+  }
+}

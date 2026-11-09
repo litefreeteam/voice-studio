@@ -1,0 +1,625 @@
+{
+  "schema": "shengyue-models-2",
+  "repositories": {
+    "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice": {
+      "revision": "85e237c12c027371202489a0ec509ded67b5e4b5",
+      "weights": {
+        "model.safetensors": "bc3c7e785eb961179c25450d1acff03f839e0002f2f3a5aeb67b5735c0fa2adb",
+        "speech_tokenizer/model.safetensors": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
+      },
+      "files": {
+        "model.safetensors": {
+          "size": 1811626576,
+          "sha256": "bc3c7e785eb961179c25450d1acff03f839e0002f2f3a5aeb67b5735c0fa2adb",
+          "modelscopeRevision": "3b07e1843e41f3863f213c84e7003ad836a059c6"
+        },
+        "tokenizer_config.json": {
+          "size": 7344,
+          "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670",
+          "modelscopeRevision": "3b07e1843e41f3863f213c84e7003ad836a059c6"
+        },
+        "config.json": {
+          "size": 4908,
+          "sha256": "81aca2b6fac304944d8acf345272d8a9a727d5fc2e2e66b222ab4729340c7455",
+          "modelscopeRevision": "3b07e1843e41f3863f213c84e7003ad836a059c6"
+        },
+        "generation_config.json": {
+          "size": 245,
+          "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
+          "modelscopeRevision": "3b07e1843e41f3863f213c84e7003ad836a059c6"
+        },
+        "README.md": {
+          "size": 3263,
+          "sha256": "1e3adeecc7a72d6756fdb77c2847f8e994195e105b51206a7a5c049b0dfa48a8",
+          "modelscopeRevision": "70b274883e68023af521a9199603192d58ccdd3f"
+        },
+        "merges.txt": {
+          "size": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "modelscopeRevision": "3b07e1843e41f3863f213c84e7003ad836a059c6"
+        },
+        "vocab.json": {
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "modelscopeRevision": "3b07e1843e41f3863f213c84e7003ad836a059c6"
+        },
+        "preprocessor_config.json": {
+          "size": 127,
+          "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119",
+          "modelscopeRevision": "3b07e1843e41f3863f213c84e7003ad836a059c6"
+        },
+        "speech_tokenizer/model.safetensors": {
+          "size": 682293092,
+          "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258",
+          "modelscopeRevision": "3b07e1843e41f3863f213c84e7003ad836a059c6"
+        },
+        "speech_tokenizer/config.json": {
+          "size": 2336,
+          "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
+          "modelscopeRevision": "3b07e1843e41f3863f213c84e7003ad836a059c6"
+        },
+        "speech_tokenizer/preprocessor_config.json": {
+          "size": 234,
+          "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb",
+          "modelscopeRevision": "3b07e1843e41f3863f213c84e7003ad836a059c6"
+        }
+      }
+    },
+    "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice": {
+      "revision": "0c0e3051f131929182e2c023b9537f8b1c68adfe",
+      "weights": {
+        "model.safetensors": "38b1d5971bdbd982b561cccec982669a53b0537c3cf5e9bd4778ed07bb2f5137",
+        "speech_tokenizer/model.safetensors": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
+      },
+      "files": {
+        "model.safetensors": {
+          "size": 3833402552,
+          "sha256": "38b1d5971bdbd982b561cccec982669a53b0537c3cf5e9bd4778ed07bb2f5137",
+          "modelscopeRevision": "ae999bce1d1356e93686274865bc72744daab1a5"
+        },
+        "tokenizer_config.json": {
+          "size": 7344,
+          "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670",
+          "modelscopeRevision": "ae999bce1d1356e93686274865bc72744daab1a5"
+        },
+        "config.json": {
+          "size": 4908,
+          "sha256": "17a07f527a1c25ea30b4e023a184482a23d3e279d697b1dc81b1bde498d29cf9",
+          "modelscopeRevision": "ae999bce1d1356e93686274865bc72744daab1a5"
+        },
+        "generation_config.json": {
+          "size": 245,
+          "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
+          "modelscopeRevision": "ae999bce1d1356e93686274865bc72744daab1a5"
+        },
+        "README.md": {
+          "size": 57846,
+          "sha256": "64f65e809b51cc0c35f393fbbfcc2d735c0cb3fdbbc6f3fdc4a5e6ce55e9d088",
+          "modelscopeRevision": "54dfa57e196341bfa4994c97ad1f0f874964eeab"
+        },
+        "merges.txt": {
+          "size": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "modelscopeRevision": "ae999bce1d1356e93686274865bc72744daab1a5"
+        },
+        "vocab.json": {
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "modelscopeRevision": "ae999bce1d1356e93686274865bc72744daab1a5"
+        },
+        "preprocessor_config.json": {
+          "size": 127,
+          "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119",
+          "modelscopeRevision": "ae999bce1d1356e93686274865bc72744daab1a5"
+        },
+        "speech_tokenizer/model.safetensors": {
+          "size": 682293092,
+          "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258",
+          "modelscopeRevision": "ae999bce1d1356e93686274865bc72744daab1a5"
+        },
+        "speech_tokenizer/config.json": {
+          "size": 2336,
+          "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
+          "modelscopeRevision": "ae999bce1d1356e93686274865bc72744daab1a5"
+        },
+        "speech_tokenizer/preprocessor_config.json": {
+          "size": 234,
+          "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb",
+          "modelscopeRevision": "ae999bce1d1356e93686274865bc72744daab1a5"
+        }
+      }
+    },
+    "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign": {
+      "revision": "5ecdb67327fd37bb2e042aab12ff7391903235d3",
+      "weights": {
+        "model.safetensors": "391e8db219f292c515297cdceeb43e4eae67cdde35fa57e79a6a8a532fca0522",
+        "speech_tokenizer/model.safetensors": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
+      },
+      "files": {
+        "model.safetensors": {
+          "size": 3833402552,
+          "sha256": "391e8db219f292c515297cdceeb43e4eae67cdde35fa57e79a6a8a532fca0522",
+          "modelscopeRevision": "98393ab8928e60376379ecb99a992b80b5926433"
+        },
+        "tokenizer_config.json": {
+          "size": 7344,
+          "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670",
+          "modelscopeRevision": "98393ab8928e60376379ecb99a992b80b5926433"
+        },
+        "config.json": {
+          "size": 4421,
+          "sha256": "aecd2cc4c1fe9edef1cb7ca7c401685a43879ad43f3f9e883f1c6760b61731e0",
+          "modelscopeRevision": "98393ab8928e60376379ecb99a992b80b5926433"
+        },
+        "generation_config.json": {
+          "size": 245,
+          "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
+          "modelscopeRevision": "98393ab8928e60376379ecb99a992b80b5926433"
+        },
+        "README.md": {
+          "size": 3214,
+          "sha256": "acfaf6c0d433866cb5e2bb73e7915ea3767f5a2e3abca413b485635a2c72b5e6",
+          "modelscopeRevision": "8dd530dbed7fda907a15ac48d7f78742cc90a065"
+        },
+        "merges.txt": {
+          "size": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "modelscopeRevision": "98393ab8928e60376379ecb99a992b80b5926433"
+        },
+        "vocab.json": {
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "modelscopeRevision": "98393ab8928e60376379ecb99a992b80b5926433"
+        },
+        "preprocessor_config.json": {
+          "size": 127,
+          "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119",
+          "modelscopeRevision": "98393ab8928e60376379ecb99a992b80b5926433"
+        },
+        "speech_tokenizer/model.safetensors": {
+          "size": 682293092,
+          "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258",
+          "modelscopeRevision": "98393ab8928e60376379ecb99a992b80b5926433"
+        },
+        "speech_tokenizer/config.json": {
+          "size": 2336,
+          "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
+          "modelscopeRevision": "98393ab8928e60376379ecb99a992b80b5926433"
+        },
+        "speech_tokenizer/preprocessor_config.json": {
+          "size": 234,
+          "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb",
+          "modelscopeRevision": "98393ab8928e60376379ecb99a992b80b5926433"
+        }
+      }
+    },
+    "Qwen/Qwen3-TTS-12Hz-1.7B-Base": {
+      "revision": "fd4b254389122332181a7c3db7f27e918eec64e3",
+      "weights": {
+        "model.safetensors": "38fc7fc51c5e776e840414b6fd443962e9411b9654888fd7913e4da643cb857c",
+        "speech_tokenizer/model.safetensors": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
+      },
+      "files": {
+        "model.safetensors": {
+          "size": 3857413744,
+          "sha256": "38fc7fc51c5e776e840414b6fd443962e9411b9654888fd7913e4da643cb857c",
+          "modelscopeRevision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+        },
+        "tokenizer_config.json": {
+          "size": 7344,
+          "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670",
+          "modelscopeRevision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+        },
+        "config.json": {
+          "size": 4494,
+          "sha256": "b4f01752d15a488abde3e1ab44723ae4f4b9e68a4037257b098b3737893cc1f9",
+          "modelscopeRevision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+        },
+        "generation_config.json": {
+          "size": 245,
+          "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
+          "modelscopeRevision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+        },
+        "README.md": {
+          "size": 57817,
+          "sha256": "621b7e88f1867bc03d817176fc1f7f55f4b5a70654b2a07fdcda1e169efb024b",
+          "modelscopeRevision": "dfb4a462f62f8f831ff0ffabf31189fc9d4344fd"
+        },
+        "merges.txt": {
+          "size": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "modelscopeRevision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+        },
+        "vocab.json": {
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "modelscopeRevision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+        },
+        "preprocessor_config.json": {
+          "size": 127,
+          "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119",
+          "modelscopeRevision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+        },
+        "speech_tokenizer/model.safetensors": {
+          "size": 682293092,
+          "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258",
+          "modelscopeRevision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+        },
+        "speech_tokenizer/config.json": {
+          "size": 2336,
+          "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
+          "modelscopeRevision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+        },
+        "speech_tokenizer/preprocessor_config.json": {
+          "size": 234,
+          "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb",
+          "modelscopeRevision": "53a097f58d6aa0d688ae0985b4c5e34cfdad2626"
+        }
+      }
+    },
+    "mlx-community/Qwen3-TTS-12Hz-0.6B-CustomVoice-4bit": {
+      "revision": "08c72cad5e2fd0f41730c8bd1f28149585e46361",
+      "weights": {
+        "model.safetensors": "4ab02a20be381700f6e73dbb5efdc424cadf9f1d0652cbffd662872ea41e296a",
+        "speech_tokenizer/model.safetensors": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
+      },
+      "files": {
+        "model.safetensors": {
+          "size": 1006772520,
+          "sha256": "4ab02a20be381700f6e73dbb5efdc424cadf9f1d0652cbffd662872ea41e296a",
+          "modelscopeRevision": "b3e1b295821bacbca1461f68b69676cb9015e4f1"
+        },
+        "tokenizer_config.json": {
+          "size": 7344,
+          "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670",
+          "modelscopeRevision": "9781ea5af6e8440a6fcb42cf6b5a4da4a2181565"
+        },
+        "config.json": {
+          "size": 6058,
+          "sha256": "612cb591b44547319e5c68a78c0e93e4defb57882a4aa9ef5f06cc2f071ed036",
+          "modelscopeRevision": "9781ea5af6e8440a6fcb42cf6b5a4da4a2181565"
+        },
+        "generation_config.json": {
+          "size": 245,
+          "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
+          "modelscopeRevision": "9781ea5af6e8440a6fcb42cf6b5a4da4a2181565"
+        },
+        "README.md": {
+          "size": 1068,
+          "sha256": "3880953e06b74d29bd04dadd111d511a04a2a427fbeb0eb23d1db3fc91fc65e9",
+          "modelscopeRevision": "b3e1b295821bacbca1461f68b69676cb9015e4f1"
+        },
+        "merges.txt": {
+          "size": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "modelscopeRevision": "9781ea5af6e8440a6fcb42cf6b5a4da4a2181565"
+        },
+        "vocab.json": {
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "modelscopeRevision": "9781ea5af6e8440a6fcb42cf6b5a4da4a2181565"
+        },
+        "model.safetensors.index.json": {
+          "size": 71447,
+          "sha256": "f3b84ec5c1b38220008c3a300b8a73502f7d4ec67b232e0193d9376909fc4e3e",
+          "modelscopeRevision": "b3e1b295821bacbca1461f68b69676cb9015e4f1"
+        },
+        "preprocessor_config.json": {
+          "size": 127,
+          "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119",
+          "modelscopeRevision": "9781ea5af6e8440a6fcb42cf6b5a4da4a2181565"
+        },
+        "speech_tokenizer/model.safetensors": {
+          "size": 682293092,
+          "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258",
+          "modelscopeRevision": "9781ea5af6e8440a6fcb42cf6b5a4da4a2181565"
+        },
+        "speech_tokenizer/config.json": {
+          "size": 2336,
+          "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
+          "modelscopeRevision": "9781ea5af6e8440a6fcb42cf6b5a4da4a2181565"
+        },
+        "speech_tokenizer/preprocessor_config.json": {
+          "size": 234,
+          "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb",
+          "modelscopeRevision": "9781ea5af6e8440a6fcb42cf6b5a4da4a2181565"
+        }
+      }
+    },
+    "mlx-community/Qwen3-TTS-12Hz-1.7B-CustomVoice-4bit": {
+      "revision": "f35faf19b0cc2160865af64ecf0f22f83d335135",
+      "weights": {
+        "model.safetensors": "45a5b5ccd3cc473b9d3890ea922937036b56b948e8bd8c678e725329abdd1d00",
+        "speech_tokenizer/model.safetensors": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
+      },
+      "files": {
+        "model.safetensors": {
+          "size": 1625226859,
+          "sha256": "45a5b5ccd3cc473b9d3890ea922937036b56b948e8bd8c678e725329abdd1d00",
+          "modelscopeRevision": "3624a3894b6b8e09d202873a2e240b1326e43128"
+        },
+        "tokenizer_config.json": {
+          "size": 7344,
+          "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670",
+          "modelscopeRevision": "dd4420f5983e89dcc69afc7bd8eb8c4c0a13d312"
+        },
+        "config.json": {
+          "size": 6058,
+          "sha256": "5a1dd8d7c9f4d04d5bdac309e9e748f16a96b0724d9c4de4974982dd84078715",
+          "modelscopeRevision": "dd4420f5983e89dcc69afc7bd8eb8c4c0a13d312"
+        },
+        "generation_config.json": {
+          "size": 245,
+          "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
+          "modelscopeRevision": "dd4420f5983e89dcc69afc7bd8eb8c4c0a13d312"
+        },
+        "README.md": {
+          "size": 1068,
+          "sha256": "481e4e53d6adf50558eb60eb15eae7eea67a3ca467dbe8e4eef9159f8d17d1f8",
+          "modelscopeRevision": "3624a3894b6b8e09d202873a2e240b1326e43128"
+        },
+        "merges.txt": {
+          "size": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "modelscopeRevision": "dd4420f5983e89dcc69afc7bd8eb8c4c0a13d312"
+        },
+        "vocab.json": {
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "modelscopeRevision": "dd4420f5983e89dcc69afc7bd8eb8c4c0a13d312"
+        },
+        "model.safetensors.index.json": {
+          "size": 71786,
+          "sha256": "8ea3f7115ca2b729e5af4e83b2580d1be97dd54d80e8ef7aa27257c04d84d325",
+          "modelscopeRevision": "3624a3894b6b8e09d202873a2e240b1326e43128"
+        },
+        "preprocessor_config.json": {
+          "size": 127,
+          "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119",
+          "modelscopeRevision": "dd4420f5983e89dcc69afc7bd8eb8c4c0a13d312"
+        },
+        "speech_tokenizer/model.safetensors": {
+          "size": 682293092,
+          "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258",
+          "modelscopeRevision": "dd4420f5983e89dcc69afc7bd8eb8c4c0a13d312"
+        },
+        "speech_tokenizer/config.json": {
+          "size": 2336,
+          "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
+          "modelscopeRevision": "dd4420f5983e89dcc69afc7bd8eb8c4c0a13d312"
+        },
+        "speech_tokenizer/preprocessor_config.json": {
+          "size": 234,
+          "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb",
+          "modelscopeRevision": "dd4420f5983e89dcc69afc7bd8eb8c4c0a13d312"
+        }
+      }
+    },
+    "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit": {
+      "revision": "5c390979e4b93af5f2932f90742ca99c7dd04687",
+      "weights": {
+        "model.safetensors": "d8627de7ef411f6775182925059e140a9e1edb1fde8feeb540b4fba0edee1e58",
+        "speech_tokenizer/model.safetensors": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
+      },
+      "files": {
+        "model.safetensors": {
+          "size": 1625226859,
+          "sha256": "d8627de7ef411f6775182925059e140a9e1edb1fde8feeb540b4fba0edee1e58",
+          "modelscopeRevision": "2952d81fc6cc0aef8f55bf3d679c10e622781580"
+        },
+        "tokenizer_config.json": {
+          "size": 7344,
+          "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670",
+          "modelscopeRevision": "f7d70679413ba8865f8b614e71658f3c0820f384"
+        },
+        "config.json": {
+          "size": 5437,
+          "sha256": "37e4e0d7b2b10b8f9946734ec808eab6045a435b5ec35219b5c07a153444675d",
+          "modelscopeRevision": "f7d70679413ba8865f8b614e71658f3c0820f384"
+        },
+        "generation_config.json": {
+          "size": 245,
+          "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
+          "modelscopeRevision": "f7d70679413ba8865f8b614e71658f3c0820f384"
+        },
+        "README.md": {
+          "size": 1068,
+          "sha256": "40d213ae6ec58c48d4362a66a8e77bc8518b87acf6cd5e54b4aa2352a588a277",
+          "modelscopeRevision": "2952d81fc6cc0aef8f55bf3d679c10e622781580"
+        },
+        "merges.txt": {
+          "size": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "modelscopeRevision": "f7d70679413ba8865f8b614e71658f3c0820f384"
+        },
+        "vocab.json": {
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "modelscopeRevision": "f7d70679413ba8865f8b614e71658f3c0820f384"
+        },
+        "model.safetensors.index.json": {
+          "size": 71786,
+          "sha256": "8ea3f7115ca2b729e5af4e83b2580d1be97dd54d80e8ef7aa27257c04d84d325",
+          "modelscopeRevision": "2952d81fc6cc0aef8f55bf3d679c10e622781580"
+        },
+        "preprocessor_config.json": {
+          "size": 127,
+          "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119",
+          "modelscopeRevision": "f7d70679413ba8865f8b614e71658f3c0820f384"
+        },
+        "speech_tokenizer/model.safetensors": {
+          "size": 682293092,
+          "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258",
+          "modelscopeRevision": "f7d70679413ba8865f8b614e71658f3c0820f384"
+        },
+        "speech_tokenizer/config.json": {
+          "size": 2336,
+          "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
+          "modelscopeRevision": "f7d70679413ba8865f8b614e71658f3c0820f384"
+        },
+        "speech_tokenizer/preprocessor_config.json": {
+          "size": 234,
+          "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb",
+          "modelscopeRevision": "f7d70679413ba8865f8b614e71658f3c0820f384"
+        }
+      }
+    },
+    "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-4bit": {
+      "revision": "37e955a1deb861c088ae5f3a67043185f3d1a60c",
+      "weights": {
+        "model.safetensors": "ac973aa38ec79d4b4b52bf858948f0d47dd909aa4bcd383f5b900e277410fdb5",
+        "speech_tokenizer/model.safetensors": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
+      },
+      "files": {
+        "model.safetensors": {
+          "size": 1649238423,
+          "sha256": "ac973aa38ec79d4b4b52bf858948f0d47dd909aa4bcd383f5b900e277410fdb5",
+          "modelscopeRevision": "8302e323b28d4802c65d73dd8b562249891eb865"
+        },
+        "tokenizer_config.json": {
+          "size": 7344,
+          "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670",
+          "modelscopeRevision": "9ec8a0054449d28b16c719b97002ca98c820d6a8"
+        },
+        "config.json": {
+          "size": 5522,
+          "sha256": "36477d07e2ac89f79c1410a9782ed69860fbfcc871edea1728624389072e25fd",
+          "modelscopeRevision": "9ec8a0054449d28b16c719b97002ca98c820d6a8"
+        },
+        "generation_config.json": {
+          "size": 245,
+          "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
+          "modelscopeRevision": "9ec8a0054449d28b16c719b97002ca98c820d6a8"
+        },
+        "README.md": {
+          "size": 1026,
+          "sha256": "21e7151db9b6316009265b788411a3e57d83651c40c653213b98f28a36a75bb8",
+          "modelscopeRevision": "8302e323b28d4802c65d73dd8b562249891eb865"
+        },
+        "merges.txt": {
+          "size": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+          "modelscopeRevision": "9ec8a0054449d28b16c719b97002ca98c820d6a8"
+        },
+        "vocab.json": {
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "modelscopeRevision": "9ec8a0054449d28b16c719b97002ca98c820d6a8"
+        },
+        "model.safetensors.index.json": {
+          "size": 78070,
+          "sha256": "2b71cbd2c84cb59d0d71383cc55166ad7108180bfd7e47d2e3a6698f3721abfb",
+          "modelscopeRevision": "8302e323b28d4802c65d73dd8b562249891eb865"
+        },
+        "preprocessor_config.json": {
+          "size": 127,
+          "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119",
+          "modelscopeRevision": "9ec8a0054449d28b16c719b97002ca98c820d6a8"
+        },
+        "speech_tokenizer/model.safetensors": {
+          "size": 682293092,
+          "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258",
+          "modelscopeRevision": "9ec8a0054449d28b16c719b97002ca98c820d6a8"
+        },
+        "speech_tokenizer/config.json": {
+          "size": 2336,
+          "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
+          "modelscopeRevision": "9ec8a0054449d28b16c719b97002ca98c820d6a8"
+        },
+        "speech_tokenizer/preprocessor_config.json": {
+          "size": 234,
+          "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb",
+          "modelscopeRevision": "9ec8a0054449d28b16c719b97002ca98c820d6a8"
+        }
+      }
+    },
+    "mlx-community/VoxCPM2-4bit": {
+      "revision": "modelscope-c523466da1ff69acd148625cb011a552d580cb85",
+      "sources": [
+        "modelscope"
+      ],
+      "files": {
+        "config.json": {
+          "size": 5332,
+          "sha256": "91bff6db1be27bc0f4f2a287cca7a8fbb8b1d7a0b026a5dc4a71bc5f2f1ddcfb",
+          "modelscopeRevision": "c523466da1ff69acd148625cb011a552d580cb85"
+        },
+        "model.safetensors": {
+          "size": 2297215329,
+          "sha256": "25bddc99a7cc6d28214f12dd676ed0afa9b0a805d6477f85c275bb113cb8acee",
+          "modelscopeRevision": "c523466da1ff69acd148625cb011a552d580cb85"
+        },
+        "special_tokens_map.json": {
+          "size": 1632,
+          "sha256": "068594063e37662c02b21acf42ebb334ef6a74fb810e68a2368f88f08351de76",
+          "modelscopeRevision": "c523466da1ff69acd148625cb011a552d580cb85"
+        },
+        "tokenizer.json": {
+          "size": 3676772,
+          "sha256": "f8984687e4a92a3503d521396d454b7d68e9fdaab2a0288eb3536c7c1aa4bc20",
+          "modelscopeRevision": "c523466da1ff69acd148625cb011a552d580cb85"
+        },
+        "tokenizer_config.json": {
+          "size": 4952,
+          "sha256": "466575c55f0cf49530666c2e46ed14f26237dbd227ba7f4bb3bbec93df90edfc",
+          "modelscopeRevision": "c523466da1ff69acd148625cb011a552d580cb85"
+        },
+        "README.md": {
+          "size": 2206,
+          "sha256": "335e9c23fc33613d8266381b5518d208f2eb29d54f5cd4de15fe1cf91eed5bc0",
+          "modelscopeRevision": "c523466da1ff69acd148625cb011a552d580cb85"
+        }
+      },
+      "weights": {
+        "model.safetensors": "25bddc99a7cc6d28214f12dd676ed0afa9b0a805d6477f85c275bb113cb8acee"
+      }
+    },
+    "openbmb/VoxCPM2": {
+      "revision": "modelscope-ea02bd9a3599f1900705b80c8db371a72065dba2",
+      "sources": [
+        "modelscope"
+      ],
+      "files": {
+        "audiovae.pth": {
+          "size": 376951122,
+          "sha256": "94b5d51e107e0507d4acc976cfdadb64edd6fd06d1f751dadbf2fd1594274bf1",
+          "modelscopeRevision": "ea02bd9a3599f1900705b80c8db371a72065dba2"
+        },
+        "config.json": {
+          "size": 4336,
+          "sha256": "405f0dcd92f7feba6011ed4eac5c8d4f74cba9712f07fd5cfa3063bbdd95402c",
+          "modelscopeRevision": "2e7c0dfff6646cef46c8bf106460a3dbce23a591"
+        },
+        "model.safetensors": {
+          "size": 4580080592,
+          "sha256": "f7f964cfa9da23653baec6e6f7750719977ad944ed9f95fe52fe3a620506891d",
+          "modelscopeRevision": "d5f1818d22a8a84a71ad99eed983cb786f33985f"
+        },
+        "special_tokens_map.json": {
+          "size": 1632,
+          "sha256": "068594063e37662c02b21acf42ebb334ef6a74fb810e68a2368f88f08351de76",
+          "modelscopeRevision": "ea02bd9a3599f1900705b80c8db371a72065dba2"
+        },
+        "tokenizer.json": {
+          "size": 3676772,
+          "sha256": "f8984687e4a92a3503d521396d454b7d68e9fdaab2a0288eb3536c7c1aa4bc20",
+          "modelscopeRevision": "ea02bd9a3599f1900705b80c8db371a72065dba2"
+        },
+        "tokenizer_config.json": {
+          "size": 5059,
+          "sha256": "e78a3ebb48a0b9437efd1823b6b726c823da89e49dd8bcc90c02419d9baa772b",
+          "modelscopeRevision": "04123d1676da3fd7e1f2d4ed847408950c9cf26d"
+        },
+        "README.md": {
+          "size": 7939,
+          "sha256": "c18d2ffbfb2f0aec770481c967842aee6c200cde65f6b033efd892a849986fda",
+          "modelscopeRevision": "519da200db2bc31a0395635fc7042653b9c4c862"
+        }
+      },
+      "weights": {
+        "audiovae.pth": "94b5d51e107e0507d4acc976cfdadb64edd6fd06d1f751dadbf2fd1594274bf1",
+        "model.safetensors": "f7f964cfa9da23653baec6e6f7750719977ad944ed9f95fe52fe3a620506891d"
+      }
+    }
+  }
+}

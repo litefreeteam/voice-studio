@@ -1,0 +1,2046 @@
+{
+  "voices": [
+    {
+      "id": "Vivian",
+      "name": "知夏",
+      "gender": "female",
+      "description": "明亮清透",
+      "stylePrompt": "像和朋友聊天一样，轻松自然地说话。",
+      "native": "中文",
+      "language": "Chinese",
+      "age": "青音",
+      "scenes": [
+        "video",
+        "course",
+        "ad"
+      ],
+      "preview": {
+        "file": "assets/previews/Vivian.mp3",
+        "text": "沿着这条小巷往前走，拐角是一家刚开门的面包店。窗边那只晒太阳的小猫，一听见纸袋响，就竖起了耳朵。",
+        "scene": "dialogue",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "duration": 10.8,
+        "sha256": "cb95bce2951c61a0422f54cefa30c4f5d0a9ddb5cdb7f473a44c74e913e977ef"
+      },
+      "portrait": "assets/portraits/Vivian.webp"
+    },
+    {
+      "id": "Serena",
+      "name": "温宁",
+      "gender": "female",
+      "description": "温暖柔和",
+      "native": "中文",
+      "language": "Chinese",
+      "age": "青音",
+      "scenes": [
+        "story",
+        "bedtime",
+        "dialogue"
+      ],
+      "preview": {
+        "file": "assets/previews/Serena.mp3",
+        "text": "小兔子把最后一颗星星放进了口袋，轻轻关上窗。森林安静下来，只有月亮还守在树梢，陪着大家慢慢入睡。",
+        "duration": 17.44,
+        "sha256": "c5a1b9ce6c9f06e49a2211e34089094d42e7cbfb171f21a44c3c42bf54ef392a",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "bedtime",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/Serena.webp"
+    },
+    {
+      "id": "Uncle_Fu",
+      "name": "远山",
+      "gender": "male",
+      "description": "低沉醇厚",
+      "native": "中文",
+      "language": "Chinese",
+      "age": "成熟",
+      "scenes": [
+        "story",
+        "course",
+        "video"
+      ],
+      "preview": {
+        "file": "assets/previews/Uncle_Fu.mp3",
+        "text": "老屋的门推开时，铰链发出熟悉的轻响。父亲还坐在窗边，手里的那本书，停在我离开时的那一页。",
+        "duration": 13.6,
+        "sha256": "c23bf26f8943d37aba5d3749bbfa94e33e410eedb8f073ba35969c0cf70c0c6b",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "story",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/Uncle_Fu.webp"
+    },
+    {
+      "id": "Dylan",
+      "name": "景川",
+      "gender": "male",
+      "description": "清朗自然 · 北京口音",
+      "native": "中文",
+      "language": "Chinese",
+      "age": "青音",
+      "scenes": [
+        "video",
+        "dialogue",
+        "game"
+      ],
+      "preview": {
+        "file": "assets/previews/Dylan.mp3",
+        "text": "这家藏在胡同里的小面馆，拢共就六张桌子。面一端上来，先拌匀了再吃，芝麻酱的香味一下就出来了。",
+        "duration": 9.44,
+        "sha256": "01ef4ed7899a75a032c387d0f49700810955d8d9de20f5c1063878217ceba7b8",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "video",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/Dylan.webp"
+    },
+    {
+      "id": "Eric",
+      "name": "阿成",
+      "gender": "male",
+      "description": "随和鲜活 · 四川口音",
+      "native": "中文",
+      "language": "Chinese",
+      "age": "青音",
+      "scenes": [
+        "dialogue",
+        "video",
+        "game"
+      ],
+      "preview": {
+        "file": "assets/previews/Eric.mp3",
+        "text": "面条煮好以后，加一勺辣椒油，再撒点葱花。喜欢吃酸的，可以放一点醋，拌匀了就能开吃。",
+        "duration": 9.92,
+        "sha256": "e5ada9af2f6635b0151564d0dbce7f775c1dbe23a17eaf28aa3f7354f2b4d009",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "dialogue",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/Eric.webp"
+    },
+    {
+      "id": "Ryan",
+      "name": "莱恩",
+      "gender": "male",
+      "description": "节奏鲜明 · 美式英语",
+      "native": "英语",
+      "language": "English",
+      "age": "成熟",
+      "scenes": [
+        "video",
+        "ad",
+        "story"
+      ],
+      "preview": {
+        "file": "assets/previews/Ryan.mp3",
+        "text": "The last train had already left when he reached the station. Under the clock, a small brown suitcase waited all alone.",
+        "duration": 7.04,
+        "sha256": "092ff80007db9992c81145011f32c9d728892ebd7be9d2f450d72a477413f993",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "story",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/Ryan.webp"
+    },
+    {
+      "id": "Aiden",
+      "name": "艾登",
+      "gender": "male",
+      "description": "阳光清晰 · 美式英语",
+      "native": "英语",
+      "language": "English",
+      "age": "青音",
+      "scenes": [
+        "course",
+        "dialogue",
+        "service"
+      ],
+      "preview": {
+        "file": "assets/previews/Aiden.mp3",
+        "text": "Could you tell me how to get to the library? Go straight ahead, then turn left at the next street.",
+        "duration": 5.04,
+        "sha256": "e0d575c59012bebd72d9ec3a326ee29a112f7e9f2cb2b3c97cd754583a781f2a",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "course",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/Aiden.webp"
+    },
+    {
+      "id": "Ono_Anna",
+      "name": "杏奈",
+      "gender": "female",
+      "description": "轻盈灵动 · 日语",
+      "native": "日语",
+      "language": "Japanese",
+      "age": "青音",
+      "scenes": [
+        "game",
+        "story",
+        "dialogue"
+      ],
+      "preview": {
+        "file": "assets/previews/Ono_Anna.mp3",
+        "text": "古い本を開くと、小さな地図が落ちてきました。地図の端には、まだ誰も知らない村の名前が書かれていました。",
+        "duration": 9.84,
+        "sha256": "6dc2816cf86ab68bd90216e69a4a359c8f8584fa85de81116d4588a226735cd4",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "story",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/Ono_Anna.webp"
+    },
+    {
+      "id": "Sohee",
+      "name": "素熙",
+      "gender": "female",
+      "description": "温柔细腻 · 韩语",
+      "native": "韩语",
+      "language": "Korean",
+      "age": "青音",
+      "scenes": [
+        "story",
+        "bedtime",
+        "dialogue"
+      ],
+      "preview": {
+        "file": "assets/previews/Sohee.mp3",
+        "text": "작은 토끼는 창문을 열고 밤하늘의 별을 바라봤어요. 가장 밝은 별을 보며 소원을 빈 뒤, 포근한 이불 속으로 들어갔어요.",
+        "duration": 14.88,
+        "sha256": "80e52fa51165145ff8e3b4cd0ba06e839700f6e15b4284f336b5fd7145e932a3",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "story",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/Sohee.webp"
+    }
+  ],
+  "characters": [
+    {
+      "id": "boy-clear",
+      "name": "乐乐",
+      "gender": "child",
+      "description": "清亮男童 · 活泼学龄",
+      "prompt": "八岁左右的小男孩，未变声的高音男童声线，轻薄清亮，童声共鸣靠前，带一点淘气的沙沙质感。像向小伙伴展示玩具飞机，充满好奇，语调有自然的小起伏，短句活泼连贯，吐字清楚。",
+      "scenes": [
+        "game",
+        "story",
+        "course"
+      ],
+      "preview": {
+        "file": "assets/previews/boy-clear.mp3",
+        "text": "你看，我把小飞机拼好啦！等会儿我们去院子里，看看它能不能飞得更远。",
+        "duration": 7.488,
+        "sha256": "0368e830c2800b1dfdc7e0ee5f6153e3c2bbb66e0414e53a1b3daf047f8cd0a0",
+        "scene": "dialogue",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 35,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/boy-clear.webp",
+      "keywords": [
+        "童声重做",
+        "童真",
+        "儿童"
+      ],
+      "reference": {
+        "file": "voice-boy-clear.mp3",
+        "sha256": "0368e830c2800b1dfdc7e0ee5f6153e3c2bbb66e0414e53a1b3daf047f8cd0a0",
+        "text": "你看，我把小飞机拼好啦！等会儿我们去院子里，看看它能不能飞得更远。",
+        "language": "Chinese"
+      }
+    },
+    {
+      "id": "girl-clear",
+      "name": "小雨",
+      "gender": "child",
+      "description": "清脆女童 · 灵动学龄",
+      "prompt": "八岁左右的小女孩，未发育的清细童声，音色清脆轻巧、天真灵动，声道小、共鸣靠前。像放学后跟家人分享画画的开心事，语调轻快跳跃，发音完整，不用成人主持和少女甜嗓的表达方式。",
+      "scenes": [
+        "story",
+        "game",
+        "video"
+      ],
+      "preview": {
+        "file": "assets/previews/girl-clear.mp3",
+        "text": "今天老师夸我的画好看，我开心极了！放学以后，我还想画一只戴帽子的小猫。",
+        "duration": 7.728,
+        "sha256": "03f4b8f89a717fffec94581f6bcc98d0a025396cd4128465acfc0a6871f2d29d",
+        "scene": "dialogue",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 35,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/girl-clear.webp",
+      "keywords": [
+        "童声重做",
+        "童真",
+        "儿童"
+      ],
+      "reference": {
+        "file": "voice-girl-clear.mp3",
+        "sha256": "03f4b8f89a717fffec94581f6bcc98d0a025396cd4128465acfc0a6871f2d29d",
+        "text": "今天老师夸我的画好看，我开心极了！放学以后，我还想画一只戴帽子的小猫。",
+        "language": "Chinese"
+      }
+    },
+    {
+      "id": "boy-soft",
+      "name": "豆豆",
+      "gender": "child",
+      "description": "软萌男童 · 稚嫩幼童",
+      "prompt": "五岁左右的幼儿园小男孩，细小柔软的幼童声线，带轻微小鼻音和稚嫩的咬字，声音轻薄，有小孩子的前向共鸣。像向妈妈介绍玩具小火车，短句自然、有好奇心，字句听得清楚。",
+      "scenes": [
+        "bedtime",
+        "story",
+        "game"
+      ],
+      "preview": {
+        "file": "assets/previews/boy-soft.mp3",
+        "text": "妈妈，你看！这是我的小火车。呜呜，开到小熊家啦，我们一起去玩吧！",
+        "duration": 7.416,
+        "sha256": "6f08e29070436cbb96fd79f1b284acee210197444aaa0e89658eb56bd8b474eb",
+        "scene": "dialogue",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 35,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/boy-soft.webp",
+      "keywords": [
+        "童声重做",
+        "童真",
+        "儿童"
+      ],
+      "reference": {
+        "file": "voice-boy-soft.mp3",
+        "sha256": "6f08e29070436cbb96fd79f1b284acee210197444aaa0e89658eb56bd8b474eb",
+        "text": "妈妈，你看！这是我的小火车。呜呜，开到小熊家啦，我们一起去玩吧！",
+        "language": "Chinese"
+      }
+    },
+    {
+      "id": "girl-soft",
+      "name": "果果",
+      "gender": "child",
+      "description": "软糯女童 · 甜亮幼童",
+      "prompt": "四至五岁的小女孩，细软明亮的幼童小奶音，圆润、稚嫩、天真，声道小、童声共鸣靠前。像找到了心爱的小兔子玩偶，有疑问时自然上扬，开心时轻快，短句清楚，避免耳语和尖叫。",
+      "scenes": [
+        "bedtime",
+        "story",
+        "game"
+      ],
+      "preview": {
+        "file": "assets/previews/girl-soft.mp3",
+        "text": "我的小兔子藏在哪里呀？哦，找到啦！我要抱着它，一起听睡前的小故事。",
+        "duration": 8.688,
+        "sha256": "d8112c0d5c9da62f058b196c2d41dabc9ec2a586e7bd5512ea0a23a1c967ae64",
+        "scene": "dialogue",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 35,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/girl-soft.webp",
+      "keywords": [
+        "童声重做",
+        "童真",
+        "儿童"
+      ],
+      "reference": {
+        "file": "voice-girl-soft.mp3",
+        "sha256": "d8112c0d5c9da62f058b196c2d41dabc9ec2a586e7bd5512ea0a23a1c967ae64",
+        "text": "我的小兔子藏在哪里呀？哦，找到啦！我要抱着它，一起听睡前的小故事。",
+        "language": "Chinese"
+      }
+    },
+    {
+      "id": "grandpa",
+      "name": "松爷爷",
+      "gender": "elder",
+      "description": "慈祥爷爷",
+      "prompt": "七十岁左右男性，温暖慈祥，嗓音稍沙哑，有岁月感但吐字清楚，自然交流。",
+      "scenes": [
+        "bedtime",
+        "story",
+        "dialogue"
+      ],
+      "preview": {
+        "file": "assets/previews/grandpa.mp3",
+        "text": "那时候，村口还没有这座桥。每到放学，孩子们就挽起裤脚，踩着河里的石头，一步一步走回家。",
+        "duration": 8.5,
+        "sha256": "af1e6871a25cf2e168062ea81ddf61d6ac7944555d68e09b1b5aed8e5a82997a",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "story",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/grandpa.webp"
+    },
+    {
+      "id": "grandma",
+      "name": "林奶奶",
+      "gender": "elder",
+      "description": "温柔奶奶",
+      "prompt": "七十岁左右女性，慈祥温柔，略带气声，语速从容，有真实老年人的声线。",
+      "scenes": [
+        "bedtime",
+        "story",
+        "dialogue"
+      ],
+      "preview": {
+        "file": "assets/previews/grandma.mp3",
+        "text": "小熊把被角掖好，给身边的小兔子留了半个枕头。窗外落起细细的雨，两个好朋友挨在一起，很快就睡着了。",
+        "duration": 11.28,
+        "sha256": "f29ab0f0631f74b8b2e6fcfe5a8277777d13bfd599a9c2611fae14ac93bb0315",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "bedtime",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/grandma.webp"
+    },
+    {
+      "id": "story-male",
+      "name": "墨白",
+      "gender": "male",
+      "description": "沉稳叙事",
+      "prompt": "三十岁左右成年男性，沉稳、清晰、富有叙事感，低中音，像讲述故事而不是播新闻。",
+      "scenes": [
+        "story",
+        "video",
+        "course"
+      ],
+      "preview": {
+        "file": "assets/previews/story-male.mp3",
+        "text": "他在旧书里发现了一张没有署名的地图。地图的尽头，是一座从未在旅途中听说过的小镇。",
+        "duration": 7.6,
+        "sha256": "3ae342c366e69f74a9c0a7785c44dad62bc391e9d3da7ac7743c24feca3a1d18",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "story",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/story-male.webp"
+    },
+    {
+      "id": "story-female",
+      "name": "听澜",
+      "gender": "female",
+      "description": "温柔讲述",
+      "prompt": "三十岁左右成年女性，温柔、清晰、有感染力，声音舒展，像与听众分享故事。",
+      "scenes": [
+        "story",
+        "bedtime",
+        "course"
+      ],
+      "preview": {
+        "file": "assets/previews/story-female.mp3",
+        "text": "她推开窗，院子里的栀子花已经开了。风翻动桌上的信纸，那句没来得及说出口的话，终于有了回音。",
+        "duration": 10.21,
+        "sha256": "047837c830703c446973cd4831212e42abb3094a5e48846af56d31db2007f04f",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "story",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/story-female.webp"
+    },
+    {
+      "id": "hero",
+      "name": "陆沉",
+      "gender": "male",
+      "description": "游戏主角",
+      "prompt": "成年男性游戏角色，坚定、干练、自然，中低音，保留真实口语感，不要过度戏剧化。",
+      "scenes": [
+        "game",
+        "ad",
+        "video"
+      ],
+      "preview": {
+        "file": "assets/previews/hero.mp3",
+        "text": "城门撑不了多久了。你带大家从北边的小路撤离，我留下来守住这里，天亮以后在山口会合。",
+        "duration": 8.61,
+        "sha256": "43ba7936e139555f04f9abcc3a231fd3ffcce142db695496938701f3934cb278",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "game",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/hero.webp"
+    },
+    {
+      "id": "heroine",
+      "name": "星遥",
+      "gender": "female",
+      "description": "冒险女主",
+      "prompt": "成年女性冒险角色，清晰、自信、敏捷，声线明亮有力量，保持自然对话感。",
+      "scenes": [
+        "game",
+        "video",
+        "ad"
+      ],
+      "preview": {
+        "file": "assets/previews/heroine.mp3",
+        "text": "等等，墙上的符号和地图对上了。先别碰那块石板，让我看看机关连在哪里，我们一定能找到出口。",
+        "duration": 9.2,
+        "sha256": "d9f11f23a63c39a9a1ecfc71c984ca1508ae8600a08ad837b1036b7d3986bc54",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "game",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/heroine.webp"
+    },
+    {
+      "id": "mascot",
+      "name": "团团",
+      "gender": "cartoon",
+      "description": "活泼萌宠",
+      "prompt": "虚构卡通吉祥物，轻快、明亮、圆润、亲切，发音清楚，带轻微卡通感，不模仿任何已有角色。",
+      "scenes": [
+        "game",
+        "ad",
+        "service"
+      ],
+      "preview": {
+        "file": "assets/previews/mascot.mp3",
+        "text": "找到啦！最后一颗星星藏在蘑菇后面。快把它放进小篮子，我们就能打开通往糖果森林的大门啦！",
+        "duration": 9.15,
+        "sha256": "5ae254d628a7aed32fce52cc9b9c5bec92f255f4368efa1d75e81028cc90f5d4",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "game",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/mascot.webp"
+    },
+    {
+      "id": "robot",
+      "name": "小智",
+      "gender": "cartoon",
+      "description": "友好机器人",
+      "prompt": "虚构机器人助手，中性声线，清晰、平稳、友好，带适度机械节奏，但不要失去自然可懂度。",
+      "scenes": [
+        "service",
+        "course",
+        "game"
+      ],
+      "preview": {
+        "file": "assets/previews/robot.mp3",
+        "text": "路线已更新。前方路口向右转，沿走廊直行二十米，您要找的会议室就在左手边。",
+        "duration": 8.72,
+        "sha256": "2468a776cf0897eb9041272ea72eb3d80e0244105dc6328798da5c4fef9b82c2",
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "scene": "service",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30
+      },
+      "portrait": "assets/portraits/robot.webp"
+    },
+    {
+      "id": "teacher-female",
+      "name": "知微",
+      "gender": "female",
+      "description": "耐心女讲师 · 清晰知性",
+      "prompt": "三十岁左右的成年女性，普通话标准，中高音区，音色干净、清润、知性，句尾平稳，像耐心的一对一讲师。重点词清晰，停顿自然，避免甜腻、气声和夸张播音腔。",
+      "scenes": [
+        "course",
+        "video"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "耐心女讲师",
+        "course",
+        "video"
+      ],
+      "preview": {
+        "file": "assets/previews/teacher-female.mp3",
+        "text": "把一个苹果平均分成四份，每一份就是四分之一。拿走其中的两份，也就是四分之二，正好等于二分之一。",
+        "duration": 11.44,
+        "sha256": "eefa5946792782df3fc7e4da6e16279ac5f349a8cc2a226cc70fa0d92b3e8702",
+        "scene": "course",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/teacher-female.webp"
+    },
+    {
+      "id": "teacher-male",
+      "name": "明哲",
+      "gender": "male",
+      "description": "温厚男讲师 · 条理分明",
+      "prompt": "四十岁左右的成年男性，标准普通话，中低音区，温厚结实，胸腔共鸣适中，像经验丰富的老师面对面讲解。吐字清楚，语尾沉稳，保留亲近感，避免低沉到含混或舞台演讲腔。",
+      "scenes": [
+        "course",
+        "story"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "温厚男讲师",
+        "course",
+        "story"
+      ],
+      "preview": {
+        "file": "assets/previews/teacher-male.mp3",
+        "text": "水受热后会变成水蒸气，这个过程叫作汽化。烧水时，壶口冒出的白雾，其实是水蒸气遇冷形成的小水滴。",
+        "duration": 13.16,
+        "sha256": "92b217c2ceeb79fda71202b90ea7a05a526e7a625492f1d7e019dda609283b03",
+        "scene": "course",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/teacher-male.webp"
+    },
+    {
+      "id": "training-female",
+      "name": "予安",
+      "gender": "female",
+      "description": "专业培训 · 稳定从容",
+      "prompt": "三十五岁左右成年女性，标准普通话，中音区，声音圆润、稳健、干练，略带成熟质感。像企业培训师，表达条理清楚，语气友善而有边界，避免童声、甜嗓与新闻播报腔。",
+      "scenes": [
+        "course",
+        "service"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "专业培训",
+        "course",
+        "service"
+      ],
+      "preview": {
+        "file": "assets/previews/training-female.mp3",
+        "text": "收到新任务后，先在协作表中写清负责人和完成时间。如果进度受阻，请把具体问题记录下来，并及时告诉项目负责人。",
+        "duration": 10.45,
+        "sha256": "0da5103b22f9644742ba5bd7730bec952ffba274f30d0825a7bce0ddd3e368ab",
+        "scene": "course",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/training-female.webp"
+    },
+    {
+      "id": "science-male",
+      "name": "星衡",
+      "gender": "male",
+      "description": "科普解说 · 清亮理性",
+      "prompt": "二十八岁左右成年男性，标准普通话，中高音区，清亮、轻盈，带少量明亮鼻腔共鸣但不鼻音过重。像有好奇心的科普讲解者，逻辑清楚，声音利落有活力，避免低音炮和过度煽情。",
+      "scenes": [
+        "course",
+        "video"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "科普解说",
+        "course",
+        "video"
+      ],
+      "preview": {
+        "file": "assets/previews/science-male.mp3",
+        "text": "为什么雨后容易看到彩虹？阳光进入小水滴时会发生折射，不同颜色的光偏转角度不同，于是分成了彩色的光带。",
+        "duration": 11.52,
+        "sha256": "238fb19e8838657c10c6c6c47635ddc28a6a18bfcb7a345a17cdd9947a2015c4",
+        "scene": "video",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/science-male.webp"
+    },
+    {
+      "id": "tutorial-female",
+      "name": "简宁",
+      "gender": "female",
+      "description": "操作教程 · 利落清楚",
+      "prompt": "二十八岁左右成年女性，标准普通话，中音区，清脆、利落，辅音清晰，声音紧实不过分尖亮。像在身旁一步步演示软件操作，节奏均匀、指令明确，避免拖长尾音、气声和机械播报。",
+      "scenes": [
+        "course",
+        "service"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "操作教程",
+        "course",
+        "service"
+      ],
+      "preview": {
+        "file": "assets/previews/tutorial-female.mp3",
+        "text": "先打开设置，找到保存位置。确认文件夹后，点击完成，就可以继续下一步了。",
+        "duration": 7.68,
+        "sha256": "a949958ad4c5a8f530c10fbe8c2b33dff4aa5b960653ac3b9497bd04990872c6",
+        "scene": "course",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 35,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/tutorial-female.webp"
+    },
+    {
+      "id": "documentary-male",
+      "name": "纪川",
+      "gender": "male",
+      "description": "纪录片旁白 · 厚实克制",
+      "prompt": "五十岁左右成年男性，标准普通话，低音区，厚实、宽阔，带轻微砂砾质感和自然胸腔共鸣。像平静讲述人文纪录片，语句舒展而有分量，避免压喉、耳语和夸张舞台腔。",
+      "scenes": [
+        "story",
+        "video"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "纪录片旁白",
+        "story",
+        "video"
+      ],
+      "preview": {
+        "file": "assets/previews/documentary-male.mp3",
+        "text": "清晨的第一缕光，落在古老的街道上。人们在日常的往来中，续写着这座城市的故事。",
+        "duration": 9.27,
+        "sha256": "4f445f8a79833b4afc946d381c9c0cdde446bacf85713737ace3c30c00209128",
+        "scene": "story",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 35,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/documentary-male.webp"
+    },
+    {
+      "id": "podcast-female",
+      "name": "晚晴",
+      "gender": "female",
+      "description": "播客聊天 · 松弛微哑",
+      "prompt": "三十二岁左右成年女性，标准普通话，中低音区，温暖松弛，带轻微沙哑质地和自然气息。像朋友坐在桌边分享见闻，口语停顿自然，避免甜腻、播音腔和过多气声。",
+      "scenes": [
+        "dialogue",
+        "story"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "播客聊天",
+        "dialogue",
+        "story"
+      ],
+      "preview": {
+        "file": "assets/previews/podcast-female.mp3",
+        "text": "我发现，越是把日程排满，越容易觉得什么都没做好。后来我每天只留三件重要的事，反而能按时下班了。",
+        "duration": 9.1,
+        "sha256": "f596957b6bc6214391ac27ae8d9985d3d23ff1fb3c9f5d01355ab9864f4d2ed4",
+        "scene": "dialogue",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/podcast-female.webp"
+    },
+    {
+      "id": "podcast-male",
+      "name": "牧言",
+      "gender": "male",
+      "description": "播客男声 · 温暖随和",
+      "prompt": "三十五岁左右成年男性，标准普通话，中音区，温暖随和，声线略有颗粒感，口腔共鸣明显但不浑浊。像熟悉的朋友平静聊天，有轻微笑意，避免刻意低沉、油腻和广播腔。",
+      "scenes": [
+        "dialogue",
+        "story"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "播客男声",
+        "dialogue",
+        "story"
+      ],
+      "preview": {
+        "file": "assets/previews/podcast-male.mp3",
+        "text": "我也试过把所有事情都记下来，结果清单越写越长。后来每天先做最重要的一件，心里反而踏实了不少。",
+        "duration": 10.88,
+        "sha256": "ea1bbdb23850c8885f7ae9298822b705e85a70e18f46fe9e50ca902e63a85922",
+        "scene": "dialogue",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/podcast-male.webp"
+    },
+    {
+      "id": "commerce-female",
+      "name": "甜橙",
+      "gender": "female",
+      "description": "好物口播 · 明快亲切",
+      "prompt": "二十五岁左右成年女性，标准普通话，中高音区，明亮、有弹性，带自然笑意和清晰前向共鸣。像真诚分享日常好物，表达轻快有重点，避免尖叫、夸张促销腔和幼态声线。",
+      "scenes": [
+        "ad",
+        "video"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "好物口播",
+        "ad",
+        "video"
+      ],
+      "preview": {
+        "file": "assets/previews/commerce-female.mp3",
+        "text": "钥匙、耳机总在桌上找不到？把这个小收纳盒放在门边，回家顺手一放，第二天出门就不用翻包了。",
+        "duration": 10.17,
+        "sha256": "3ada8ba1e55d749b0a9e1ffa687a1d6a3e3bbacfd07d3a2cc91b7b8e33cbb76e",
+        "scene": "ad",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/commerce-female.webp"
+    },
+    {
+      "id": "brand-male",
+      "name": "朗岳",
+      "gender": "male",
+      "description": "品牌表达 · 醇厚笃定",
+      "prompt": "四十岁左右成年男性，标准普通话，低中音区，醇厚、光滑，气息稳定，磁性克制。像从容介绍用心制作的产品，重点清楚，语尾坚定，避免喊口号、夸张广告腔与过分沙哑。",
+      "scenes": [
+        "ad",
+        "video"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "品牌表达",
+        "ad",
+        "video"
+      ],
+      "preview": {
+        "file": "assets/previews/brand-male.mp3",
+        "text": "一块木头，经过打磨，留下温润的纹理。从桌角的弧度，到手掌碰到的每一处表面，我们都认真做好。",
+        "duration": 12.56,
+        "sha256": "8d8c8d7f26c1b7ce83792f13fedf65898b1106be7e52805e91da60870b3fbef0",
+        "scene": "ad",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/brand-male.webp"
+    },
+    {
+      "id": "service-female",
+      "name": "语棠",
+      "gender": "female",
+      "description": "服务引导 · 轻润友善",
+      "prompt": "二十七岁左右成年女性，标准普通话，中高音区，轻润、柔和、透明，声音轻而不虚，咬字完整。像友善的服务人员清晰引导，礼貌自然，避免机械客服腔、幼态和过度亲昵。",
+      "scenes": [
+        "service",
+        "course"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "服务引导",
+        "service",
+        "course"
+      ],
+      "preview": {
+        "file": "assets/previews/service-female.mp3",
+        "text": "您预约的图书已送达，请在三天内携带借阅证，到一楼服务台领取。图书馆今天开放至晚上九点。",
+        "duration": 10.25,
+        "sha256": "16bcd08e7c8bfa74fd1e3ab28f618cc61d100c78aa88efdf520017827dee8ff4",
+        "scene": "service",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/service-female.webp"
+    },
+    {
+      "id": "meditation-female",
+      "name": "静禾",
+      "gender": "female",
+      "description": "舒缓陪伴 · 柔和低语",
+      "prompt": "三十八岁左右成年女性，标准普通话，中低音区，柔和、绵密，气息平稳，带适量轻气声。像安静陪伴听众放松，语尾自然落下，避免耳语到听不清、压喉和刻意拖音。",
+      "scenes": [
+        "bedtime",
+        "story"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "舒缓陪伴",
+        "bedtime",
+        "story"
+      ],
+      "preview": {
+        "file": "assets/previews/meditation-female.mp3",
+        "text": "把注意力轻轻放回此刻。感受一次自然的呼吸，让肩膀慢慢放松下来。",
+        "duration": 9.67,
+        "sha256": "2e5a7fcfa958e61ef64e5a7589f6a0a4985d69a5c8d4e0147fc7944ff9eaaa9c",
+        "scene": "bedtime",
+        "emotion": "natural",
+        "pace": "slow",
+        "intensity": 35,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/meditation-female.webp"
+    },
+    {
+      "id": "youth-female",
+      "name": "初夏",
+      "gender": "female",
+      "description": "青春对白 · 轻盈明亮",
+      "prompt": "二十岁左右成年女性，标准普通话，中高音区，轻盈清亮，少量自然鼻腔共鸣，带年轻人的灵动。像校园故事中的自然对白，发音完整，避免儿童声线、甜腻和动漫夸张腔。",
+      "scenes": [
+        "game",
+        "dialogue"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "青春对白",
+        "game",
+        "dialogue"
+      ],
+      "preview": {
+        "file": "assets/previews/youth-female.mp3",
+        "text": "走吧，今天的天气这么好。我们去看看新开的书店，也许会遇见喜欢的故事。",
+        "duration": 6.64,
+        "sha256": "fd3768a4fd7906d653f4675564e84dd8ddb423e4d2c86b0447e7426cd921d13b",
+        "scene": "game",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 35,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/youth-female.webp"
+    },
+    {
+      "id": "youth-male",
+      "name": "亦辰",
+      "gender": "male",
+      "description": "青春男声 · 清朗有朝气",
+      "prompt": "二十三岁左右的成年青年男性，完成变声的清朗男声，中音区，有轻暖的胸腔与口腔共鸣，爽朗、干净、亲切。像阳光的年轻同伴自然说话，吐字清楚，语尾利落，避免儿童声、女性声线、高音假声和刻意压低。",
+      "scenes": [
+        "game",
+        "dialogue"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "青春男声",
+        "game",
+        "dialogue",
+        "青年",
+        "清朗"
+      ],
+      "preview": {
+        "file": "assets/previews/youth-male.mp3",
+        "text": "别着急，我们再试一次。刚才已经找到关键步骤了，这一次一定会更顺利。",
+        "duration": 8.208,
+        "sha256": "53ea092e38a9227e799481b3cbcfb4c3dd5b4db34bc3efee12b013a5bf07ab63",
+        "scene": "dialogue",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 35,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/youth-male.webp",
+      "reference": {
+        "file": "voice-youth-male.mp3",
+        "sha256": "53ea092e38a9227e799481b3cbcfb4c3dd5b4db34bc3efee12b013a5bf07ab63",
+        "text": "别着急，我们再试一次。刚才已经找到关键步骤了，这一次一定会更顺利。",
+        "language": "Chinese"
+      }
+    },
+    {
+      "id": "storybook-female",
+      "name": "绘音",
+      "gender": "female",
+      "description": "绘本讲述 · 圆润生动",
+      "prompt": "三十五岁左右成年女性，标准普通话，中音区，圆润饱满，声音富有弹性，温暖明快。像给孩子讲绘本的老师，画面感鲜明，角色语气轻微变化，避免幼态、尖锐和夸张表演。",
+      "scenes": [
+        "story",
+        "bedtime"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "绘本讲述",
+        "story",
+        "bedtime"
+      ],
+      "preview": {
+        "file": "assets/previews/storybook-female.mp3",
+        "text": "小狐狸捡到了一片会发光的叶子。它小心地捧着，想把这份惊喜带给森林里的朋友。",
+        "duration": 7.84,
+        "sha256": "fb1ad88c0e2c434a0b447814a78827b2e74e2e8d330d3dbd72ae1735026799cb",
+        "scene": "story",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 35,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        }
+      },
+      "portrait": "assets/portraits/storybook-female.webp"
+    },
+    {
+      "id": "clear-male",
+      "name": "清舟",
+      "gender": "male",
+      "description": "清爽男声 · 干净有朝气",
+      "prompt": "二十四岁左右成年男性，标准普通话，中高音区，音色干净清朗、结实而不厚重，带一点阳光笑意，辅音利落。像年轻创作者面对面分享见闻，按语义连贯说话，轻重自然，句尾干净收束。避免儿童声、刻意低音、鼻音过重、逐字顿读和上扬拖尾。",
+      "scenes": [
+        "video",
+        "course",
+        "dialogue"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "清爽",
+        "阳光",
+        "青年",
+        "口播",
+        "解说",
+        "新声"
+      ],
+      "preview": {
+        "file": "assets/previews/clear-male.mp3",
+        "text": "冰箱里的食物，为什么要留一点空隙？因为冷空气需要流动，塞得太满，反而会让里面的食物降温更慢。",
+        "scene": "video",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "duration": 8.98,
+        "sha256": "c1d8b1576a47530fa0d2a3a9f11a78b6c719f2928b69826268b865a38ca6d2ca"
+      },
+      "portrait": "assets/portraits/clear-male.webp"
+    },
+    {
+      "id": "warm-male",
+      "name": "怀瑾",
+      "gender": "male",
+      "description": "温润男声 · 磁性陪伴",
+      "prompt": "三十二岁左右成年男性，标准普通话，中低音区，温润圆厚，有柔和的胸腔共鸣，音色细腻顺滑，气息稳定，亲近但不耳语。像安静坐在身旁讲故事，句子连贯，重音随意思自然变化，停顿适度，句尾收住。避免压喉低音、油腻气泡音、过多气声、刻意煽情和拖长尾音。",
+      "scenes": [
+        "story",
+        "bedtime",
+        "dialogue"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "温润",
+        "磁性",
+        "陪伴",
+        "治愈",
+        "有声书",
+        "新声"
+      ],
+      "preview": {
+        "file": "assets/previews/warm-male.mp3",
+        "text": "末班车驶过桥头，车窗里映着万家灯火。他把给女儿买的那本书抱在怀里，想到家，嘴角便慢慢扬了起来。",
+        "scene": "story",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "duration": 10.7,
+        "sha256": "0d07290bbca836f06ee741227bb0bca62f8ccd9e839083666dda2768e285077e"
+      },
+      "portrait": "assets/portraits/warm-male.webp"
+    },
+    {
+      "id": "steady-male",
+      "name": "闻岳",
+      "gender": "male",
+      "description": "沉稳男声 · 力量与质感",
+      "prompt": "四十二岁左右成年男性，标准普通话，低中音区，结实有力量，略带细微颗粒质感，胸腔共鸣饱满，咬字清楚，音头干净。像可靠的品牌讲述者，表达从容自信，逻辑重音明确，连句流畅，语尾笃定。避免喊口号、夸张播音腔、沙哑到含混、刻意压低和每个字一样重。",
+      "scenes": [
+        "ad",
+        "video",
+        "course"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "沉稳",
+        "成熟",
+        "商务",
+        "品牌",
+        "宣传片",
+        "新声"
+      ],
+      "preview": {
+        "file": "assets/previews/steady-male.mp3",
+        "text": "推开窗，新风穿过整间屋子。从第一道密封，到每一次安静开合，让舒适落在生活的每一处细节里。",
+        "scene": "ad",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "duration": 9.2,
+        "sha256": "c1efd98f7a7706bd48d7fcaf5417040fa647a9bbaec5d69aaa69c9e51bf016d3"
+      },
+      "portrait": "assets/portraits/steady-male.webp"
+    },
+    {
+      "id": "clear-female",
+      "name": "沐言",
+      "gender": "female",
+      "description": "清透女声 · 灵动自然",
+      "prompt": "二十六岁左右成年女性，标准普通话，中高音区，清透鲜亮、轻巧而有支撑，音色纯净，带一点自然笑意，辅音清晰。像亲切的短视频讲解者，连贯表达，重音随内容自然起伏，句尾利落收束。避免幼态夹嗓、甜腻鼻音、尖锐齿音、逐字顿读和固定节拍。",
+      "scenes": [
+        "video",
+        "course",
+        "dialogue"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "清透",
+        "灵动",
+        "自然",
+        "口播",
+        "讲解",
+        "新声"
+      ],
+      "preview": {
+        "file": "assets/previews/clear-female.mp3",
+        "text": "长方形的面积等于长乘宽。比如这张卡片，长六厘米，宽四厘米，面积就是六乘四，等于二十四平方厘米。",
+        "scene": "course",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "duration": 11.13,
+        "sha256": "d71a682a3f1bb01d1bf1467ead53f238470d3095e17c26e4d9118153e1c3d3d1"
+      },
+      "portrait": "assets/portraits/clear-female.webp",
+      "reference": {
+        "file": "voice-clear-female.mp3",
+        "sha256": "d71a682a3f1bb01d1bf1467ead53f238470d3095e17c26e4d9118153e1c3d3d1",
+        "text": "长方形的面积等于长乘宽。比如这张卡片，长六厘米，宽四厘米，面积就是六乘四，等于二十四平方厘米。",
+        "language": "Chinese"
+      }
+    },
+    {
+      "id": "warm-female",
+      "name": "南絮",
+      "gender": "female",
+      "description": "温润女声 · 轻松自然",
+      "prompt": "二十八岁成年女声，标准普通话，中音区，声音清楚结实。像约熟悉的朋友出门逛街，随口聊天，语气轻松爽快，用日常语速连贯说话，问句自然上扬。",
+      "scenes": [
+        "dialogue",
+        "story",
+        "video"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "自然",
+        "随和",
+        "聊天",
+        "陪伴",
+        "故事",
+        "新声"
+      ],
+      "preview": {
+        "file": "assets/previews/warm-female.mp3",
+        "text": "今天的事情终于忙完了。要不要一起出去走走？路口新开了一家小店，我们可以顺便看看。",
+        "scene": "dialogue",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 50,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "duration": 7.992,
+        "sha256": "602f4a2dd6fc70bb75f4e18897f9d7b1652dd66343a31d6c39c4131a1b3886c5"
+      },
+      "portrait": "assets/portraits/warm-female.webp",
+      "reference": {
+        "file": "voice-warm-female.mp3",
+        "sha256": "602f4a2dd6fc70bb75f4e18897f9d7b1652dd66343a31d6c39c4131a1b3886c5",
+        "text": "今天的事情终于忙完了。要不要一起出去走走？路口新开了一家小店，我们可以顺便看看。",
+        "language": "Chinese"
+      }
+    },
+    {
+      "id": "elegant-female",
+      "name": "颂雅",
+      "gender": "female",
+      "description": "知性女声 · 从容有质感",
+      "prompt": "三十六岁左右成年女性，标准普通话，中低音区，声音醇润、紧实、通透，成熟知性，有柔和的低频共鸣，吐字完整。像有阅历的女性从容介绍作品，语气自信，连句自然，重点清楚，句尾稳稳落下。避免过分沙哑、刻意性感气声、机械播报、夸张舞台腔和每句同样的语调。",
+      "scenes": [
+        "ad",
+        "course",
+        "video"
+      ],
+      "language": "Chinese",
+      "native": "中文",
+      "keywords": [
+        "知性",
+        "御姐",
+        "成熟",
+        "品牌",
+        "商务",
+        "新声"
+      ],
+      "preview": {
+        "file": "assets/previews/elegant-female.mp3",
+        "text": "早晨，磨好的咖啡粉遇上热水，香气慢慢舒展开来。给忙碌的一天留几分钟，从一杯认真冲泡的咖啡开始。",
+        "scene": "ad",
+        "emotion": "natural",
+        "pace": "normal",
+        "intensity": 30,
+        "mastering": {
+          "targetRmsDb": -21,
+          "paddingMs": 160,
+          "peak": 0.9
+        },
+        "duration": 10.88,
+        "sha256": "273c9711f681695fb1f15ba7e9dba730d0ecdde24d9689e3b29f34680e91c106"
+      },
+      "portrait": "assets/portraits/elegant-female.webp"
+    }
+  ],
+  "emotions": [
+    {
+      "id": "natural",
+      "name": "自然",
+      "prompt": "自然口语，像面对面交流，避免播音腔。"
+    },
+    {
+      "id": "happy",
+      "name": "开心",
+      "prompt": "开心、轻快，喜悦自然流露，不夸张。"
+    },
+    {
+      "id": "excited",
+      "name": "激动",
+      "prompt": "激动、有活力，节奏鲜明但吐字清楚。"
+    },
+    {
+      "id": "gentle",
+      "name": "温柔",
+      "prompt": "温柔、亲近、平和，语气柔软。"
+    },
+    {
+      "id": "calm",
+      "name": "平静",
+      "prompt": "平静从容，语气稳定、舒展。"
+    },
+    {
+      "id": "sad",
+      "name": "难过",
+      "prompt": "低落、难过，克制情绪，略有哽咽。"
+    },
+    {
+      "id": "melancholy",
+      "name": "惆怅",
+      "prompt": "若有所思，惆怅、略带遗憾，情感克制。"
+    },
+    {
+      "id": "angry",
+      "name": "生气",
+      "prompt": "克制着愤怒，语气坚定有力，避免持续喊叫。"
+    },
+    {
+      "id": "afraid",
+      "name": "害怕",
+      "prompt": "害怕、急切，略带颤音，避免持续尖叫。"
+    },
+    {
+      "id": "nervous",
+      "name": "紧张",
+      "prompt": "紧张、有些不安，短促但表达清楚。"
+    },
+    {
+      "id": "urgent",
+      "name": "紧迫",
+      "prompt": "情况紧迫，稍大声，短促有力地催促行动。"
+    },
+    {
+      "id": "surprised",
+      "name": "惊讶",
+      "prompt": "突然惊讶，带不敢相信的感觉，不夸张。"
+    },
+    {
+      "id": "relief",
+      "name": "释然",
+      "prompt": "松了一口气，感激中仍带轻微紧张。"
+    },
+    {
+      "id": "hopeful",
+      "name": "期待",
+      "prompt": "满怀希望和期待，声音自然上扬。"
+    },
+    {
+      "id": "doubtful",
+      "name": "疑惑",
+      "prompt": "疑惑、试探，像在认真询问。"
+    },
+    {
+      "id": "firm",
+      "name": "坚定",
+      "prompt": "坚定、自信、有说服力，清楚有力。"
+    },
+    {
+      "id": "tired",
+      "name": "疲惫",
+      "prompt": "疲惫、气息稍弱，保持清晰可懂。"
+    },
+    {
+      "id": "whisper",
+      "name": "轻声",
+      "prompt": "低声、轻柔地说，像靠近身边的人交谈。"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "dialogue",
+      "name": "自然对话",
+      "prompt": "像真实场景中的对话，口语自然。"
+    },
+    {
+      "id": "game",
+      "name": "游戏角色",
+      "prompt": "正在游戏剧情中与同伴说话，带情境感。"
+    },
+    {
+      "id": "story",
+      "name": "故事旁白",
+      "prompt": "有画面感地讲述故事，情绪随语义自然变化。"
+    },
+    {
+      "id": "video",
+      "name": "短视频解说",
+      "prompt": "节奏清楚，讲解亲切有重点，避免机械朗读。"
+    },
+    {
+      "id": "course",
+      "name": "课程讲解",
+      "prompt": "讲解清晰耐心，关键处有自然重音。"
+    },
+    {
+      "id": "ad",
+      "name": "品牌广告",
+      "prompt": "自信、清晰、有感染力，像真诚推荐。"
+    },
+    {
+      "id": "service",
+      "name": "客服提示",
+      "prompt": "礼貌、耐心、清晰，语气友好。"
+    },
+    {
+      "id": "bedtime",
+      "name": "睡前故事",
+      "prompt": "轻柔、舒缓地讲故事，节奏从容。"
+    }
+  ],
+  "languages": [
+    {
+      "id": "Chinese",
+      "name": "中文"
+    },
+    {
+      "id": "English",
+      "name": "英语"
+    },
+    {
+      "id": "Japanese",
+      "name": "日语"
+    },
+    {
+      "id": "Korean",
+      "name": "韩语"
+    },
+    {
+      "id": "German",
+      "name": "德语"
+    },
+    {
+      "id": "French",
+      "name": "法语"
+    },
+    {
+      "id": "Russian",
+      "name": "俄语"
+    },
+    {
+      "id": "Portuguese",
+      "name": "葡萄牙语"
+    },
+    {
+      "id": "Spanish",
+      "name": "西班牙语"
+    },
+    {
+      "id": "Italian",
+      "name": "意大利语"
+    }
+  ],
+  "templateCategories": [
+    {
+      "id": "course",
+      "name": "课程与培训"
+    },
+    {
+      "id": "content",
+      "name": "视频与播客"
+    },
+    {
+      "id": "business",
+      "name": "产品与服务"
+    },
+    {
+      "id": "story",
+      "name": "故事与陪伴"
+    },
+    {
+      "id": "dialogue",
+      "name": "角色与对话"
+    }
+  ],
+  "templates": [
+    {
+      "id": "course-batch",
+      "name": "批量课程讲解",
+      "category": "course",
+      "description": "按知识点分段，用例子讲清概念，再安排练习。",
+      "voiceKey": "design:clear-female",
+      "scene": "course",
+      "emotion": "natural",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 30,
+      "instruction": "像一对一讲课，重点处轻微强调，每段结尾自然停顿。",
+      "text": "长方形的面积等于长乘宽。比如这张卡片，长六厘米，宽四厘米，面积就是六乘四，等于二十四平方厘米。\n再看这块长八米、宽三米的花圃。用八乘三，得到二十四，所以它的面积是二十四平方米。\n请算一算，一张长五厘米、宽三厘米的照片，面积是多少？先写出算式，再检查面积单位。",
+      "batch": true,
+      "prefix": "course-batch"
+    },
+    {
+      "id": "knowledge-lesson",
+      "name": "知识微课",
+      "category": "course",
+      "description": "概念、例子、总结，适合短课与知识付费。",
+      "voiceKey": "design:teacher-male",
+      "scene": "course",
+      "emotion": "calm",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 40,
+      "instruction": "",
+      "text": "先认识今天的概念：把复杂问题拆成几个容易回答的小问题。\n例如整理学习计划，可以分别考虑目标、时间和行动。\n记住这三个步骤，再尝试把它用在你自己的任务里。",
+      "batch": true,
+      "prefix": "knowledge-lesson"
+    },
+    {
+      "id": "training-onboarding",
+      "name": "新员工培训",
+      "category": "course",
+      "description": "介绍团队流程与工作规范。",
+      "voiceKey": "design:training-female",
+      "scene": "course",
+      "emotion": "natural",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 40,
+      "instruction": "",
+      "text": "欢迎加入团队。这一节先介绍我们的协作方式。\n收到任务后，请确认目标、负责人和完成时间。\n遇到阻碍及时沟通，完成后记录结果，方便伙伴接着推进。",
+      "batch": true,
+      "prefix": "training-onboarding"
+    },
+    {
+      "id": "tutorial-software",
+      "name": "软件操作教程",
+      "category": "course",
+      "description": "一步一操作，说明清楚，方便跟做。",
+      "voiceKey": "design:tutorial-female",
+      "scene": "course",
+      "emotion": "natural",
+      "pace": "slow",
+      "language": "Chinese",
+      "intensity": 40,
+      "instruction": "",
+      "text": "第一步，打开设置页面，找到文件保存位置。\n第二步，选择一个方便查找的文件夹，检查路径是否正确。\n第三步，点击保存。现在可以返回工作区，继续创建你的内容。",
+      "batch": true,
+      "prefix": "tutorial-software"
+    },
+    {
+      "id": "language-lesson",
+      "name": "英语跟读课堂",
+      "category": "course",
+      "description": "英语原生音色，适合句型示范与跟读。",
+      "voiceKey": "preset:Aiden",
+      "scene": "course",
+      "emotion": "natural",
+      "pace": "slow",
+      "language": "English",
+      "intensity": 40,
+      "instruction": "",
+      "text": "Welcome to our English practice. Listen first, then repeat.\nCould you tell me how to get to the library?\nNow try the sentence again, at your own pace.",
+      "batch": true,
+      "prefix": "language-lesson"
+    },
+    {
+      "id": "exam-review",
+      "name": "考点复习",
+      "category": "course",
+      "description": "先提炼重点，再安排练习与回顾。",
+      "voiceKey": "design:teacher-female",
+      "scene": "course",
+      "emotion": "firm",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 30,
+      "instruction": "",
+      "text": "这一节复习三个重点：先看条件，再确定方法，最后检查结果。\n练习时，先独立完成，再对照示例找出不同的步骤。\n如果还有疑问，回到概念部分，再用自己的话解释一次。",
+      "batch": true,
+      "prefix": "exam-review"
+    },
+    {
+      "id": "knowledge-video",
+      "name": "科普短视频",
+      "category": "content",
+      "description": "用问题开场，把原理讲得有趣易懂。",
+      "voiceKey": "design:science-male",
+      "scene": "video",
+      "emotion": "hopeful",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 40,
+      "instruction": "",
+      "text": "为什么雨后容易看到彩虹？答案藏在小小的水滴里。阳光进入水滴后，改变了方向，也分开成不同的颜色。下次遇见彩虹，不妨看看太阳在你的哪个方向。",
+      "batch": false,
+      "prefix": "knowledge-video"
+    },
+    {
+      "id": "travel-vlog",
+      "name": "旅行与生活旁白",
+      "category": "content",
+      "description": "轻松叙述画面，保留日常的温度。",
+      "voiceKey": "preset:Vivian",
+      "scene": "video",
+      "emotion": "gentle",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 40,
+      "instruction": "",
+      "text": "走进这条小街，脚步也慢了下来。转角的咖啡香、窗边晒太阳的小猫，还有刚刚经过的笑声，都成了今天值得记住的风景。",
+      "batch": false,
+      "prefix": "travel-vlog"
+    },
+    {
+      "id": "podcast-intro",
+      "name": "播客开场",
+      "category": "content",
+      "description": "像朋友聊天，自然介绍本期话题。",
+      "voiceKey": "design:podcast-female",
+      "scene": "dialogue",
+      "emotion": "natural",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 40,
+      "instruction": "",
+      "text": "欢迎收听，今天想和你聊聊生活里的小改变。有时候，让一天变得轻松的，不是做更多事情，而是找到更适合自己的节奏。",
+      "batch": false,
+      "prefix": "podcast-intro"
+    },
+    {
+      "id": "documentary",
+      "name": "人文纪录片",
+      "category": "content",
+      "description": "舒展、有分量，适合城市与人物旁白。",
+      "voiceKey": "design:documentary-male",
+      "scene": "story",
+      "emotion": "calm",
+      "pace": "slow",
+      "language": "Chinese",
+      "intensity": 40,
+      "instruction": "",
+      "text": "清晨，街道渐渐苏醒。有人推开店门，有人赶往熟悉的站台。这些日复一日的小事，构成了一座城市最真实的表情。",
+      "batch": false,
+      "prefix": "documentary"
+    },
+    {
+      "id": "product-demo",
+      "name": "产品使用说明",
+      "category": "business",
+      "description": "介绍用途、操作步骤和使用细节。",
+      "voiceKey": "design:tutorial-female",
+      "scene": "course",
+      "emotion": "natural",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 40,
+      "instruction": "",
+      "text": "使用前，请先确认配件齐全。\n按照图示安装，连接完成后检查是否稳固。\n首次使用建议从基础设置开始，再根据需要调整。",
+      "batch": true,
+      "prefix": "product-demo"
+    },
+    {
+      "id": "ecommerce",
+      "name": "好物推荐口播",
+      "category": "business",
+      "description": "先说使用场景，再讲实用细节。",
+      "voiceKey": "design:commerce-female",
+      "scene": "ad",
+      "emotion": "happy",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 45,
+      "instruction": "",
+      "text": "桌面上总有一些小物件找不到？这个收纳设计，把常用的东西放在顺手的位置。拿取方便，整理也轻松，适合喜欢清爽桌面的你。",
+      "batch": false,
+      "prefix": "ecommerce"
+    },
+    {
+      "id": "brand-ad",
+      "name": "品牌介绍",
+      "category": "business",
+      "description": "克制、自信，突出产品理念。",
+      "voiceKey": "design:brand-male",
+      "scene": "ad",
+      "emotion": "firm",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 35,
+      "instruction": "",
+      "text": "我们相信，好的设计应该回应日常的需要。从一次顺手的拿取，到一处细致的触感，每个小地方，都值得认真对待。",
+      "batch": false,
+      "prefix": "brand-ad"
+    },
+    {
+      "id": "service-guide",
+      "name": "服务流程提示",
+      "category": "business",
+      "description": "礼貌清楚，适合引导与通知。",
+      "voiceKey": "design:service-female",
+      "scene": "service",
+      "emotion": "gentle",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 40,
+      "instruction": "",
+      "text": "您好，欢迎使用。请先确认页面上的信息。\n填写完成后，点击下一步，查看办理进度。\n如需帮助，可以通过页面中的服务入口联系我们。",
+      "batch": true,
+      "prefix": "service-guide"
+    },
+    {
+      "id": "bedtime-story",
+      "name": "睡前故事",
+      "category": "story",
+      "description": "轻柔舒缓，适合晚间故事。",
+      "voiceKey": "preset:Serena",
+      "scene": "bedtime",
+      "emotion": "gentle",
+      "pace": "slow",
+      "language": "Chinese",
+      "intensity": 40,
+      "instruction": "",
+      "text": "夜晚，小兔子把窗帘轻轻拉上。星星在窗外眨着眼睛，像是在说：今天已经很努力了，现在，可以安心休息啦。",
+      "batch": false,
+      "prefix": "bedtime-story"
+    },
+    {
+      "id": "children-reading",
+      "name": "儿童绘本对话",
+      "category": "story",
+      "description": "旁白与童声分开，逐句设置角色。",
+      "voiceKey": "design:storybook-female",
+      "scene": "story",
+      "emotion": "gentle",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 40,
+      "instruction": "",
+      "text": "小狐狸发现了一片发光的叶子。\n这会是谁送来的礼物呢？\n它决定带着叶子，去问问森林里的朋友。",
+      "batch": true,
+      "prefix": "children-reading",
+      "rows": [
+        {
+          "text": "小狐狸发现了一片发光的叶子。",
+          "voiceKey": "design:storybook-female",
+          "emotion": "gentle",
+          "filename": "picture-01"
+        },
+        {
+          "text": "这会是谁送来的礼物呢？",
+          "voiceKey": "design:girl-clear",
+          "emotion": "doubtful",
+          "filename": "picture-02"
+        },
+        {
+          "text": "它决定带着叶子，去问问森林里的朋友。",
+          "voiceKey": "design:storybook-female",
+          "emotion": "hopeful",
+          "filename": "picture-03"
+        }
+      ]
+    },
+    {
+      "id": "audiobook",
+      "name": "有声故事",
+      "category": "story",
+      "description": "平稳讲述，适合章节与长篇分批制作。",
+      "voiceKey": "design:story-male",
+      "scene": "story",
+      "emotion": "natural",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 40,
+      "instruction": "",
+      "text": "他在旧书里发现了一张没有署名的地图。地图的尽头，是一座从未在旅途中听说过的小镇。第二天清晨，他带上行李，决定去看看。",
+      "batch": false,
+      "prefix": "audiobook"
+    },
+    {
+      "id": "relaxation",
+      "name": "舒缓陪伴",
+      "category": "story",
+      "description": "柔和、从容，适合放松类内容。",
+      "voiceKey": "design:meditation-female",
+      "scene": "bedtime",
+      "emotion": "gentle",
+      "pace": "slow",
+      "language": "Chinese",
+      "intensity": 25,
+      "instruction": "",
+      "text": "找一个舒服的位置坐好，让肩膀自然放松。\n不用急着改变什么，只是感受一次轻松的呼吸。\n留一点时间给自己，慢慢回到此刻。",
+      "batch": true,
+      "prefix": "relaxation"
+    },
+    {
+      "id": "game-dialogue",
+      "name": "游戏剧情对白",
+      "category": "dialogue",
+      "description": "两位青年角色，一句一人，分别命名。",
+      "voiceKey": "design:youth-male",
+      "scene": "game",
+      "emotion": "natural",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 40,
+      "instruction": "",
+      "text": "前面就是入口了，我们一起进去看看。\n先等一下，你看，门边好像有一条线索。\n发现了！我们再认真检查一遍。",
+      "batch": true,
+      "prefix": "game-dialogue",
+      "rows": [
+        {
+          "text": "前面就是入口了，我们一起进去看看。",
+          "voiceKey": "design:youth-male",
+          "emotion": "hopeful",
+          "filename": "game-01"
+        },
+        {
+          "text": "先等一下，你看，门边好像有一条线索。",
+          "voiceKey": "design:youth-female",
+          "emotion": "doubtful",
+          "filename": "game-02"
+        },
+        {
+          "text": "发现了！我们再认真检查一遍。",
+          "voiceKey": "design:youth-male",
+          "emotion": "happy",
+          "filename": "game-03"
+        }
+      ]
+    },
+    {
+      "id": "interview-dialogue",
+      "name": "双人播客",
+      "category": "dialogue",
+      "description": "主持人接话追问，嘉宾分享经历，逐句调整表达。",
+      "voiceKey": "preset:Serena",
+      "scene": "dialogue",
+      "emotion": "natural",
+      "pace": "normal",
+      "language": "Chinese",
+      "intensity": 30,
+      "instruction": "两个人坐在桌边轻松聊天，声音松弛，按意思连贯说话，重音随语义变化，句尾自然收住。",
+      "deliverySettings": {
+        "normalize": true,
+        "trimSilence": true,
+        "pauseMs": 80
+      },
+      "text": "你还记得，第一次接到这份工作的时候，是什么感觉吗？\n记得啊。其实我当时挺没底的，第一天到公司，连该坐哪儿都不知道。\n真的？那你后来是怎么慢慢适应的？\n先找人问呗。有个同事每天带我去吃午饭，我有什么不懂的，就趁吃饭的时候问他。\n所以，让你放松下来的，反而是一起吃饭这件小事？\n对。工作还是那些工作，但知道有人愿意帮你，心里就不一样了。\n我懂，就是终于觉得，自己不是一个人在硬撑了。\n是啊。后来来了新人，我也会先问一句，要不要一起吃个饭？",
+      "batch": true,
+      "prefix": "interview-dialogue",
+      "rows": [
+        {
+          "text": "你还记得，第一次接到这份工作的时候，是什么感觉吗？",
+          "voiceKey": "preset:Serena",
+          "roleName": "主持人",
+          "emotion": "natural",
+          "instruction": "像和熟悉的朋友聊天，放松、好奇地问对方，重音放在第一次，语调轻轻提起，把话交给对方。",
+          "filename": "interview-01"
+        },
+        {
+          "text": "记得啊。其实我当时挺没底的，第一天到公司，连该坐哪儿都不知道。",
+          "voiceKey": "preset:Dylan",
+          "roleName": "嘉宾",
+          "emotion": "natural",
+          "instruction": "随口接住对方的问题，像回忆自己的经历，有一点自嘲的笑意，后半句轻松地说完，保持连贯。",
+          "filename": "interview-02"
+        },
+        {
+          "text": "真的？那你后来是怎么慢慢适应的？",
+          "voiceKey": "preset:Serena",
+          "roleName": "主持人",
+          "emotion": "natural",
+          "instruction": "先轻轻惊讶地接一句真的，随即感兴趣地追问后来的经历，两个问句语调有变化，轻松自然。",
+          "filename": "interview-03"
+        },
+        {
+          "text": "先找人问呗。有个同事每天带我去吃午饭，我有什么不懂的，就趁吃饭的时候问他。",
+          "voiceKey": "preset:Dylan",
+          "roleName": "嘉宾",
+          "emotion": "natural",
+          "instruction": "熟人聊天的随和口气，开头很自然地接话，再具体讲同事带自己吃饭的经历，句子连贯，语调有轻重变化。",
+          "filename": "interview-04"
+        },
+        {
+          "text": "所以，让你放松下来的，反而是一起吃饭这件小事？",
+          "voiceKey": "preset:Serena",
+          "roleName": "主持人",
+          "emotion": "natural",
+          "instruction": "听懂之后带着轻微笑意向对方确认，轻轻强调反而，句尾是温和好奇的问句，口气松弛。",
+          "filename": "interview-05"
+        },
+        {
+          "text": "对。工作还是那些工作，但知道有人愿意帮你，心里就不一样了。",
+          "voiceKey": "preset:Dylan",
+          "roleName": "嘉宾",
+          "emotion": "natural",
+          "instruction": "先肯定对方的理解，再真诚地说自己的感受，轻轻强调有人愿意帮你，最后平实收住，像面对面说话。",
+          "filename": "interview-06"
+        },
+        {
+          "text": "我懂，就是终于觉得，自己不是一个人在硬撑了。",
+          "voiceKey": "preset:Serena",
+          "roleName": "主持人",
+          "emotion": "natural",
+          "instruction": "像听朋友说完后深有同感地接话，开头我懂轻而自然，后半句是理解对方的陈述，句尾下落。",
+          "filename": "interview-07"
+        },
+        {
+          "text": "是啊。后来来了新人，我也会先问一句，要不要一起吃个饭？",
+          "voiceKey": "preset:Dylan",
+          "roleName": "嘉宾",
+          "emotion": "natural",
+          "instruction": "温暖、随和地回应，带一点笑意讲后来的变化，最后一句像当面邀请同事吃饭，语气轻松。",
+          "filename": "interview-08"
+        }
+      ]
+    }
+  ]
+}

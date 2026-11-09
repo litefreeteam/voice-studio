@@ -1,0 +1,83 @@
+/* Fit the logical viewport. Keep the user's system text/display scale intact. */
+:root[data-platform="win32"]{--titlebar-height:0px}
+:root[data-platform="win32"] .titlebar{display:none}
+main:has(.settings-page:not(.hidden)){padding-top:calc(var(--titlebar-height) + 16px)}
+.settings,.project-chapters,.project-cast{top:calc(var(--titlebar-height) + 16px);max-height:calc(100vh - var(--titlebar-height) - 76px)}
+.project-script-card>.project-bulk{top:calc(var(--titlebar-height) + 16px)}
+.lab-preview{top:calc(var(--titlebar-height) + 16px)}
+
+@media(max-width:1180px){
+  .home-featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .home-more-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .project-layout{grid-template-columns:184px minmax(0,1fr);grid-template-rows:auto 1fr;gap:14px}
+  .project-chapters{grid-column:1;grid-row:1;position:static;max-height:240px}
+  .project-cast{grid-column:1;grid-row:2;position:static;max-height:none}
+  .project-script-column{grid-column:2;grid-row:1 / 3}
+  .project-filters,.project-line-top,.project-selection{flex-wrap:wrap}
+  .project-heading-actions{flex-wrap:wrap;justify-content:flex-end}
+  .project-detail-meta{flex-wrap:wrap;gap:6px 12px}
+}
+
+@media(max-width:1050px){
+  main{padding-inline:22px}
+  header{gap:16px;margin-bottom:20px}
+  h1{font-size:24px}
+  .creative-header{min-height:92px;margin-top:0}
+  .studio-art{width:112px;height:84px;border-radius:16px}
+  .workspace{grid-template-columns:minmax(0,1fr) 270px;gap:16px}
+  .editor-toolbar{flex-wrap:wrap;gap:10px;padding:12px 16px}
+  .toolbar-actions{flex-wrap:wrap;gap:12px}
+  .settings-body{padding:14px}
+  .selected-voice .avatar,.selected-voice .avatar.illustrated{width:48px;height:48px;border-radius:12px}
+  .selected-voice strong{font-size:14px}
+  .script-head,.script-row{grid-template-columns:minmax(0,1fr) 108px 96px;gap:8px}
+  .project-next{align-items:flex-start;gap:14px;padding:16px}
+  .project-next h2{font-size:15px}
+  .project-steps>button{flex-wrap:wrap}
+  .project-library-heading h1{font-size:26px}
+  .lab-kind{grid-template-columns:minmax(0,1fr) 100px;gap:10px;padding:16px;min-height:150px}
+  .lab-kind h2{font-size:16px}
+}
+
+@media(max-width:960px){
+  .workspace,.lab-layout{grid-template-columns:minmax(0,1fr)}
+  .settings,.lab-preview{position:static;max-height:none}
+  .home-more-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-layout{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto}
+  .project-chapters{grid-column:1;grid-row:1;max-height:180px}
+  .project-cast{grid-column:1;grid-row:2;max-height:340px;overflow-y:auto}
+  .project-script-column{grid-column:1;grid-row:3}
+  #project-chapters{display:flex;gap:6px;overflow-x:auto}
+  #project-chapters>button{width:auto;flex:0 0 auto;max-width:220px}
+  #project-cast{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-detail-heading{flex-wrap:wrap}
+  .project-heading-actions{justify-content:flex-start}
+  .project-next{flex-wrap:wrap}
+  .project-next-actions{flex-direction:row;flex-wrap:wrap}
+  .lab-local-badge{display:none}
+  .sample-player{gap:10px;padding:12px 16px;flex-wrap:wrap}
+  .sample-timeline{min-width:160px}
+}
+
+@media(max-height:700px){
+  main{padding-top:calc(var(--titlebar-height) + 20px)}
+  .home-topline{margin-bottom:12px}
+  .home-hero{padding:14px 20px}
+  .home-hero h1{font-size:22px}
+  .home-library-heading{margin:16px 0 12px}
+  .creative-header{min-height:88px;margin-bottom:18px}
+  .studio-art{height:84px;width:112px}
+  .settings-hero{min-height:88px;padding-block:14px}
+}
+
+@media(max-width:800px){
+  :root{--sidebar:192px}
+  main{padding-inline:18px}
+  .brand{gap:2px 8px}
+  .nav{gap:9px}
+  .home-featured-grid,.lab-kinds{grid-template-columns:minmax(0,1fr)}
+  .history-filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-library-bar,.library-search{flex-wrap:wrap}
+  .project-library-search{max-width:none;flex-basis:100%}
+}

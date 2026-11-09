@@ -1,0 +1,315 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Shengyue generation request",
+  "type": "object",
+  "additionalProperties": false,
+  "anyOf": [
+    {
+      "required": [
+        "text"
+      ]
+    },
+    {
+      "required": [
+        "rows"
+      ]
+    }
+  ],
+  "properties": {
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 5000
+    },
+    "rows": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "$ref": "#/$defs/row"
+      }
+    },
+    "batch": {
+      "type": "boolean"
+    },
+    "speaker": {
+      "type": "string",
+      "enum": [
+        "Vivian",
+        "Serena",
+        "Uncle_Fu",
+        "Dylan",
+        "Eric",
+        "Ryan",
+        "Aiden",
+        "Ono_Anna",
+        "Sohee"
+      ]
+    },
+    "engine": {
+      "type": "string",
+      "enum": [
+        "standard",
+        "light"
+      ]
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "preset",
+        "design",
+        "clone"
+      ]
+    },
+    "language": {
+      "type": "string"
+    },
+    "emotion": {
+      "type": "string"
+    },
+    "scene": {
+      "type": "string"
+    },
+    "pace": {
+      "type": "string",
+      "enum": [
+        "slow",
+        "normal",
+        "fast"
+      ]
+    },
+    "intensity": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "instruction": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "character": {
+      "type": "string"
+    },
+    "voiceDescription": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "voiceName": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "referenceId": {
+      "type": "string"
+    },
+    "referenceText": {
+      "type": "string",
+      "maxLength": 1000
+    },
+    "sampleRate": {
+      "type": "integer",
+      "enum": [
+        24000,
+        44100,
+        48000
+      ]
+    },
+    "prefix": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 48,
+      "pattern": "^[\\p{L}\\p{N}_-]+$"
+    },
+    "filename": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80,
+      "pattern": "^[\\p{L}\\p{N}_-]+$"
+    },
+    "project": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "lockVoice": {
+      "type": "boolean",
+      "description": "人物声音默认定声；false 显式关闭。定声后继承样本表达，逐句表演参数不重定声。"
+    },
+    "voiceScopeId": {
+      "type": "string",
+      "maxLength": 64,
+      "description": "稳定的作品 ID；跨调用、重做和续做时保持相同。"
+    },
+    "voiceId": {
+      "type": "string",
+      "maxLength": 128,
+      "description": "作品内稳定的角色 ID，默认使用 character 或 custom。"
+    },
+    "voiceRevision": {
+      "type": "string",
+      "maxLength": 64,
+      "description": "更改此版本会重新定声；普通重做与续做保持不变。"
+    },
+    "voiceAnchorId": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64,
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "可选，校验复用的定声样本；需与声音设置、范围及版本匹配。"
+    },
+    "referenceStyle": {
+      "type": "string",
+      "enum": [
+        "original",
+        "expressive"
+      ],
+      "description": "original reuses recorded expression (default); expressive uses optional VoxCPM2 resources, installed only by explicit setup"
+    }
+  },
+  "$defs": {
+    "row": {
+      "description": "Each row accepts the top-level voice and performance properties except rows/batch; text is required and limited to 600 characters.",
+      "type": "object",
+      "required": [
+        "text"
+      ],
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 600
+        },
+        "speaker": {
+          "type": "string",
+          "enum": [
+            "Vivian",
+            "Serena",
+            "Uncle_Fu",
+            "Dylan",
+            "Eric",
+            "Ryan",
+            "Aiden",
+            "Ono_Anna",
+            "Sohee"
+          ]
+        },
+        "engine": {
+          "type": "string",
+          "enum": [
+            "standard",
+            "light"
+          ]
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "preset",
+            "design",
+            "clone"
+          ]
+        },
+        "language": {
+          "type": "string"
+        },
+        "emotion": {
+          "type": "string"
+        },
+        "scene": {
+          "type": "string"
+        },
+        "pace": {
+          "type": "string",
+          "enum": [
+            "slow",
+            "normal",
+            "fast"
+          ]
+        },
+        "intensity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "instruction": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "character": {
+          "type": "string"
+        },
+        "voiceDescription": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "voiceName": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "referenceId": {
+          "type": "string"
+        },
+        "referenceText": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "sampleRate": {
+          "type": "integer",
+          "enum": [
+            24000,
+            44100,
+            48000
+          ]
+        },
+        "prefix": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 48,
+          "pattern": "^[\\p{L}\\p{N}_-]+$"
+        },
+        "filename": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^[\\p{L}\\p{N}_-]+$"
+        },
+        "project": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "lockVoice": {
+          "type": "boolean",
+          "description": "人物声音默认定声；false 显式关闭。定声后继承样本表达，逐句表演参数不重定声。"
+        },
+        "voiceScopeId": {
+          "type": "string",
+          "maxLength": 64,
+          "description": "稳定的作品 ID；跨调用、重做和续做时保持相同。"
+        },
+        "voiceId": {
+          "type": "string",
+          "maxLength": 128,
+          "description": "作品内稳定的角色 ID，默认使用 character 或 custom。"
+        },
+        "voiceRevision": {
+          "type": "string",
+          "maxLength": 64,
+          "description": "更改此版本会重新定声；普通重做与续做保持不变。"
+        },
+        "voiceAnchorId": {
+          "type": "string",
+          "minLength": 64,
+          "maxLength": 64,
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "可选，校验复用的定声样本；需与声音设置、范围及版本匹配。"
+        },
+        "referenceStyle": {
+          "type": "string",
+          "enum": [
+            "original",
+            "expressive"
+          ],
+          "description": "original reuses recorded expression (default); expressive uses optional VoxCPM2 resources, installed only by explicit setup"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

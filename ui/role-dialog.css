@@ -1,0 +1,105 @@
+/* Role settings keep the selected voice visible and the save action in reach. */
+.icon-users{mask-image:url('assets/icons/users.svg')}
+#project-role-dialog{width:820px;max-width:calc(100vw - 48px);max-height:calc(100vh - 56px);padding:0;border-radius:20px;overflow:hidden;color:var(--ink);background:#fff}
+#project-role-dialog[open]{animation:role-dialog-in .24s cubic-bezier(.2,.8,.2,1)}
+#project-role-dialog::backdrop{background:#30284466;backdrop-filter:blur(3px)}
+#project-role-form{display:flex;flex-direction:column;max-height:calc(100vh - 58px)}
+#project-role-dialog .role-dialog-heading{display:flex;align-items:center;gap:13px;padding:21px 24px;margin:0;border-bottom:1px solid #eeeaf5;flex-shrink:0;background:#fff}
+.role-heading-mark{display:grid;place-items:center;width:43px;height:43px;border:1px solid #e3daf8;border-radius:13px;background:linear-gradient(145deg,#f7f3ff,#ece5fc);color:#9473c2;flex-shrink:0}
+.role-heading-mark .ui-icon{width:21px;height:21px}
+.role-dialog-heading>div{min-width:0;flex:1}
+.role-eyebrow{display:block;font-size:10px;color:#a394b2;margin-bottom:2px}
+#project-role-dialog h2{margin:0;font-size:21px;line-height:1.5;overflow-wrap:anywhere}
+#project-role-dialog #project-role-subtitle{margin:4px 0 0;color:#958a9e;font-size:11px;line-height:1.7}
+.role-close-button{display:grid;place-items:center;width:31px;height:31px;margin-left:auto;align-self:flex-start;border-radius:9px;color:#a397b2;background:#f8f6fb;flex-shrink:0}
+.role-close-button:hover{background:#f0eaf9;color:var(--accent)}
+.role-close-button .ui-icon{width:16px;height:16px}
+.role-dialog-body{display:grid;grid-template-columns:260px minmax(0,1fr);align-items:start;gap:20px;padding:22px 24px;overflow-y:auto;overscroll-behavior:contain;min-height:0;scrollbar-width:thin;background:#fcfbfe}
+.role-voice-panel{padding:18px 16px;border:1px solid #e7ddf4;border-radius:15px;background:linear-gradient(155deg,#f6f1ff,#fff 78%);min-width:0}
+.role-voice-hero{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+#project-role-portrait{flex-shrink:0;display:flex}
+#project-role-portrait .avatar{width:66px;height:74px;border-radius:15px;font-size:26px;box-shadow:0 3px 9px #37204f09}
+.role-voice-copy{min-width:0;flex:1}
+.role-voice-copy>span{display:block;margin-bottom:3px;color:#a08ab7;font-size:10px}
+.role-voice-copy>strong{display:block;font-size:20px;font-weight:650;line-height:1.5;overflow-wrap:anywhere}
+.role-voice-copy>small{display:block;font-size:10px;color:#a094ac;margin-top:4px}
+#project-role-dialog label{display:block;font-size:11px;font-weight:500;color:#71637e;margin:0 0 7px}
+#project-role-dialog label>span{font-size:10px;color:#b0a4ba;font-weight:400}
+#project-role-dialog input:not([type=checkbox],[type=range]),#project-role-dialog textarea{padding:9px 11px;font-size:12px;border-color:#e8e2f0;background:#fff;border-radius:8px;line-height:1.7}
+#project-role-dialog input:not([type=checkbox],[type=range]):focus,#project-role-dialog textarea:focus{border-color:#bca6df;box-shadow:0 0 0 3px #ede5f966}
+#project-role-dialog textarea{resize:vertical;min-height:66px}
+#project-role-dialog .project-role-voice-field{display:block}
+#project-role-dialog .custom-select{width:100%;min-width:0}
+#project-role-dialog .select-trigger{min-height:39px;padding:8px 11px;font-size:12px;border-color:#e2d7ef;background:#fff}
+.project-role-voice-field .select-trigger .avatar{display:none}
+#project-role-dialog .role-action{display:flex;align-items:center;justify-content:center;gap:7px;width:100%;min-height:37px;padding:8px 10px;font-size:11px;font-weight:500;border:1px solid transparent;border-radius:9px;line-height:1.7;transition:background .18s,border-color .18s,box-shadow .18s,transform .18s}
+.role-action .ui-icon{width:14px;height:14px}
+.role-action:hover:not(:disabled){transform:translateY(-1px)}
+.role-action:active:not(:disabled){transform:scale(.98)}
+#project-role-dialog .role-preview-button{margin-top:10px;background:#fff;border-color:#dfd2f0;color:#8c6aab;box-shadow:0 2px 4px #623d8505}
+#project-role-dialog .role-preview-button:hover:not(:disabled){border-color:#b99ad8;box-shadow:0 4px 8px #6b438b10}
+.role-preview-button.playing{background:#f0e8fa!important;border-color:#c5addf!important}
+#project-role-dialog .role-installed-button{justify-content:flex-start;padding:8px 2px;margin-top:3px;font-size:10px;color:#9a88ab;min-height:30px}
+.role-installed-button .ui-icon{width:12px;height:12px}
+.role-lock-panel{border-top:1px solid #e8dff1;padding-top:15px;margin-top:13px}
+#project-role-dialog .role-lock-toggle{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0;cursor:pointer}
+.role-lock-toggle>span{min-width:0;flex:1}
+#project-role-dialog .role-lock-toggle strong{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:550;color:#6e557f}
+.role-lock-toggle strong .ui-icon{width:14px;height:14px}
+.role-lock-toggle small{display:block;font-size:10px;color:#ac99b8;margin:4px 0 0 19px}
+#project-role-lock-voice{appearance:none;position:relative;width:31px;height:18px;padding:0;border:1px solid #d3c8df;border-radius:12px;background:#e4dce9;transition:background .2s,border-color .2s;cursor:pointer}
+#project-role-lock-voice::after{content:"";position:absolute;width:12px;height:12px;left:2px;top:2px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #54406122;transition:transform .2s}
+#project-role-lock-voice:checked{background:#9675bd;border-color:#9675bd}
+#project-role-lock-voice:checked::after{transform:translateX(13px)}
+.role-anchor-heading{display:flex;align-items:center;gap:6px;justify-content:space-between;margin-top:15px}
+.role-anchor-state{display:flex;align-items:center;gap:4px;font-size:10px;color:#ad8b59}
+.role-anchor-state::before{content:"";width:4px;height:4px;border-radius:50%;background:currentColor}
+.role-anchor-state[data-state=ready]{color:#73917b}
+.role-reset-button{display:flex;align-items:center;gap:4px;padding:2px 0;font-size:10px;color:#9b85ac}
+.role-reset-button .ui-icon{width:11px;height:11px}
+#project-role-dialog .role-prepare-button{margin-top:9px;background:#9472bb;color:#fff;border-color:#9472bb;box-shadow:0 3px 7px #7b54951a}
+#project-role-dialog .role-prepare-button:hover:not(:disabled){background:#8461ad;box-shadow:0 5px 9px #7b549526}
+.role-prepare-button.is-loading .ui-icon{mask:none;background:none;border:1.5px solid currentColor;border-right-color:transparent;border-radius:50%;animation:role-button-spin .7s linear infinite}
+.role-voice-note{display:flex;gap:6px;margin-top:15px;color:#ad9cba}
+.role-voice-note>.ui-icon{width:12px;height:12px;margin-top:3px}
+#project-role-dialog #project-role-voice-note{margin:0;font-size:10px;line-height:1.85;color:#a392b0}
+.role-details-column{display:flex;flex-direction:column;gap:16px;min-width:0}
+.role-form-section{padding:17px 18px;border:1px solid #ebe6f1;border-radius:14px;background:#fff}
+.role-form-section h3{display:flex;align-items:center;gap:7px;margin:0 0 16px;font-size:13px;font-weight:600;color:#665477}
+.role-form-section h3>.ui-icon{width:15px;height:15px;color:#a390b3}
+.role-section-caption{margin-left:auto;font-size:9px;color:#baadc4;font-weight:400}
+#project-role-dialog .field-grid{gap:13px;min-width:0}
+.role-field-hint{margin:9px 0 0!important;color:#ad9fb8!important;font-size:10px!important;line-height:1.8}
+.role-reference-fields{margin-bottom:14px}
+.role-performance-note{margin:12px 0 0!important;padding:9px 11px;border-radius:8px;background:#f7f4fa;color:#9a88a8!important;font-size:10px!important;line-height:1.8}
+#project-role-dialog .project-role-advanced{margin:0;border:1px solid #e7e0ee;border-radius:13px;background:#fff;overflow:clip;font-size:11px}
+.project-role-advanced summary{display:flex;align-items:center;gap:9px;padding:14px 17px;list-style:none;color:#806393;user-select:none}
+.project-role-advanced summary::-webkit-details-marker{display:none}
+.project-role-advanced summary>.ui-icon{width:15px;height:15px;color:#a28cb3}
+.project-role-advanced summary>span:nth-child(2){flex:1}
+.project-role-advanced summary small{display:block;font-size:9px;color:#b4a4bf;margin-top:3px}
+.project-role-advanced summary>.ui-icon:last-child{width:12px;height:12px;transition:transform .2s}
+.project-role-advanced[open] summary>.ui-icon:last-child{transform:rotate(180deg)}
+.project-role-advanced[open] summary{border-bottom:1px solid #f0ebf5}
+.role-advanced-body{padding:16px 18px}
+.role-advanced-body>textarea{margin-bottom:14px}
+#project-role-description-field{margin-bottom:14px}
+#project-role-dialog .role-intensity-label{display:flex;align-items:center;justify-content:space-between;margin:0 0 11px}
+.role-intensity-label output{font-size:10px;color:#a088b2;background:#f6f1fa;padding:1px 6px;border-radius:5px}
+.role-range-labels{display:flex;justify-content:space-between;font-size:9px;color:#b7a9c0;margin-top:4px}
+#project-role-dialog .role-dialog-footer{position:static;display:block;height:auto;padding:15px 24px 17px;margin:0;border-top:1px solid #eae4f1;background:#fff;flex-shrink:0}
+#project-role-dialog #project-role-error{margin:0 0 11px;font-size:11px;line-height:1.7;color:#b5667a}
+#project-role-error:empty{display:none}
+#project-role-dialog .dialog-actions{display:flex;align-items:center;gap:9px;margin:0}
+#project-role-dialog .dialog-actions button{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:36px;padding:8px 15px;font-size:11px;border-radius:9px;transition:background .18s,box-shadow .18s,transform .18s}
+#project-role-dialog .dialog-actions .ui-icon{width:14px;height:14px}
+#project-role-dialog .dialog-actions .primary{background:#9270b8;box-shadow:0 3px 7px #8358a51a}
+#project-role-dialog .dialog-actions .primary:hover{background:#8260aa;box-shadow:0 4px 9px #8358a526}
+#project-role-dialog .dialog-actions .role-delete-button{padding-inline:0;color:#b38a9d;font-size:10px;margin-right:auto}
+#project-role-dialog .role-delete-button:hover{color:#be6b87}
+#project-role-dialog button:focus-visible{outline:2px solid #ac8bcd;outline-offset:3px}
+@keyframes role-dialog-in{from{opacity:0;transform:translateY(9px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes role-button-spin{to{transform:rotate(360deg)}}
+@media(max-width:720px){.role-dialog-body{grid-template-columns:minmax(0,1fr);padding:16px;gap:16px}.role-voice-panel{padding:16px}.role-voice-hero{margin-bottom:14px}.role-details-column{gap:14px}#project-role-dialog .role-dialog-heading{padding:17px 18px}#project-role-dialog .role-dialog-footer{padding:13px 18px}.role-heading-mark{width:36px;height:36px}#project-role-dialog h2{font-size:18px}.role-section-caption{display:none}}
+@media(max-height:680px){#project-role-dialog{max-height:calc(100vh - 28px)}#project-role-form{max-height:calc(100vh - 30px)}#project-role-dialog .role-dialog-heading{padding-block:14px}#project-role-dialog .role-dialog-footer{padding-block:11px}.role-dialog-body{padding-block:16px}}
+@media(prefers-reduced-motion:reduce){#project-role-dialog,#project-role-dialog *{animation:none!important;transition:none!important}}

@@ -1,0 +1,14 @@
+# Intel macOS uses the last official x86_64 PyTorch wheel.
+qwen-tts==0.1.1
+torch==2.2.2
+torchaudio==2.2.2
+numpy==1.26.4
+onnxruntime==1.19.2
+numba==0.61.2
+llvmlite==0.44.0
+lameenc>=1.8,<2
+soundfile>=0.13,<1
+huggingface-hub>=0.34,<2
+cryptography==46.0.3
+faster-whisper==1.2.1
+ctranslate2==4.6.0

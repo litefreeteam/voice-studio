@@ -1,0 +1,7 @@
+mlx-audio[tts]==0.5.8
+lameenc>=1.8,<2
+soundfile>=0.13,<1
+huggingface-hub>=0.34,<2
+cryptography==46.0.3
+faster-whisper==1.2.1
+ctranslate2==4.6.0

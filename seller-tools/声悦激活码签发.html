@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'"><title>声悦 · 激活码签发</title><style>*{box-sizing:border-box}body{font:15px/1.7 system-ui,sans-serif;background:#f4f3f8;color:#292337;margin:0;padding:40px 24px}main{max-width:780px;margin:auto;background:white;padding:36px 42px;border:1px solid #e8e4ef;border-radius:22px}h1{font-size:27px;margin:6px 0}small,.hint{color:#6b6277}.tag{color:#7550b3;font-weight:600}label{display:block;margin:22px 0 7px;font-weight:600}input,textarea,button{font:inherit}input,textarea{width:100%;border:1px solid #dcd5e8;border-radius:9px;padding:12px}textarea{resize:vertical;word-break:break-all}button{border:0;border-radius:10px;background:#7650b7;color:white;padding:12px 20px;cursor:pointer;margin:16px 8px 0 0}button.secondary{background:#f0ecf7;color:#5d398f}button:disabled{opacity:.45;cursor:wait}#status{min-height:26px;color:#6a429e}details{margin-top:22px}code{background:#f4f0f8;padding:3px 5px}hr{border:0;border-top:1px solid #eee8f3;margin-top:30px}.hint{font-size:13px}</style></head><body><main><div class="tag">声悦 · 商家工具</div><h1>为客户签发离线激活码</h1><p class="hint">核对客户订单后，凭机器码即可签发，无需检测报告。此页面在本机签发，不连接网络；私钥不会被保存到浏览器。</p><label for="key">1. 选择你的签发私钥</label><input type="file" id="key" accept=".pem"><p class="hint">选择项目中 <code>.seller/signing-key.pem</code>。请离线备份，勿随客户端发送给客户。</p><label for="machine">2. 粘贴客户机器码</label><input id="machine" spellcheck="false" placeholder="SYD1-…" maxlength="37"><p class="hint">签发新版 90 位激活码。客户名称、订单号请另存到你的订单记录中。</p><button id="issue">签发永久专业版授权</button><p id="status" role="status"></p><label for="output">3. 将完整激活码发送给客户</label><textarea id="output" readonly rows="3" placeholder="签发后的激活码显示在这里"></textarea><button id="copy" class="secondary">复制激活码</button><button id="download" class="secondary">保存激活码文件</button><hr><details><summary>授权与换机说明</summary><p>新版只支持 SY2 激活码，旧 SY1 码不再适用。每个激活码绑定一台设备。换电脑后由客户提供新机器码，再次签发。客户激活后不需要连接你的服务器。</p><p>完全离线授权无法远程撤销已签发的永久激活码，也无法严格限制换机总数。请按订单记录管理重发。</p><p>签发私钥只属于你，客户安装包仅包含验签公钥。请使用当前版本 Chrome 或 Edge 打开此 HTML；可在断网状态下使用。</p></details></main><script>
+const publicPEM = "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAEk8mRmKZHCyEGPMx6wPtZB52JQ/bUpkr3mZgybyxCbU=\n-----END PUBLIC KEY-----\n";
+const $ = id => document.getElementById(id);
+const decodePEM = text => Uint8Array.from(atob(text.replace(/-----[^-]+-----/g,'').replace(/\s/g,'')),c=>c.charCodeAt(0));
+const b64 = data => btoa(String.fromCharCode(...new Uint8Array(data))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+$('issue').onclick = async () => {
+  $('status').textContent=''; $('output').value=''; $('issue').disabled=true;
+  try {
+    if(!crypto.subtle) throw Error('请使用当前版本的 Chrome 或 Edge 打开此文件');
+    const file=$('key').files[0];if(!file)throw Error('请先选择签发私钥文件');
+    if(file.size>8192)throw Error('私钥文件格式不正确');
+    const machine=$('machine').value.trim().toUpperCase();if(!/^SYD1-[0-9A-F]{32}$/.test(machine))throw Error('机器码应为 SYD1- 开头的 37 个字符');
+    const privateKey=await crypto.subtle.importKey('pkcs8',decodePEM(await file.text()),{name:'Ed25519'},false,['sign']);
+    const publicKey=await crypto.subtle.importKey('spki',decodePEM(publicPEM),{name:'Ed25519'},false,['verify']);
+    const bytes=new TextEncoder().encode(`shengyue:offline:pro:perpetual:v2:${machine}`),signature=await crypto.subtle.sign('Ed25519',privateKey,bytes);
+    if(!await crypto.subtle.verify('Ed25519',publicKey,signature,bytes))throw Error('此私钥与当前客户端不匹配，请选择原始签发私钥');
+    $('output').value='SY2.'+b64(signature);$('status').textContent='90 位激活码签发成功。请在订单中保存机器码与激活码。';
+  }catch(e){$('status').textContent=e.message;}finally{$('issue').disabled=false;}
+};
+$('copy').onclick=async()=>{if(!$('output').value)return;try{await navigator.clipboard.writeText($('output').value);$('status').textContent='激活码已复制';}catch{$('output').select();$('status').textContent='激活码已选中，请按 Ctrl+C 或 Command+C 复制';}};
+$('download').onclick=()=>{if(!$('output').value)return;const url=URL.createObjectURL(new Blob([$ ('output').value],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='声悦-'+$('machine').value.trim()+'.activation.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+</script></body></html>

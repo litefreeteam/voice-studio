@@ -1,0 +1,11 @@
+{
+  "name": "shengyue-payment-service",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "nodemailer": "10.1.7"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "credit": "Apple Support · macOS Sequoia 中文官方示例截图",
+  "article": "https://support.apple.com/zh-cn/102445",
+  "assets": [
+    {
+      "file": "blocked-example.png",
+      "source": "https://cdsassets.apple.com/live/7WUAS350/images/macos/sequoia/locale/zh-cn/macos-sequoia-app-not-opened-could-not-verify-free-from-malware.png",
+      "bytes": 65941,
+      "sha256": "a38679453a2c813350e42c3999c49d3b9d6367b3287b1cb813007ae943c7bee5"
+    },
+    {
+      "file": "privacy-security-example.png",
+      "source": "https://cdsassets.apple.com/live/7WUAS350/images/macos/sequoia/locale/zh-cn/macos-sequoia-system-settings-privacy-and-security-open-app-anyway.png",
+      "bytes": 243626,
+      "sha256": "f1d34417f67cbfa73ce689c048561dd69698ca5f3aa5d52b7505c6579a44ab7d"
+    }
+  ]
+}

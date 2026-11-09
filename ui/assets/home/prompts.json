@@ -1,0 +1,83 @@
+{
+  "mode": "built-in image_gen",
+  "styleReference": "ui/assets/illustrations/voice-studio.webp",
+  "assets": [
+    {
+      "name": "hero",
+      "prompt": "Use case: stylized-concept. Asset type: wide 3:1 homepage hero background for Shengyue, a Chinese desktop voice creation app. Create an elegant soft tactile 3D watercolor clay illustration on a pale lavender (#eee9fb) background. Composition: LEFT 60 percent is almost empty softly illuminated lavender negative space for live HTML text. RIGHT 40 percent features a refined lavender studio microphone with champagne-gold accents, cream headphones, an open little storybook with a tiny crescent and leaves, a few translucent flowing lilac and peach sound ribbons. Not busy, calm premium creative desk atmosphere, gentle diffuse light, subtle paper texture, believable soft shadows, sophisticated pastel palette matching a light purple desktop software UI. All objects fully fit with generous space around them. No text, no letters, no typography, no interface, no watermarks, no logos. This is a background illustration asset, not a UI mockup.",
+      "generatedSource": "/Users/bingzhang/.codex/generated_images/01a12907-b4a5-7650-8fd9-1868184fcd33/exec-ced7c80f-94f2-4ba5-a0da-7a26adf06feb.png",
+      "projectSource": "docs/artwork-source/home/hero.png",
+      "output": "ui/assets/home/hero.webp",
+      "width": 1800,
+      "height": 601,
+      "bytes": 55362,
+      "conversion": "Pillow resize, WebP quality 88, method 6"
+    },
+    {
+      "name": "short-video",
+      "prompt": "Use case: stylized-concept. Asset type: single illustration asset for a Chinese local voice studio homepage scenario card, not a UI or screenshot. Make one wide landscape image, aspect ratio 3:2. Style: exquisite soft 3D handcrafted watercolor / paper-clay illustration with tactile paper grain, delicate painted details, matte rounded surfaces, subtle hand-painted shading, cozy domestic editorial feel. Palette: muted lavender, lilac, creamy ivory, soft peach with tiny pale-gold accents. Background is a single very pale pastel color with no hard horizon, ample breathing room around a compact centered group of objects, gentle contact shadows. Keep all main objects within center 70% width and 75% height for flexible crops. Soft diffuse natural light. No people, no lettering, no words, no numbers, no logos, no watermark, no borders, no collage, no multiple panels. Create the illustration alone. Subject: a small upright lavender smartphone showing a simple landscape of layered lavender mountains, peach sky and a cream sun without any UI text. Beside it a little rolled film strip, a sculptural cream play triangle, and a miniature lavender recording microphone. Communicate creating a voiceover for a short video. Light lilac solid background.",
+      "generatedSource": "/Users/bingzhang/.codex/generated_images/01a1290c-450f-7392-8779-4ae24e696293/exec-7d1b2c73-9c9c-47b4-9786-f78adac3077d.png",
+      "projectSource": "docs/artwork-source/home/short-video.png",
+      "output": "ui/assets/home/short-video.webp",
+      "width": 800,
+      "height": 533,
+      "bytes": 36872,
+      "conversion": "Pillow LANCZOS resize, WebP quality 88, method 6"
+    },
+    {
+      "name": "podcast",
+      "prompt": "Use case: stylized-concept. Asset type: single illustration asset for a Chinese local voice studio homepage scenario card, not a UI or screenshot. Make one wide landscape image, aspect ratio 3:2. Style: exquisite soft 3D handcrafted watercolor / paper-clay illustration with tactile paper grain, delicate painted details, matte rounded surfaces, subtle hand-painted shading, cozy domestic editorial feel. Palette: muted lavender, lilac, creamy ivory, soft peach with tiny pale-gold accents. Background is a single very pale pastel color with no hard horizon, ample breathing room around a compact centered group of objects, gentle contact shadows. Keep all main objects within center 70% width and 75% height for flexible crops. Soft diffuse natural light. No people, no lettering, no words, no numbers, no logos, no watermark, no borders, no collage, no multiple panels. Create the illustration alone. Subject: two small elegant tabletop podcast microphones, one creamy ivory and one pale lavender, angled gently toward each other with a soft lavender over-ear headphone set resting in the foreground. Small subtle sculptural sound-wave ribbons connect the two. Communicate a warm two-person podcast conversation. Light lavender solid background.",
+      "generatedSource": "/Users/bingzhang/.codex/generated_images/01a1290c-450f-7392-8779-4ae24e696293/exec-64260f9c-8512-492f-9c8c-d4fa54c3cabf.png",
+      "projectSource": "docs/artwork-source/home/podcast.png",
+      "output": "ui/assets/home/podcast.webp",
+      "width": 800,
+      "height": 533,
+      "bytes": 42456,
+      "conversion": "Pillow LANCZOS resize, WebP quality 88, method 6"
+    },
+    {
+      "name": "game",
+      "prompt": "Use case: stylized-concept. Asset type: single illustration asset for a Chinese local voice studio homepage scenario card, not a UI or screenshot. Make one wide landscape image, aspect ratio 3:2. Style: exquisite soft 3D handcrafted watercolor / paper-clay illustration with tactile paper grain, delicate painted details, matte rounded surfaces, subtle hand-painted shading, cozy domestic editorial feel. Palette: muted lavender, lilac, creamy ivory, soft peach with tiny pale-gold accents. Background is a single very pale pastel color with no hard horizon, ample breathing room around a compact centered group of objects, gentle contact shadows. Keep all main objects within center 70% width and 75% height for flexible crops. Soft diffuse natural light. No people, no lettering, no words, no numbers, no logos, no watermark, no borders, no collage, no multiple panels. Create the illustration alone. Subject: an exquisite rounded lavender game controller, one small handcrafted fantasy sword with ivory blade and peach-gold hilt, and two softly glowing lavender crystals, with a small sculptural curved sound wave. Friendly fantasy game voice acting mood, polished but calm. Pale lilac solid background.",
+      "generatedSource": "/Users/bingzhang/.codex/generated_images/01a1290c-450f-7392-8779-4ae24e696293/exec-91319039-a207-4661-9e3d-0c32da8b3bdf.png",
+      "projectSource": "docs/artwork-source/home/game.png",
+      "output": "ui/assets/home/game.webp",
+      "width": 800,
+      "height": 533,
+      "bytes": 35664,
+      "conversion": "Pillow LANCZOS resize, WebP quality 88, method 6"
+    },
+    {
+      "name": "picture-book",
+      "prompt": "Use case: stylized-concept. Asset type: single illustration asset for a Chinese local voice studio homepage scenario card, not a UI or screenshot. Make one wide landscape image, aspect ratio 3:2. Style: exquisite soft 3D handcrafted watercolor / paper-clay illustration with tactile paper grain, delicate painted details, matte rounded surfaces, subtle hand-painted shading, cozy domestic editorial feel. Palette: muted lavender, lilac, creamy ivory, soft peach with tiny pale-gold accents. Background is a single very pale pastel color with no hard horizon, ample breathing room around a compact centered group of objects, gentle contact shadows. Keep all main objects within center 70% width and 75% height for flexible crops. Soft diffuse natural light. No people, no lettering, no words, no numbers, no logos, no watermark, no borders, no collage, no multiple panels. Create the illustration alone. Subject: a beautiful open cream picture book with a small pop-up watercolor woodland emerging from its pages: a friendly little ivory rabbit, rounded sage-green and lavender trees, a tiny peach star and a few delicately painted leaves. Communicate telling a children's picture book story. Warm pale peach-cream solid background.",
+      "generatedSource": "/Users/bingzhang/.codex/generated_images/01a1290c-450f-7392-8779-4ae24e696293/exec-72a73a78-f499-43f6-ae24-5610629e5ee7.png",
+      "projectSource": "docs/artwork-source/home/picture-book.png",
+      "output": "ui/assets/home/picture-book.webp",
+      "width": 800,
+      "height": 533,
+      "bytes": 43980,
+      "conversion": "Pillow LANCZOS resize, WebP quality 88, method 6"
+    },
+    {
+      "name": "course",
+      "prompt": "Use case: stylized-concept. Asset type: single illustration asset for a Chinese local voice studio homepage scenario card, not a UI or screenshot. Make one wide landscape image, aspect ratio 3:2. Style: exquisite soft 3D handcrafted watercolor / paper-clay illustration with tactile paper grain, delicate painted details, matte rounded surfaces, subtle hand-painted shading, cozy domestic editorial feel. Palette: muted lavender, lilac, creamy ivory, soft peach with tiny pale-gold accents. Background is a single very pale pastel color with no hard horizon, ample breathing room around a compact centered group of objects, gentle contact shadows. Keep all main objects within center 70% width and 75% height for flexible crops. Soft diffuse natural light. No people, no lettering, no words, no numbers, no logos, no watermark, no borders, no collage, no multiple panels. Create the illustration alone. Subject: a small lavender laptop, its screen displaying a simple wordless educational diagram made from a few pastel circles and connecting lines, accompanied by a cream notebook open at blank pages and an orange-peach pencil. Communicate preparing and narrating an online lesson. Soft very pale lavender-cream solid background.",
+      "generatedSource": "/Users/bingzhang/.codex/generated_images/01a1290c-450f-7392-8779-4ae24e696293/exec-0b01bcac-4245-459f-bbde-0e50cad532c3.png",
+      "projectSource": "docs/artwork-source/home/course.png",
+      "output": "ui/assets/home/course.webp",
+      "width": 800,
+      "height": 533,
+      "bytes": 37890,
+      "conversion": "Pillow LANCZOS resize, WebP quality 88, method 6"
+    },
+    {
+      "name": "audiobook",
+      "prompt": "Use case: stylized-concept. Asset type: single illustration asset for a Chinese local voice studio homepage scenario card, not a UI or screenshot. Make one wide landscape image, aspect ratio 3:2. Style: exquisite soft 3D handcrafted watercolor / paper-clay illustration with tactile paper grain, delicate painted details, matte rounded surfaces, subtle hand-painted shading, cozy domestic editorial feel. Palette: muted lavender, lilac, creamy ivory, soft peach with tiny pale-gold accents. Background is a single very pale pastel color with no hard horizon, ample breathing room around a compact centered group of objects, gentle contact shadows. Keep all main objects within center 70% width and 75% height for flexible crops. Soft diffuse natural light. No people, no lettering, no words, no numbers, no logos, no watermark, no borders, no collage, no multiple panels. Create the illustration alone. Subject: an open cream book resting on two softly rounded stacked books, a lavender over-ear headphone set partly draped over the books, and a tiny warm-glowing cream desk lamp to the side. Quiet cozy audiobook listening and narration mood. Warm very pale peach solid background.",
+      "generatedSource": "/Users/bingzhang/.codex/generated_images/01a1290c-450f-7392-8779-4ae24e696293/exec-ad6cba4e-a818-45c4-bd94-d8181bfc9d90.png",
+      "projectSource": "docs/artwork-source/home/audiobook.png",
+      "output": "ui/assets/home/audiobook.webp",
+      "width": 800,
+      "height": 533,
+      "bytes": 36706,
+      "conversion": "Pillow LANCZOS resize, WebP quality 88, method 6"
+    }
+  ]
+}

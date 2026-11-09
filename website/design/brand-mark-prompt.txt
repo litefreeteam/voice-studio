@@ -1,0 +1,8 @@
+Tool: built-in image_gen.imagegen
+transparent_background: true
+Final asset: public/assets/brand-mark.webp
+Favicon: public/assets/favicon.png
+
+Use case: logo-brand. Asset type: a single finished brand symbol for SHENGYUE VOICE / 声悦配音, a polished creative voice studio website. Primary request: design an original, extremely refined, compact sonic ribbon monogram. One continuous sculptural S-shaped ribbon with two interlocking flowing folds; its negative space subtly suggests a sound wave and an infinite creative loop. It should read instantly at 40px. Standalone mark only, no text. Style: premium contemporary brand identity, precise confident silhouette, broad graceful curves, sophisticated optical balance, restrained satin violet with pale lavender edge highlights. Palette: vivid violet #8056f3 and soft lavender #bba3ff; suitable on dark ink #090912 and ivory. Composition: centered single icon, near-square 1024x1024, tight balanced framing with generous clear alpha margin. Transparent background with genuine alpha. Avoid: rounded-square app tiles, boxed badges, microphone icons, generic equalizer bars, play icons, decorative particles, bloom, heavy drop shadows, bevelled button look, mockup, wordmark, extra symbols. This is a replacement for a demo-looking app badge: make it feel like a credible established creative product.
+
+The generated image was trimmed to its alpha bounds, scaled to 327 × 512, and encoded as WebP. Its alpha was preserved. The Chinese/English wordmark is live website typography. No parent application assets were changed.

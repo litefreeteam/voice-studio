@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="24" y1="0" x2="442" y2="360" gradientUnits="userSpaceOnUse"><stop stop-color="#eee4fb"/><stop offset="1" stop-color="#f8f3ff"/></linearGradient>
+    <linearGradient id="card" x1="112" y1="80" x2="276" y2="282" gradientUnits="userSpaceOnUse"><stop stop-color="#c8b2e4"/><stop offset="1" stop-color="#a17ac5"/></linearGradient>
+    <radialGradient id="disc"><stop stop-color="#6d537e"/><stop offset=".7" stop-color="#47354f"/><stop offset="1" stop-color="#5e456c"/></radialGradient>
+    <filter id="shadow" filterUnits="userSpaceOnUse" x="30" y="0" width="430" height="360" color-interpolation-filters="sRGB"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#75518f" flood-opacity=".17"/></filter>
+  </defs>
+  <rect width="480" height="360" rx="28" fill="url(#bg)"/><circle cx="412" cy="36" r="146" fill="#fff" opacity=".3"/><circle cx="45" cy="340" r="100" fill="#d6c6ef" opacity=".25"/>
+  <g filter="url(#shadow)">
+    <circle cx="295" cy="180" r="100" fill="url(#disc)"/>
+    <g stroke="#aa8fbd" opacity=".18"><circle cx="295" cy="180" r="85"/><circle cx="295" cy="180" r="77"/><circle cx="295" cy="180" r="69"/><circle cx="295" cy="180" r="61"/></g>
+    <circle cx="295" cy="180" r="32" fill="#d3bde9"/><circle cx="295" cy="180" r="8" fill="#f6effc"/>
+    <rect x="98" y="70" width="186" height="220" rx="15" fill="url(#card)"/><rect x="110" y="82" width="162" height="196" rx="9" stroke="#fff" stroke-opacity=".25"/>
+    <circle cx="191" cy="169" r="48" fill="#fff" opacity=".12"/><path d="M183 191v-55l30-6v49" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="174" cy="191" rx="11" ry="9" fill="#fff"/><ellipse cx="204" cy="180" rx="11" ry="9" fill="#fff"/>
+    <g stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".65"><path d="M143 240v8m12-14v20m12-23v26m12-17v8m12-19v30m12-22v14m12-17v20m12-15v9m12-13v17"/></g>
+  </g>
+  <g fill="#ad8dca" opacity=".45"><circle cx="63" cy="105" r="5"/><circle cx="397" cy="273" r="4"/><circle cx="418" cy="101" r="3"/></g><path d="M388 61v25m-12-13h25M58 244v13m-6-6h13" stroke="#bba1d3" stroke-width="2" stroke-linecap="round"/>
+</svg>

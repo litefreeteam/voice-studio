@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self' blob:; connect-src 'none'">
+  <title>声悦</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="laboratory.css">
+  <link rel="stylesheet" href="activation.css">
+  <link rel="stylesheet" href="preflight.css">
+  <link rel="stylesheet" href="settings.css">
+  <link rel="stylesheet" href="project-library.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="audio-studio.css">
+  <link rel="stylesheet" href="role-dialog.css">
+  <link rel="stylesheet" href="import-dialog.css">
+  <link rel="stylesheet" href="mix-dialog.css">
+  <link rel="stylesheet" href="project-editor.css">
+  <link rel="stylesheet" href="playback.css">
+</head>
+<body class="activation-view">
+  <div class="titlebar"><span>声悦</span><span>好声音，让表达更动人</span></div>
+  <section id="activation-gate" class="activation-gate" aria-labelledby="gate-title" aria-busy="true">
+    <div class="activation-layout">
+    <div class="activation-intro">
+      <div class="activation-brand"><img src="icon.png" alt="" width="42" height="42"><span>声悦<small>好声音，让表达更动人</small></span></div>
+      <span class="activation-eyebrow">你的本地声音工作台</span>
+      <h1 id="gate-title">用自然的声音，<br><em>让创作更动人。</em></h1>
+      <p>从一段文案，到一份有温度的声音作品。<br>配音、播客、多角色创作，都在这台电脑上完成。</p>
+      <div id="activation-wave" class="activation-wave" data-motion="playing">
+        <canvas id="gate-wave-canvas" aria-hidden="true"></canvas><canvas id="gate-wave-fallback" aria-hidden="true" hidden></canvas>
+        <button id="gate-motion" class="wave-motion" aria-label="暂停粒子动效" aria-pressed="false" title="暂停粒子动效"><span class="ui-icon icon-pause" aria-hidden="true"></span></button>
+      </div>
+      <div class="activation-features">
+        <div><span class="activation-feature-icon"><span class="ui-icon gate-icon-lightning" aria-hidden="true"></span></span><span><strong>丰富音色</strong><small>多种风格、专业自然</small></span></div>
+        <div><span class="activation-feature-icon"><span class="ui-icon gate-icon-shield" aria-hidden="true"></span></span><span><strong>本地运行</strong><small>隐私安全、离线可用</small></span></div>
+        <div><span class="activation-feature-icon"><span class="ui-icon gate-icon-user" aria-hidden="true"></span></span><span><strong>高效创作</strong><small>视频、播客、配音等</small></span></div>
+      </div>
+      <button id="gate-preflight" class="preflight-entry" type="button"><span class="activation-preflight-icon"><span class="ui-icon icon-headphones" aria-hidden="true"></span></span><span class="activation-preflight-copy"><strong>电脑兼容性检测（可选）</strong><span id="gate-preflight-badge">检查配置与环境</span></span><span class="ui-icon icon-arrow-right" aria-hidden="true"></span></button>
+      <small class="activation-signature">声悦 · 让好声音创造更多可能</small>
+    </div>
+    <div class="card activation-card">
+      <span class="activation-tag">免费版</span>
+      <h2>开启你的声音创作</h2><p class="activation-card-description">安装即可使用。首次启动先检查配置，再下载需要的模型。</p>
+      <p id="gate-status" class="activation-status" role="status" aria-live="polite">正在打开工作台…</p>
+      <button id="gate-retry" class="text-button hidden">重新打开工作台</button>
+      <div class="activation-links"><button id="gate-support" class="text-button">使用帮助</button><button id="gate-logs" class="text-button">运行记录</button><button id="gate-notices" class="text-button">第三方许可</button></div>
+    </div>
+    </div>
+  </section>
+  <dialog id="preflight-dialog" class="preflight-dialog" aria-labelledby="preflight-title">
+    <div class="preflight-heading"><div><h2 id="preflight-title">电脑配置与环境检查</h2><p>自愿检查系统、内存、磁盘与环境，不下载资源或生成配音。</p></div><button id="preflight-close" class="preflight-close" aria-label="关闭配置检查"><span class="ui-icon icon-x" aria-hidden="true"></span></button></div>
+    <div class="preflight-body">
+      <ul id="preflight-options" class="preflight-option-grid" aria-label="自动检测的四项功能"><li data-package="light"><span class="ui-icon icon-mic" aria-hidden="true"></span>轻量配音</li><li data-package="standard"><span class="ui-icon icon-headphones" aria-hidden="true"></span>生动配音与情绪</li><li data-package="character"><span class="ui-icon icon-sparkles" aria-hidden="true"></span>人物与童声创作</li><li data-package="reference"><span class="ui-icon icon-arrow-right-left" aria-hidden="true"></span>声音克隆</li></ul>
+      <details class="preflight-optional"><summary>录音检测<span>可选<span class="ui-icon icon-chevron-down" aria-hidden="true"></span></span></summary><div class="preflight-microphone"><label><input id="preflight-needs-microphone" type="checkbox">需要直接录音</label><button id="preflight-microphone" class="text-button">检测麦克风</button><span id="preflight-microphone-state" role="status">仅检测权限与音量，不保存录音</span></div></details>
+      <div class="preflight-storage"><span>保存位置</span><span id="preflight-location" tabindex="0" aria-label="声音与组件保存位置"></span><button id="preflight-change-location" class="text-button">更换</button><span id="preflight-space"></span></div>
+      <section class="preflight-environment" aria-label="本机配置检查"><details id="preflight-details"><summary><span class="preflight-check-heading"><span class="ui-icon gate-icon-shield" aria-hidden="true"></span>本机配置<span id="preflight-check-count" role="status"></span></span><span class="preflight-detail-toggle">详情<span class="ui-icon icon-chevron-down" aria-hidden="true"></span></span></summary><ul id="preflight-checks" class="preflight-checks"></ul></details><ul id="preflight-alerts" class="preflight-checks" hidden></ul></section>
+      <div class="preflight-actions"><button id="preflight-prepare" class="primary" aria-busy="false"><progress id="preflight-button-progress" max="4" value="0" aria-hidden="true"></progress><span class="preflight-button-spinner" aria-hidden="true"></span><span id="preflight-prepare-label">检查配置与环境</span><span id="preflight-button-count" aria-hidden="true" hidden>0 / 4</span><span id="preflight-button-icon" class="ui-icon icon-arrow-right" aria-hidden="true"></span></button><button id="preflight-stop" class="text-button" hidden>停止检测</button></div>
+      <p id="preflight-progress" role="status" aria-live="polite"></p>
+      <div id="preflight-results" class="preflight-results"></div>
+    </div>
+    <div class="preflight-footer"><p id="preflight-summary" class="preflight-summary" role="status" aria-live="polite">正在检查…</p><button id="preflight-copy" class="primary" disabled><span class="ui-icon gate-icon-copy" aria-hidden="true"></span>复制检测报告</button></div>
+  </dialog>
+  <dialog id="gate-contact-dialog" class="activation-contact" aria-labelledby="gate-contact-title" aria-describedby="gate-contact-description">
+    <button id="gate-contact-close" class="activation-contact-close" aria-label="关闭联系客服"><span class="ui-icon icon-x" aria-hidden="true"></span></button>
+    <span class="activation-tag">企业微信</span>
+    <h2 id="gate-contact-title">联系客服</h2>
+    <p id="gate-contact-description">安装、下载模型或使用中遇到问题，欢迎联系。</p>
+    <div id="gate-contact-qr-frame" class="activation-contact-qr" hidden><img id="gate-contact-qr" data-src="assets/contact-qr.png" alt="微信联系二维码" width="564" height="581"></div>
+    <p id="gate-contact-state" class="activation-contact-state" role="status">正在加载二维码…</p>
+    <p id="gate-contact-caption" class="activation-contact-caption" hidden>使用微信扫一扫，联系我们</p>
+  </dialog>
+  <div id="workspace" hidden inert>
+  <aside class="sidebar">
+    <div class="brand"><img src="icon.png" alt=""><span>声悦</span><small>好声音，让表达更动人</small></div>
+    <div class="nav-label">你的创作空间</div>
+    <nav aria-label="主导航">
+      <button class="nav active" data-view="home" aria-current="page"><span class="ui-icon icon-house" aria-hidden="true"></span>创作首页</button>
+      <button class="nav" data-view="editor"><span class="ui-icon icon-mic" aria-hidden="true"></span>开始配音</button>
+      <button class="nav" data-view="projects"><span class="ui-icon icon-book-open" aria-hidden="true"></span>配音项目</button>
+      <button class="nav" data-view="laboratory"><span class="ui-icon icon-sparkles" aria-hidden="true"></span>功能实验室</button>
+      <button class="nav" data-view="voices"><span class="ui-icon icon-headphones" aria-hidden="true"></span>挑选声音<em id="builtin-voice-count">42</em></button>
+      <button class="nav" data-view="roles"><span class="ui-icon icon-heart" aria-hidden="true"></span>我的声音</button>
+      <button class="nav" data-view="history"><span class="ui-icon icon-folder" aria-hidden="true"></span>我的作品<em id="history-count">0</em></button>
+    </nav>
+    <div class="sidebar-bottom">
+      <nav aria-label="设置与帮助">
+        <button class="nav" data-view="account"><span class="ui-icon icon-settings" aria-hidden="true"></span>设置与帮助</button>
+      </nav>
+      <div class="app-version">声悦 v0.4.7 · 本机创作</div>
+    </div>
+  </aside>
+  <main>
+    <section class="view hidden" id="view-laboratory" aria-labelledby="lab-title">
+      <div id="lab-library">
+        <header><div><div class="eyebrow">声音，还可以这样玩</div><h1 id="lab-title">功能实验室</h1><p>从一份文案、一段熟悉的声音开始，做出可以试听、分享的作品。</p></div><span class="lab-local-badge">本机创作 · 离线可用</span></header>
+        <div id="lab-kinds" class="lab-kinds"></div>
+        <div class="lab-recent-heading"><h2>继续我的实验</h2><span id="lab-count"></span></div>
+        <div id="lab-recent" class="lab-recent"></div>
+      </div>
+      <div id="lab-workspace" hidden>
+        <div class="lab-breadcrumb"><button id="lab-back" class="text-button">← 功能实验室</button><span id="lab-kind-name"></span><span id="lab-save-state" role="status" aria-live="polite"></span></div>
+        <div class="lab-work-heading"><label for="lab-name" class="sr-only">实验作品名称</label><input id="lab-name" maxlength="80"><button id="lab-show-tasks" class="button">后台任务</button></div>
+        <div class="lab-layout"><div class="lab-editor card"><div id="lab-fields"></div></div><aside id="lab-preview" class="lab-preview card"><div class="lab-panel-heading"><h2 id="lab-preview-title">作品预览</h2><span id="lab-preview-meta"></span></div><canvas id="lab-canvas" width="720" height="1280" aria-label="竖屏作品画面预览"></canvas><p id="lab-preview-help"></p></aside></div>
+        <div class="lab-production card"><div><h2>生成与试听</h2><p id="lab-summary" role="status" aria-live="polite"></p></div><div class="lab-production-actions"><button id="lab-generate" class="primary">生成配音</button><button id="lab-stop-playback" class="button">停止播放</button></div></div>
+        <div id="lab-results" class="lab-results"></div>
+        <div class="lab-export card"><div><h2>保存这份作品</h2><p id="lab-export-help"></p></div><div id="lab-export-actions" class="lab-export-actions"></div><div id="lab-export-progress" role="status" aria-live="polite" hidden></div><button id="lab-cancel-export" class="text-button" hidden>取消视频制作</button></div>
+      </div>
+    </section>
+    <section class="view" id="view-home" aria-labelledby="home-title">
+      <div class="home-topline"><div><span class="ui-icon icon-house" aria-hidden="true"></span>创作首页</div><span>好声音，让每一种创作都有可能</span></div>
+      <div class="home-hero">
+        <img class="home-hero-art" src="assets/home/hero.webp" alt="" width="1800" height="601" fetchpriority="high">
+        <h1 id="home-title">你的下一段好声音，<em>从这里开始。</em></h1>
+        <p>按场景挑选声音、语气和示例文稿，提前了解需要准备的声音包。</p>
+        <div class="home-hero-actions"><button id="home-explore" class="primary">选择创作场景<span class="ui-icon icon-arrow-right" aria-hidden="true"></span></button><button id="home-quick-editor" class="text-button"><span class="ui-icon icon-mic" aria-hidden="true"></span>直接输入文字</button></div>
+      </div>
+      <section id="home-recent" hidden aria-labelledby="home-recent-title">
+        <h2 id="home-recent-title">最近创作</h2>
+        <div class="home-resume-grid">
+          <div id="home-recent-list"></div>
+          <div id="home-draft" class="home-draft" hidden><button id="home-continue-draft" class="home-resume-item" type="button"><span class="home-resume-icon"><span class="ui-icon icon-audio-lines" aria-hidden="true"></span></span><span class="home-resume-copy"><strong id="home-draft-name">快速配音草稿</strong><small id="home-draft-excerpt"></small></span><span class="sr-only">继续编辑</span><span class="ui-icon icon-arrow-right home-resume-arrow" aria-hidden="true"></span></button></div>
+        </div>
+      </section>
+      <div id="home-library" class="home-library-heading"><div><h2>今天，想创作点什么？</h2><p>选择场景，确认声音准备情况，再换上你的文稿。</p></div><button id="home-all-templates" class="text-button">浏览文稿模板<span class="ui-icon icon-arrow-right" aria-hidden="true"></span></button></div>
+      <div class="home-tools"><div id="home-categories" class="home-categories" role="group" aria-label="按用途筛选场景"></div><label class="home-search"><span class="ui-icon icon-search" aria-hidden="true"></span><input id="home-search" type="search" placeholder="搜索场景，如播客、绘本、PPT" aria-label="搜索创作场景"></label></div>
+      <section id="home-featured-section" aria-labelledby="home-featured-title"><div class="home-section-heading"><h3 id="home-featured-title">常用创作场景</h3><span id="home-scene-count" role="status" aria-live="polite">20 个场景，找到适合你的那一个</span></div><div id="home-featured-grid" class="home-featured-grid"></div></section>
+      <section id="home-more-section" class="home-more-section" aria-labelledby="home-more-title"><div class="home-section-heading"><h3 id="home-more-title">更多实用场景</h3><span>工作、学习和生活，都有合适的声音</span></div><div id="home-more-grid" class="home-more-grid"></div></section>
+      <div id="home-empty" class="home-empty" hidden><span class="ui-icon icon-search" aria-hidden="true"></span><h3>暂时没有找到这个场景</h3><p>试试“课程”“视频”“故事”，或查看全部场景。</p><div id="home-suggestions"></div><button id="home-reset-search" class="button">查看全部场景</button></div>
+      <p class="home-footnote"><span class="ui-icon icon-folder" aria-hidden="true"></span>每个场景都会新建独立项目 · 文稿与作品保存在本机</p>
+    </section>
+    <section class="view hidden" id="view-editor">
+      <header class="creative-header">
+        <div class="hero-copy"><div class="eyebrow">每一段文字，都值得被听见</div><h1>让你的文字，开口说话。</h1><p>给视频配旁白，为课程批量配音，或让故事和角色有自己的声音。</p></div>
+        <img class="studio-art" src="assets/illustrations/voice-studio.webp" alt="" width="216" height="144">
+      </header>
+    <div id="setup-banner" class="setup-banner hidden"><div><strong>已经可以试听，配音前再准备一步</strong><span id="setup-message">下载当前声音需要的声音包，就能把文字变成作品。</span></div><button id="goto-downloads">准备这个声音<span class="ui-icon icon-arrow-right" aria-hidden="true"></span></button></div>
+      <div class="workspace">
+        <div class="editor-column">
+          <div class="card editor-card">
+            <div class="editor-toolbar"><div class="segmented"><button class="selected" id="mode-text">一段文字</button><button id="mode-script">逐句配音</button></div><div class="toolbar-actions"><button class="text-button" id="open-templates"><span class="ui-icon icon-book-open" aria-hidden="true"></span>场景模板 · 20</button><button class="text-button" id="import-script">导入文案</button><button class="text-button" id="example">对话示例</button></div></div>
+            <div class="project-line"><span class="step-number">1</span><strong>写下想说的话</strong><span class="autosave" id="draft-status" role="status">自动保存</span></div>
+            <div id="template-applied" class="template-applied hidden" role="status"><span id="template-applied-name"></span><button id="undo-template" class="text-button">撤销套用</button></div>
+            <input id="project-name" maxlength="80" placeholder="作品名称（选填，由你命名）" aria-label="作品名称">
+            <div id="text-panel">
+              <textarea id="text" spellcheck="false" maxlength="5000" aria-label="配音文本" placeholder="把你的文案粘贴到这里…"></textarea>
+              <div class="example-chips"><span>试试看</span><button data-example="warm-male"><span class="ui-icon icon-book-open" aria-hidden="true"></span>怀瑾 · 故事旁白</button><button data-example="warm-female"><span class="ui-icon icon-message-circle" aria-hidden="true"></span>南絮 · 自然对话</button><button data-example="course"><span class="ui-icon icon-graduation-cap" aria-hidden="true"></span>AI 批量课程配音</button></div>
+              <div class="editor-foot"><label><input type="checkbox" id="batch" aria-describedby="course-batch-help"> 按换行批量配音</label><span id="char-count">0 / 5000 字</span></div>
+              <p id="course-batch-help" class="microcopy">课程文稿每行一段，勾选后批量生成、单独重做、打包保存。每个任务最多 5000 字、100 段，长课程请分批提交。</p>
+            </div>
+            <div id="script-panel" class="hidden"><div class="project-upgrade"><span>想按角色管理声音，或给长故事分章节？</span><button class="text-button" id="convert-project">转为配音项目 →</button></div><div class="script-head"><span>每个人说什么</span><span>谁来说 / 什么语气</span><span>音频名字</span></div><div id="script-rows"></div><button id="add-row" class="add-row">添加一句台词</button><p class="microcopy">给每句台词选不同的声音，满意的保留，不满意的单独重做。</p></div>
+          </div>
+          <div class="generate-bar"><div class="generation-copy" role="status" aria-live="polite"><strong id="line-count">写点什么，试试你的第一段配音</strong><small id="generation-summary">生成后即可试听，支持保存为 MP3 或 WAV</small></div><div class="generation-actions"><button id="generate" class="primary" disabled><span class="ui-icon icon-sparkles" aria-hidden="true"></span><span id="generate-label">生成配音</span><span id="generate-arrow" class="ui-icon icon-arrow-right" aria-hidden="true"></span></button><button id="background-generation" class="button hidden">转为后台处理</button><button id="stop-generation" class="text-button hidden">停止生成</button></div></div>
+          <div class="card output-card"><div class="card-heading"><h2><span class="step-number">3</span>听听效果，保存作品<span class="count" id="result-count">0</span></h2><div class="export-actions"><select id="zip-format" aria-label="打包格式"><option value="mp3">MP3</option><option value="wav">WAV</option></select><button class="text-button" id="export-zip" disabled>打包保存</button></div></div><div id="results" class="clip-list"></div><div class="output-history-note"><span>仅展示最近 10 条配音</span><button id="output-history" class="text-button">查看全部作品 →</button></div></div>
+        </div>
+        <aside class="card settings">
+          <div class="card-heading"><h2><span class="step-number">2</span>选个喜欢的声音</h2></div>
+          <div class="settings-body">
+            <div class="voice-setting-heading"><span>音色</span><button id="reset-parameters" class="text-button" type="button" title="恢复当前声音的默认配音参数"><span class="ui-icon icon-refresh-cw" aria-hidden="true"></span>参数重置</button></div>
+            <div class="selected-voice">
+              <div class="selected-voice-portrait"><div id="selected-voice-avatar"></div><button id="preview-voice" class="sample-preview" type="button" aria-label="试听当前声音" aria-describedby="voice-preview-note" aria-pressed="false"><span class="ui-icon icon-play" aria-hidden="true"></span></button></div>
+              <div id="selected-voice" class="selected-voice-details"></div><button class="text-button" id="browse-voices" type="button" aria-label="更换声音" title="换一个声音"><span class="ui-icon icon-arrow-right-left" aria-hidden="true"></span></button>
+            </div>
+            <div id="selected-scenes" class="scene-tags selected-scenes" aria-label="当前声音适合的场景"></div>
+            <div id="saved-role-control" hidden><select id="saved-role-select" aria-label="选择声音配置"><option value="">声音配置</option></select></div>
+            <p id="voice-preview-note" class="preview-note sr-only">声音示例已备好，随时听，不用等待。</p>
+            <div id="design-fields" class="hidden">
+              <label for="voice-description">你想要什么样的声音？</label><textarea id="voice-description" maxlength="500" rows="3" placeholder="例如：温柔的女声，像在给孩子讲故事"></textarea>
+              <div class="voice-consistency-controls">
+                <label class="voice-lock-control" for="lock-voice"><span class="voice-lock-copy"><span id="voice-lock-label"><span class="ui-icon icon-shield-check" aria-hidden="true"></span>固定人物声音</span><small id="voice-lock-hint">全部台词沿用同一声线</small></span><input id="lock-voice" type="checkbox" role="switch" aria-labelledby="voice-lock-label" aria-describedby="voice-lock-hint" checked></label>
+                <button id="reset-voice" class="voice-reset-button" type="button" title="下次生成时重新确定人物声音"><span class="ui-icon icon-refresh-cw" aria-hidden="true"></span>重新定声</button>
+              </div>
+              <p class="microcopy">默认先确定声音，再用于全部台词、重做和续做，需要人物与童声和我的专属声音。定声后沿用样本的声线与表达；修改表达设置后请重新定声。关闭后会逐句自由设计，音色可能变化。上方试听为预存示例。</p>
+            </div>
+            <div id="reference-fields" class="hidden"><label for="reference-select">使用哪个声音</label><select id="reference-select"></select><label for="reference-text">这段录音里说了什么？</label><textarea id="reference-text" maxlength="1000" rows="3" placeholder="请准确填写录音中的原话"></textarea><label for="reference-style">这次怎么表达？</label><select id="reference-style"><option value="original">沿用录音表达</option><option value="expressive">调整语气与情绪 · 可选资源</option></select><p id="reference-style-note" class="microcopy">新配音会参考这段录音的音色与语气。</p></div>
+            <div class="divider"></div>
+            <label for="scene">这段配音用在哪里？</label><select id="scene"></select>
+            <div id="performance-fields"><div class="field-heading"><label>想用什么语气？</label><span id="emotion-label">自然</span></div><div id="emotion-options" class="emotion-grid"></div>
+              <details class="more-expression"><summary>更多语气与表达</summary><div id="more-emotions" class="emotion-grid"></div><div class="field-heading"><label for="intensity">情绪浓一点，还是淡一点？</label><span id="intensity-label">自然</span></div><input type="range" id="intensity" min="0" max="100" value="50" step="5"><div class="range-labels"><span>淡一点</span><span>浓一点</span></div><label for="pace">说话节奏</label><select id="pace"><option value="slow">慢一些</option><option value="normal" selected>自然</option><option value="fast">快一些</option></select><label for="instruction">再说说你想要的感觉<span class="optional">选填</span></label><textarea id="instruction" maxlength="500" rows="2" placeholder="例如：像和朋友聊天，轻松一点。"></textarea></details>
+            </div>
+            <p id="performance-note" class="microcopy hidden"></p>
+            <details class="advanced-settings"><summary><span class="ui-icon icon-sliders-horizontal" aria-hidden="true"></span>更多设置</summary><label for="language">说哪种语言</label><select id="language"></select><label for="engine">配音方式</label><select id="engine"><option value="standard">生动表达 · 可调语气</option><option value="light">轻松朗读 · 更省资源</option></select><div class="field-grid"><div><label for="prefix">音频名字开头</label><input id="prefix" maxlength="48" value="voice"></div><div><label for="sample-rate">音频品质</label><select id="sample-rate"><option value="48000">视频常用 · 48 kHz</option><option value="44100">音频常用 · 44.1 kHz</option><option value="24000">原始音质 · 24 kHz</option></select></div></div><p class="microcopy">同时保留 MP3 与 WAV。原始声音为 24 kHz，选择更高采样率方便剪辑使用，不会增加声音细节。</p></details>
+            <button class="save-voice-setting" id="save-role"><span class="ui-icon icon-heart" aria-hidden="true"></span>保存声音配置</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="view hidden" id="view-projects">
+      <div id="project-library">
+        <header class="project-library-heading"><div><div class="project-library-eyebrow">我的配音项目</div><h1>让每个角色，都有自己的声音。</h1><p>收好角色、章节和台词，从这里继续你的声音创作。</p></div><button class="primary" id="project-new"><span class="ui-icon icon-plus" aria-hidden="true"></span>新建配音项目</button></header>
+        <div class="project-library-bar">
+          <div class="project-library-search"><span class="ui-icon icon-search" aria-hidden="true"></span><input id="project-search" type="search" placeholder="搜索项目名称" aria-label="搜索配音项目"></div>
+          <span id="project-library-count" role="status" aria-live="polite"></span>
+          <div class="project-library-tools"><select id="project-library-sort" aria-label="项目排序"><option value="newest">最近编辑</option><option value="oldest">最早编辑</option><option value="name">项目名称</option></select><div class="project-library-views" role="group" aria-label="项目展示方式"><button type="button" data-project-layout="grid" aria-label="网格视图" aria-pressed="true" title="网格视图"><span class="ui-icon project-icon-grid" aria-hidden="true"></span></button><button type="button" data-project-layout="list" aria-label="列表视图" aria-pressed="false" title="列表视图"><span class="ui-icon project-icon-list" aria-hidden="true"></span></button></div></div>
+        </div>
+        <div id="project-list" class="project-grid"></div>
+        <div id="project-library-pagination" class="project-library-pagination" hidden><div class="project-library-page-summary"><span id="project-library-range" role="status" aria-live="polite"></span><label for="project-library-page-size">每页<select id="project-library-page-size"><option value="12">12 个</option><option value="24">24 个</option><option value="48">48 个</option></select></label></div><nav id="project-library-pages" aria-label="配音项目分页"></nav></div>
+      </div>
+      <div id="project-detail" hidden>
+        <div class="project-breadcrumb"><button id="project-back" class="text-button"><span class="ui-icon icon-arrow-left" aria-hidden="true"></span>所有项目</button><span><span class="ui-icon icon-shield-check" aria-hidden="true"></span>本机创作</span></div>
+        <header class="project-detail-heading"><span class="project-title-mark"><span class="ui-icon icon-book-open" aria-hidden="true"></span></span><div><label class="sr-only" for="project-title">配音项目名称</label><input id="project-title" maxlength="80" aria-label="配音项目名称"><div class="project-detail-meta"><span id="project-meta"></span><span class="project-save-badge"><span class="ui-icon icon-check" aria-hidden="true"></span><span id="project-save-state" role="status" aria-live="polite">已自动保存</span></span><button id="project-save-retry" class="text-button" hidden>重试保存</button></div></div><div class="project-heading-actions"><button id="project-undo" class="project-icon-control" aria-label="撤销上一步" title="撤销上一步" disabled><span class="ui-icon icon-undo-2" aria-hidden="true"></span></button><button id="project-import" class="button"><span class="ui-icon icon-folder" aria-hidden="true"></span>导入文案</button><button id="project-add-line-top" class="primary"><span class="ui-icon icon-plus" aria-hidden="true"></span>添加台词</button></div></header>
+        <nav class="project-steps" aria-label="配音项目流程">
+          <button type="button" data-project-step="import"><b><span class="ui-icon icon-book-open" aria-hidden="true"></span></b><span>文稿<small id="project-import-step-summary">添加文案</small></span><span class="project-step-state"></span></button>
+          <button type="button" data-project-step="roles"><b><span class="ui-icon icon-users" aria-hidden="true"></span></b><span>角色<small id="project-role-summary">选择声音</small></span><span class="project-step-state"></span></button>
+          <button type="button" data-project-step="generate"><b><span class="ui-icon icon-mic" aria-hidden="true"></span></b><span>配音<small id="project-generate-step-summary">准备生成</small></span><span class="project-step-state"></span></button>
+          <button type="button" data-project-step="export"><b><span class="ui-icon icon-download" aria-hidden="true"></span></b><span>成品<small id="project-export-step-summary">试听与导出</small></span><span class="project-step-state"></span></button>
+        </nav>
+        <div class="project-next card"><div class="project-start-visual" aria-hidden="true"><span class="ui-icon icon-book-open"></span><div><img src="assets/portraits/Vivian.webp" alt=""><img src="assets/portraits/Dylan.webp" alt=""><img src="assets/portraits/girl-clear.webp" alt=""></div></div><div><span class="project-next-eyebrow" id="project-next-eyebrow">从这里开始</span><h2 id="project-next-title">把故事，变成听得见的声音</h2><p id="project-next-description">导入文案或直接添加台词，为角色选好声音。</p></div><div class="project-next-actions"><button id="project-next-action" class="primary">导入文案</button><button id="project-next-secondary" class="text-button">手动添加台词</button></div></div>
+        <div class="project-layout">
+          <div class="project-script-column">
+            <div class="card project-production" tabindex="-1" aria-label="生成配音与导出">
+              <div class="project-production-toolbar"><div class="project-scope-field"><label for="project-generation-scope" class="sr-only">处理范围</label><span class="ui-icon icon-audio-lines" aria-hidden="true"></span><select id="project-generation-scope" aria-label="生成和导出的范围"><option value="filtered">当前筛选结果</option><option value="chapter">当前章节</option><option value="selected">选中台词</option><option value="all">整个项目</option></select></div><div class="project-generation-actions"><button id="project-generate" class="primary"><span class="ui-icon icon-sparkles" aria-hidden="true"></span>生成配音</button><button id="project-listen" class="button"><span class="ui-icon icon-play" aria-hidden="true"></span>按顺序连听</button><button id="project-delivery" class="button" title="导出合并音频、字幕与分段备份"><span class="ui-icon icon-download" aria-hidden="true"></span>导出成品</button><button id="project-options-open" class="project-icon-control" aria-haspopup="dialog" aria-label="制作选项" title="制作选项：目标时长、托管、分段导出"><span class="ui-icon icon-sliders-horizontal" aria-hidden="true"></span></button></div></div>
+              <div class="project-production-heading"><div class="project-progress-overview"><progress id="project-overall-progress" max="1" value="0" aria-label="项目配音完成进度"></progress><strong id="project-progress-label">0 / 0 句</strong><span id="project-scope-note"></span></div><strong id="project-production-summary" class="sr-only" role="status"></strong><span id="project-production-hint" class="sr-only"></span><div class="project-production-controls"><button id="project-fix-roles" class="text-button" hidden>配好角色</button><button id="project-prepare-voices" class="text-button" hidden>准备声音包</button><button id="project-reveal-work" class="text-button" hidden>查看待配音</button></div></div>
+              <div id="project-managed-status" class="managed-status" hidden><div><strong id="project-managed-title"></strong><button id="project-managed-tasks" class="text-button">查看任务<span class="ui-icon icon-arrow-right" aria-hidden="true"></span></button></div><progress id="project-managed-progress" max="1" value="0" aria-label="托管配音进度"></progress><p id="project-managed-summary" role="status"></p></div>
+              <span id="project-export-summary" class="sr-only"></span>
+            </div>
+            <div class="card project-script-card">
+              <div class="project-chapter-heading"><span class="ui-icon icon-book-open" aria-hidden="true"></span><input id="project-chapter-title" maxlength="80" aria-label="章节名称"><span id="project-chapter-summary"></span><button id="project-chapter-up" class="project-icon-control" aria-label="将当前章节前移" title="将当前章节前移"><span class="ui-icon icon-arrow-up" aria-hidden="true"></span></button><button id="project-chapter-down" class="project-icon-control" aria-label="将当前章节后移" title="将当前章节后移"><span class="ui-icon icon-arrow-down" aria-hidden="true"></span></button><button id="project-remove-chapter" class="project-icon-control" aria-label="删除当前章节" title="删除当前章节"><span class="ui-icon icon-trash-2" aria-hidden="true"></span></button></div>
+              <div class="project-editor-tools"><div id="project-status-chips" class="project-status-chips" role="group" aria-label="快速筛选台词"><button type="button" data-line-status="" aria-pressed="true">全部<span></span></button><button type="button" data-line-status="todo" aria-pressed="false"><span class="ui-icon icon-mic" aria-hidden="true"></span>待配音<span></span></button><button type="button" data-line-status="complete" aria-pressed="false"><span class="ui-icon icon-check" aria-hidden="true"></span>已完成<span></span></button></div><div class="project-editor-search"><span class="ui-icon icon-search" aria-hidden="true"></span><input id="project-line-search" type="search" placeholder="搜索台词" aria-label="搜索项目台词"></div><button id="project-filter-toggle" class="project-icon-control" aria-controls="project-extra-filters" aria-expanded="false" aria-label="按角色和状态筛选" title="按角色和状态筛选"><span class="ui-icon icon-sliders-horizontal" aria-hidden="true"></span><i></i></button></div>
+              <div id="project-extra-filters" class="project-filters" hidden><select id="project-filter-role" aria-label="按角色筛选台词"></select><select id="project-filter-status" aria-label="按生成状态筛选"><option value="">全部状态</option><option value="todo">待配音</option><option value="unassigned">待分配角色 / 声音</option><option value="new">未生成</option><option value="changed">需要更新</option><option value="pending">处理中</option><option value="complete">已完成</option></select><button id="project-filter-reset" class="text-button">清除筛选</button></div>
+              <div class="project-selection"><label><input type="checkbox" id="project-select-page">选择本页</label><button id="project-select-filtered" class="text-button">选择全部结果</button><span id="project-filter-count" role="status"></span></div>
+              <div id="project-quick-pages" class="project-quick-pagination" hidden><button id="project-quick-previous" class="button">上一页</button><select id="project-page-jump" aria-label="跳转台词页"></select><button id="project-quick-next" class="button">下一页</button></div>
+              <div id="project-lines"></div>
+              <div class="project-pagination"><button id="project-previous" class="button">上一页</button><span id="project-page-info"></span><button id="project-next" class="button">下一页</button><button id="project-add-line" class="text-button"><span class="ui-icon icon-plus" aria-hidden="true"></span>添加台词</button></div>
+            </div>
+            <div id="project-bulk" class="card project-bulk" hidden><div class="project-bulk-heading"><strong id="project-selected-count"></strong><button id="project-clear-selection" class="text-button">取消选择</button></div><div class="project-bulk-fields"><select id="project-bulk-role" aria-label="批量分配角色"></select><select id="project-bulk-emotion" aria-label="批量设置语气"></select><select id="project-bulk-pace" aria-label="批量设置节奏"><option value="">不改节奏</option><option value="inherit">跟随角色节奏</option><option value="slow">慢一些</option><option value="normal">自然</option><option value="fast">快一些</option></select><select id="project-bulk-chapter" aria-label="批量移动到章节"></select><button id="project-bulk-apply" class="button">应用设置</button><button id="project-bulk-delete" class="text-button"><span class="ui-icon icon-trash-2" aria-hidden="true"></span>删除选中</button></div></div>
+          </div>
+          <aside class="project-side-rail" aria-label="项目素材">
+            <section class="card project-chapters"><div class="project-panel-heading"><strong><span class="ui-icon icon-book-open" aria-hidden="true"></span>章节<span id="project-chapter-count" class="project-panel-count"></span></strong><button id="project-add-chapter" class="project-icon-control" aria-label="添加章节" title="添加章节"><span class="ui-icon icon-plus" aria-hidden="true"></span></button></div><div id="project-chapters"></div></section>
+            <section class="card project-cast" tabindex="-1" aria-label="项目角色设置"><div class="project-panel-heading"><strong><span class="ui-icon icon-users" aria-hidden="true"></span>本项目角色<span id="project-cast-count" class="project-panel-count"></span></strong><button id="project-add-role" class="project-icon-control" aria-label="新增角色" title="新增角色"><span class="ui-icon icon-plus" aria-hidden="true"></span></button></div><p class="project-panel-help sr-only">角色声音自动应用到台词，可随时试听、换声和调整语气。</p><div id="project-cast"></div></section>
+            <div id="project-mix-slot"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section class="view hidden" id="view-voices">
+      <header><div><div class="eyebrow">好声音，先听再选</div><h1>找到适合你的那个声音。</h1><p id="voice-library-description">42 种声音，20 套场景模板。按用途、语言和声线挑选，先听再用。</p></div><button class="button" id="custom-character"><span class="ui-icon icon-plus" aria-hidden="true"></span>设计我的声音</button></header>
+      <div class="library-intro"><div><span class="ui-icon icon-headphones" aria-hidden="true"></span><strong>放心试听，喜欢再用</strong><span>预存声音示例，无需下载声音包</span></div><div class="library-cast"><div class="cast-portraits" aria-hidden="true"><img src="assets/portraits/Vivian.webp" alt="" width="42" height="42"><img src="assets/portraits/Dylan.webp" alt="" width="42" height="42"><img src="assets/portraits/girl-clear.webp" alt="" width="42" height="42"><img src="assets/portraits/robot.webp" alt="" width="42" height="42"></div><span class="library-count" id="voice-total">42 个声音</span></div></div>
+      <div class="library-controls"><div class="library-toolbar"><div class="filter-tabs" id="voice-filters"><button class="selected" data-filter="all">全部声音</button><button data-filter="female">女声</button><button data-filter="male">男声</button><button data-filter="child">童声</button><button data-filter="elder">长辈</button><button data-filter="cartoon">卡通</button></div><div class="library-search"><select id="voice-language" aria-label="按原生语言筛选声音"></select><input id="voice-search" type="search" placeholder="搜声音、风格或用途，如：课程 女声" aria-label="搜索音色"></div></div><div class="scene-filter-row"><span>用来做什么</span><div id="scene-filters" class="scene-filters" aria-label="按使用场景筛选声音"></div></div></div>
+      <div id="voice-grid" class="voice-grid"></div>
+      <div class="library-note"><span class="ui-icon icon-headphones" aria-hidden="true"></span><p>声音配图为原创角色插画。场景标签帮你快速选声，也可以试试其他用途；人物声音的实际效果会随文字和描述变化。</p></div>
+    </section>
+    <section class="view hidden" id="view-roles">
+      <header><div><div class="eyebrow">我的声音收藏夹</div><h1>喜欢的声音，下次接着用。</h1><p>已保存的声音和语气，都在这里。随时试听，选一个继续配音。</p></div></header>
+      <div id="role-grid" class="voice-grid"></div>
+      <div class="card reference-card"><div><h2>让新文案，用熟悉的声音来说</h2><p>直接录下或导入一段 3–30 秒的清晰人声，再写下录音中的原话。</p><label class="consent"><input type="checkbox" id="reference-consent"> 我拥有这段声音的使用授权</label></div><div class="reference-actions"><button id="import-reference" class="button"><span class="ui-icon icon-folder" aria-hidden="true"></span>导入一段录音</button><button id="record-reference" class="primary"><span class="ui-icon icon-mic" aria-hidden="true"></span>直接录音</button></div></div><div id="reference-grid" class="voice-grid"></div>
+    </section>
+    <section class="view hidden" id="view-history">
+      <header><div><div class="eyebrow">我的快捷配音作品</div><h1>你的好声音，都帮你存好了。</h1><p>随时回来听一听，按名称或声音找作品。配音项目内的音频，请到对应项目中试听和导出。</p></div></header>
+      <div class="card history-filters">
+        <div class="history-search-row"><input type="search" id="history-search" placeholder="搜索作品名、文案、声音或文件名" aria-label="搜索作品"><button class="text-button" id="history-reset">清空筛选</button></div>
+        <div class="history-filter-grid">
+          <label for="history-project">作品名称<select id="history-project"><option value="">全部作品</option></select></label>
+          <label for="history-voice">谁的声音<select id="history-voice"><option value="">全部声音</option></select></label>
+          <label for="history-scene">作品用途<select id="history-scene"><option value="">全部用途</option></select></label>
+          <label for="history-period">创作时间<select id="history-period"><option value="">不限时间</option><option value="today">今天</option><option value="week">最近 7 天</option><option value="month">最近 30 天</option></select></label>
+          <label for="history-duration">音频时长<select id="history-duration"><option value="">不限时长</option><option value="short">30 秒以内</option><option value="medium">30 秒至 2 分钟</option><option value="long">2 分钟以上</option></select></label>
+          <label for="history-sort">排列顺序<select id="history-sort"><option value="newest">最新创作在前</option><option value="oldest">最早创作在前</option><option value="shortest">时长从短到长</option><option value="longest">时长从长到短</option></select></label>
+        </div>
+      </div>
+      <div class="card history-card">
+        <div class="card-heading history-heading"><div><h2>我的配音<span id="history-total" class="count">0</span></h2><div class="history-result-summary"><p id="history-summary" role="status" aria-live="polite"></p><nav id="history-quick-pages" aria-label="作品快速翻页"><button id="history-previous">上一页</button><span id="history-quick-info"></span><button id="history-next">下一页</button></nav></div></div><div class="history-export-actions"><select id="history-export-format" aria-label="作品打包格式"><option value="mp3">MP3</option><option value="wav">WAV</option></select><button class="button" id="history-export" disabled><span class="ui-icon icon-download" aria-hidden="true"></span><span id="history-export-label">打包全部作品</span></button></div></div>
+        <div id="history-bulk" class="history-bulk">
+          <div class="history-selection">
+            <label class="history-check history-page-check"><input type="checkbox" id="history-select-page" aria-label="选择本页作品"><span class="history-check-mark" aria-hidden="true"><span class="ui-icon icon-check"></span></span><span>选择本页</span></label>
+            <span id="history-selection-summary" role="status" aria-live="polite">勾选作品，批量下载或删除</span>
+            <div class="history-selection-links"><button id="history-select-all" class="text-button">全选筛选结果</button><button id="history-clear-selection" class="text-button hidden">取消选择</button></div>
+          </div>
+          <div id="history-bulk-panel" class="history-bulk-panel" inert>
+            <div class="history-bulk-content"><div class="history-bulk-copy"><span class="ui-icon icon-check" aria-hidden="true"></span><span>好作品，一起带走<small id="history-bulk-hint">按 MP3 格式打包为 ZIP</small></span></div><div class="history-bulk-actions"><button id="history-bulk-download" class="button history-download" disabled><span class="ui-icon icon-download" aria-hidden="true"></span><span id="history-bulk-download-label">下载所选</span></button><button id="history-bulk-delete" class="button history-delete" disabled><span class="ui-icon icon-trash-2" aria-hidden="true"></span><span id="history-bulk-delete-label">删除所选</span></button></div></div>
+          </div>
+        </div>
+        <div id="history" class="clip-list"></div>
+        <div id="history-pagination" class="history-pagination"><label for="history-page-size">每页<select id="history-page-size"><option value="12">12 条</option><option value="24">24 条</option><option value="48">48 条</option></select></label><nav id="history-pages" aria-label="作品分页"></nav><span id="history-page-info"></span></div>
+      </div>
+    </section>
+    <section class="view hidden settings-page" id="view-account" aria-labelledby="settings-title">
+      <header class="settings-hero">
+        <img class="settings-hero-art" src="assets/settings/hero.png" alt="" aria-hidden="true">
+        <div><h1 id="settings-title">安心创作，有问题在这里找答案。</h1><p>你的文字、录音和作品，都保存在这台电脑上。</p></div>
+      </header>
+      <div class="settings-overview">
+        <div id="device-card" class="card device-card" aria-label="当前电脑配置"></div>
+        <button class="card license-overview" id="license-overview" aria-label="查看免费版说明">
+          <span class="license-symbol" aria-hidden="true"><img src="assets/settings/license.webp" alt="" width="64" height="64"></span>
+          <span class="license-overview-copy"><span class="license-title-row"><strong>免费使用</strong><span class="license-state" id="account-plan">免费版</span></span><small>无需购买 · 不限生成次数</small></span>
+        </button>
+      </div>
+      <section class="card settings-resources" aria-labelledby="resources-title">
+        <div class="settings-section-heading"><div><h2 id="resources-title">完整配音资源</h2><p class="download-scope-note">一键准备全部声音功能，自动补齐缺失资源。暂停或关闭后，已下载的内容会保留。</p></div></div>
+        <div class="resource-summary">
+          <div class="resource-summary-copy"><strong id="resources-state" role="status" aria-live="polite">正在检查本机资源…</strong><p>日常配音、轻松朗读、人物与童声、固定人物声音和声音克隆，一次备齐。</p><p id="resources-size" class="microcopy"></p></div>
+          <div class="resource-summary-actions"><button id="resources-prepare" class="primary">一键下载并安装</button><button id="resources-pause" class="button" hidden>暂停下载</button></div>
+        </div>
+        <div id="resources-progress" class="resource-total-progress" hidden><div class="resource-progress-heading"><strong id="resources-progress-title" role="status" aria-live="polite"></strong><span id="resources-percent"></span></div><progress id="resources-progress-bar" max="1" aria-label="完整配音资源准备进度"></progress><p id="resources-progress-detail"></p></div>
+        <div id="package-task" class="preparation-panel" hidden><strong id="package-task-title"></strong><p id="package-task-detail" role="status"></p><button id="package-task-return" class="button">返回创作</button><button id="package-task-optional" class="primary" hidden>下载可选情绪配音资源</button></div>
+        <details class="resource-details"><summary>查看资源详情与单独修复</summary><p class="microcopy">通常只需一键准备。单独准备人物声音时，固定人物声音还需要声音克隆资源。</p><div id="package-grid" class="package-grid"></div></details>
+        <details id="optional-resources" class="resource-details"><summary>可选功能 · 我的声音也能调情绪</summary><p class="microcopy">VoxCPM2 为独立可选资源，不包含在上方一键下载中。查看大小并确认后才下载，准备完成后可离线使用。</p><div id="optional-package-grid" class="package-grid"></div></details>
+      </section>
+      <div class="account-columns">
+        <section class="card account-card" id="license-settings" aria-labelledby="license-title" tabindex="-1">
+          <div class="settings-section-heading"><div><h2 id="license-title">免费版</h2><p id="account-description">无需购买或激活，准备好模型即可创作。</p></div></div>
+          <p>配音、项目、声音克隆和 CLI 均可免费使用，不限生成次数。文本、设备配置和资源要求仍适用。</p>
+          <button class="text-button" data-contact-support>使用帮助</button>
+        </section>
+        <section class="card help-card" aria-labelledby="help-title">
+          <div class="settings-section-heading"><h2 id="help-title">常见问题</h2><button class="text-button settings-link" id="more-help" aria-expanded="false" aria-controls="settings-more-help">更多帮助<span class="ui-icon icon-arrow-right" aria-hidden="true"></span></button></div>
+          <details><summary>免费版有哪些使用限制？<span class="ui-icon icon-chevron-down" aria-hidden="true"></span></summary><p>免费版不限生成次数，每个任务最多 5000 字、100 段，实际生成速度取决于电脑配置。声音库示例可直接播放，无需调用配音引擎。</p></details>
+          <details><summary>怎样给课程批量配音？<span class="ui-icon icon-chevron-down" aria-hidden="true"></span></summary><p>点击创作页的“AI 批量课程配音”示例，或粘贴课程文稿，每行一段并勾选“按换行批量配音”。复用讲师声音，生成后逐段试听、单独重做，再打包保存 MP3 / WAV。需要逐段命名时可导入 CSV / TSV 脚本。每个任务最多 5000 字、100 段，长课程请分批提交。</p></details>
+          <details><summary>需要一直联网吗？<span class="ui-icon icon-chevron-down" aria-hidden="true"></span></summary><p>下载声音包时需要联网。准备好之后，试听和配音都可以离线完成。</p></details>
+          <details><summary>两种配音方式怎么选？<span class="ui-icon icon-chevron-down" aria-hidden="true"></span></summary><p>想让语气更丰富，选“生动表达”；只需要自然朗读，或电脑内存较小，可以选“轻松朗读”。</p></details>
+          <details id="device-help"><summary>换电脑后怎么办？<span class="ui-icon icon-chevron-down" aria-hidden="true"></span></summary><p>在新电脑安装免费版，完成配置检查并下载所需模型即可使用，无需设备码。</p></details>
+          <div id="settings-more-help" hidden><h3>第一次使用，这样开始</h3><ol><li>去“挑选声音”试听，找到喜欢的声音。</li><li>在“完整配音资源”一键下载并安装，安装时保持联网。</li><li>写点文字，开始配音。准备好后离线也可以使用。</li></ol><div class="settings-help-actions"><button class="text-button" id="logs">查看运行记录</button><button class="text-button" id="refresh-device">刷新电脑配置</button></div></div>
+        </section>
+      </div>
+      <section class="card settings-cli" aria-labelledby="cli-title">
+        <div class="settings-section-heading"><div><h2 id="cli-title">智能体与 CLI 接入</h2><p>把接入说明发给你的智能体，让它调用声悦完成本地配音。支持具有本地命令执行能力的 Codex、Claude Code、WorkBuddy 等工具。</p></div><span id="cli-platform" class="cli-platform"></span></div>
+        <ol class="cli-steps"><li>先检查配置与声音包。</li><li>保存脚本示例，修改成自己的文稿。</li><li>在脚本所在目录运行配音命令，或将说明复制给智能体。</li></ol>
+        <p id="cli-load-status" class="microcopy" role="status" aria-live="polite">打开设置后，将自动获取本机接入配置。</p><button id="cli-retry" class="text-button" hidden>重新获取配置</button>
+        <div id="cli-content" hidden>
+          <div class="cli-command"><div><h3>检查组件与模型</h3><button class="settings-soft-button" data-cli-copy="status">复制检查命令</button></div><pre tabindex="0" aria-label="检查组件与模型命令"><code id="cli-status-command"></code></pre></div>
+          <div class="cli-command"><div><h3>批量配音</h3><button class="settings-soft-button" data-cli-copy="generate">复制配音命令</button></div><pre tabindex="0" aria-label="批量配音命令"><code id="cli-generate-command"></code></pre></div>
+          <div class="cli-actions"><button class="primary" data-cli-copy="guide">复制给智能体的说明</button><button class="button" id="cli-save-script">保存脚本示例</button><button class="text-button settings-link" id="cli-docs">打开完整 CLI 文档<span class="ui-icon icon-arrow-right" aria-hidden="true"></span></button></div>
+          <details class="cli-guide"><summary>查看给智能体的说明</summary><pre id="cli-guide-text"></pre></details>
+        </div>
+        <p class="microcopy cli-note">已按当前软件路径自动配置，无需注册命令或另外安装 Node.js。与软件共用声音包和作品；首次安装声音包需联网，准备好后可离线配音。移动软件后，请重新复制接入说明。</p>
+      </section>
+      <p class="settings-version"><span>声悦 v0.4.7</span><span>人物声音和语气效果，以实际生成的作品为准。</span></p>
+    </section>
+  </main>
+  <aside id="sample-player" class="sample-player hidden" aria-label="声音示例播放器"><button id="sample-toggle" class="sample-toggle" aria-label="暂停试听"><span class="ui-icon icon-pause" aria-hidden="true"></span></button><div id="sample-portrait" class="sample-portrait" aria-hidden="true"></div><div class="sample-info"><strong id="sample-name"></strong><span id="sample-text"></span></div><div class="sample-timeline"><span id="sample-time">0:00</span><input id="sample-seek" type="range" min="0" max="1000" value="0" aria-label="试听进度"><span id="sample-duration">0:00</span></div><span class="sample-free">预存声音示例</span><button id="sample-close" aria-label="关闭试听"><span class="ui-icon icon-x" aria-hidden="true"></span></button></aside>
+  <footer role="status" aria-live="polite">
+    <div id="idle-status"><i id="status-dot"></i><span id="status-text">正在打开你的创作空间…</span></div>
+    <div id="generation-dock" class="hidden">
+      <button id="show-generation" class="generation-peek" aria-label="查看后台配音任务"><span class="ui-icon icon-headphones" aria-hidden="true"></span><span class="generation-dock-copy"><strong id="generation-title"></strong><small><span id="generation-count"></span><span id="generation-elapsed"></span></small></span></button>
+      <span id="generation-queue-count"></span><button id="generation-results" class="text-button hidden">听听作品<span class="ui-icon icon-arrow-right" aria-hidden="true"></span></button><button id="generation-dismiss" class="icon-button hidden" aria-label="收起任务状态"><span class="ui-icon icon-x" aria-hidden="true"></span></button>
+    </div>
+    <div class="footer-task-actions"><button id="cancel" class="text-button hidden">停止处理</button></div><span id="status-detail" aria-live="off">文字和声音，都留在本机</span>
+  </footer>
+  <dialog id="expressive-download-dialog" class="project-dialog" aria-labelledby="expressive-download-heading" aria-describedby="expressive-download-description"><h2 id="expressive-download-heading">下载可选情绪配音资源？</h2><p id="expressive-download-description">让录入的声音保留音色，同时调整语气、情绪、强度和节奏。这个功能使用 VoxCPM2。</p><p id="expressive-download-size"></p><p class="microcopy">仅在确认后联网下载，完成后在本机配音，录音与文稿不上传。以后可继续选择“沿用录音表达”。</p><p id="expressive-download-error" role="alert"></p><div class="dialog-actions"><button id="expressive-download-cancel" class="button" autofocus>暂不下载</button><button id="expressive-download-confirm" class="primary">同意并下载</button></div></dialog>
+  <dialog id="jobs-dialog" aria-labelledby="jobs-heading">
+    <div class="jobs-heading"><div><div class="eyebrow">创作继续，声音慢慢来</div><h2 id="jobs-heading">后台配音与托管任务</h2><p>查看预约、生成进度和结果，随时暂停或继续托管。</p></div><button id="jobs-close" class="icon-button" aria-label="关闭后台任务"><span class="ui-icon icon-x" aria-hidden="true"></span></button></div>
+    <div class="jobs-summary"><span id="jobs-summary"></span><small>最多 10 个待处理任务 · 按顺序生成</small></div>
+    <div id="jobs-list"></div>
+    <p class="jobs-footnote">托管等待和生成期间防止自动休眠，屏幕可以熄灭。请接通电源、保持笔记本开盖。关闭窗口会最小化继续处理；完全退出或关机会中断，重开后可补做未完成段落。</p>
+  </dialog>
+  <dialog id="managed-dialog" class="project-dialog managed-dialog" aria-labelledby="managed-heading" aria-describedby="managed-description">
+    <form id="managed-form">
+      <div class="managed-heading"><span class="managed-moon ui-icon icon-moon" aria-hidden="true"></span><div><div class="eyebrow">今晚交给声悦，明天回来听</div><h2 id="managed-heading">托管配音</h2></div><button type="button" class="icon-button" data-close="managed-dialog" aria-label="关闭托管配音"><span class="ui-icon icon-x" aria-hidden="true"></span></button></div>
+      <p id="managed-description">文案和声音一次设好，接下来自动逐段生成，完成的音频随时保存在本机。</p>
+      <label for="managed-scope">这次托管哪些内容</label><select id="managed-scope"><option value="all">整个项目的未完成台词</option><option value="current">当前处理范围的未完成台词</option></select>
+      <div class="managed-preview"><strong id="managed-project-name"></strong><p id="managed-preview-summary"></p><small id="managed-preview-skipped"></small></div>
+      <fieldset class="managed-start"><legend>什么时候开始</legend><label><input type="radio" name="managed-start" value="now" checked> 现在开始</label><label><input type="radio" name="managed-start" value="scheduled"> 预约开始</label></fieldset>
+      <div id="managed-time-field" hidden><label for="managed-time">开始时间（本机时间）</label><input id="managed-time" type="datetime-local"><p class="microcopy">到点后按顺序开始；前面有任务时，完成后自动接着做。</p></div>
+      <ul class="managed-assurances"><li>每段完成立即保存，暂停后可接着生成。</li><li>失败自动重试 2 次，仍未成功就记录下来，继续后面的文案。</li><li>等待和生成时防止自动休眠；全部处理后恢复正常休眠，并发送系统提醒。</li></ul>
+      <p class="managed-device-note">请接通电源、保持笔记本开盖，允许屏幕熄灭。可以最小化或关闭窗口；请保持软件运行。完全退出或关机后不会自动开始，重开后可继续未完成段落。</p>
+      <p id="managed-error" class="project-form-error" role="alert"></p><button id="managed-fix" type="button" class="text-button" hidden>完善声音设置 →</button>
+      <div class="dialog-actions"><button type="button" class="button" data-close="managed-dialog">取消</button><button id="managed-submit" class="primary" type="submit">开始托管</button></div>
+    </form>
+  </dialog>
+  <dialog id="template-dialog" aria-labelledby="template-heading" aria-describedby="template-description">
+    <div class="template-heading"><div><div class="eyebrow">从一个好模板开始</div><h2 id="template-heading">给这次创作，选一个起点</h2><p id="template-description">20 套文稿与表达设置，套用后可以自由改写，也可以撤销恢复。</p></div><button id="template-close" class="icon-button" aria-label="关闭场景模板"><span class="ui-icon icon-x" aria-hidden="true"></span></button></div>
+    <div class="template-controls"><div id="template-categories" class="filter-tabs" aria-label="模板分类"></div><input id="template-search" type="search" placeholder="搜索课程、培训、播客或声音名称" aria-label="搜索场景模板"></div>
+    <p id="template-count" class="microcopy" role="status" aria-live="polite"></p><div id="template-grid" class="template-grid"></div>
+    <div class="template-footer"><span class="ui-icon icon-headphones" aria-hidden="true"></span><p>试听播放预存声音。套用不生成音频；首次配音前，准备对应声音包。</p></div>
+  </dialog>
+  <dialog id="voice-picker" aria-labelledby="voice-picker-heading" aria-describedby="voice-picker-description">
+    <div class="voice-picker-heading"><div><div class="eyebrow">好声音，先听再选</div><h2 id="voice-picker-heading">给这段文字，换个声音</h2><p id="voice-picker-description">听听声线，看看适合的用途，找到喜欢的直接选用。</p></div><button id="voice-picker-close" class="icon-button" aria-label="关闭声音选择"><span class="ui-icon icon-x" aria-hidden="true"></span></button></div>
+    <div class="voice-picker-controls">
+      <div class="voice-picker-search"><span class="ui-icon icon-search" aria-hidden="true"></span><input id="voice-picker-search" type="search" placeholder="搜索名字、声线或用途，比如：温柔、故事" aria-label="搜索弹窗中的声音"></div>
+      <div id="voice-picker-filters" class="filter-tabs" aria-label="声音类型"><button data-picker-filter="all" class="selected" aria-pressed="true">全部</button><button data-picker-filter="female">女声</button><button data-picker-filter="male">男声</button><button data-picker-filter="child">童声</button><button data-picker-filter="elder">长辈</button><button data-picker-filter="cartoon">卡通</button><button data-picker-filter="mine"><span class="ui-icon icon-heart" aria-hidden="true"></span>我的声音</button></div>
+      <div class="voice-picker-results-heading"><span id="voice-picker-count" role="status" aria-live="polite"></span><div><label for="voice-picker-scene">适合用途</label><select id="voice-picker-scene"><option value="all">不限用途</option></select></div></div>
+    </div>
+    <div id="voice-picker-grid" class="voice-grid"></div>
+    <div class="voice-picker-footer"><div id="voice-picker-current"></div><span><span class="ui-icon icon-headphones" aria-hidden="true"></span>预存声音示例 · 选好即可继续创作</span></div>
+  </dialog>
+  <dialog id="name-dialog"><form method="dialog"><h2>保存声音配置</h2><p>给这套声音配置起个名字，下次一选就能用。</p><input id="role-name" maxlength="32" placeholder="例如：我的旁白、故事奶奶、小雨"><div class="dialog-actions"><button class="button" value="cancel">取消</button><button class="primary" value="save">保存声音配置</button></div></form></dialog>
+  <dialog id="project-delivery-dialog" class="project-dialog project-delivery-dialog" aria-labelledby="project-delivery-heading" aria-describedby="project-delivery-description">
+    <form id="project-delivery-form">
+      <div class="project-modal-heading"><div><div class="eyebrow">项目交付</div><h2 id="project-delivery-heading">导出成品</h2></div><button id="project-delivery-close" type="button" class="icon-button" aria-label="关闭成品导出"><span class="ui-icon icon-x" aria-hidden="true"></span></button></div>
+      <p id="project-delivery-description">选择范围、音量和停顿，打包导出。</p>
+      <div class="delivery-project-name" id="project-delivery-name"></div>
+      <fieldset id="project-delivery-settings">
+        <div class="field-grid delivery-scope-grid"><div><label for="project-delivery-scope">导出范围</label><select id="project-delivery-scope"><option value="filtered">当前筛选结果</option><option value="chapter">当前章节（忽略筛选）</option><option value="selected">选中台词</option><option value="all">整个项目</option></select></div><div><label for="project-delivery-completeness">台词状态</label><select id="project-delivery-completeness"><option value="complete">全部完成后导出</option><option value="available">仅导出已完成</option></select></div></div>
+        <div class="delivery-readiness" aria-live="polite"><span class="ui-icon icon-activity" aria-hidden="true"></span><div><strong id="project-delivery-ready"></strong><p id="project-delivery-counts"></p></div></div>
+        <div id="project-delivery-partial" class="delivery-warning" hidden><strong>导出节选</strong><p id="project-delivery-partial-note"></p><label><input id="project-delivery-partial-confirm" type="checkbox"> 确认跳过未完成台词，并标记为节选</label></div>
+        <div class="delivery-settings-title">声音处理</div>
+        <div class="delivery-options">
+          <label class="delivery-toggle"><input id="project-delivery-normalize" type="checkbox" checked><span><strong>音量均衡</strong><small>让各句音量更统一</small></span></label>
+          <label class="delivery-toggle"><input id="project-delivery-trim" type="checkbox"><span><strong>收紧首尾静音</strong><small>缩短每句前后的静音</small></span></label>
+        </div>
+        <div class="delivery-pause-field"><label for="project-delivery-pause">句间停顿</label><div><input id="project-delivery-pause" type="number" min="0" max="3000" step="1" value="350" required><span>毫秒</span></div></div>
+        <p id="project-delivery-duration" class="delivery-duration" aria-live="polite"></p>
+        <div class="delivery-package"><div><strong>导出内容</strong><p>合并音频 · 字幕 · 处理清单</p></div><div class="delivery-format-chips" aria-label="导出格式"><span>WAV</span><span>MP3</span><span>SRT</span></div><label class="delivery-segments-toggle"><input id="project-delivery-segments" type="checkbox" checked><span>附带分段备份</span></label></div>
+      </fieldset>
+      <p class="delivery-subtitle-note">SRT 按音频段对齐，不是逐字字幕。</p>
+      <div id="project-delivery-progress-panel" class="delivery-progress-panel" hidden><strong id="project-delivery-progress-title" role="status" aria-live="polite"></strong><progress id="project-delivery-progress" max="1" aria-label="成品导出进度"></progress><p id="project-delivery-progress-detail"></p></div>
+      <div id="project-delivery-success" class="delivery-success" role="status" hidden><strong id="project-delivery-success-title"></strong><p id="project-delivery-success-detail"></p></div>
+      <ul id="project-delivery-warnings" class="delivery-quality-warnings" aria-label="音频质量提醒" hidden></ul>
+      <p id="project-delivery-error" class="project-form-error" role="alert"></p>
+      <div id="project-delivery-close-confirm" class="delivery-warning" hidden><strong>要停止这次成品导出吗？</strong><p>原音频会保留。停止后可重新导出。</p><div class="dialog-actions"><button id="project-delivery-keep" type="button" class="button">继续导出</button><button id="project-delivery-stop-close" type="button" class="button">停止并关闭</button></div></div>
+      <div class="dialog-actions delivery-actions"><button id="project-delivery-cancel" type="button" class="button">取消</button><button id="project-delivery-submit" type="submit" class="primary">导出成品 ZIP</button></div>
+    </form>
+  </dialog>
+  <dialog id="project-new-dialog" class="project-dialog" aria-labelledby="project-new-heading"><form id="project-new-form"><h2 id="project-new-heading">新建配音项目</h2><p>给故事、情景剧或一组游戏台词起个名字，角色和章节都收在一起。</p><label for="project-new-name">项目名称</label><input id="project-new-name" maxlength="80" required placeholder="例如：小兔子的森林冒险"><div class="dialog-actions"><button type="button" class="button" data-close="project-new-dialog">取消</button><button class="primary" type="submit">创建项目</button></div></form></dialog>
+  <dialog id="project-options-dialog" class="project-options-dialog" aria-labelledby="project-options-heading">
+    <header class="project-options-heading"><span class="role-heading-mark"><span class="ui-icon icon-sliders-horizontal" aria-hidden="true"></span></span><div><span class="role-eyebrow">按你的创作节奏来</span><h2 id="project-options-heading">制作选项</h2></div><button id="project-options-close" class="role-close-button" type="button" aria-label="关闭制作选项"><span class="ui-icon icon-x" aria-hidden="true"></span></button></header>
+    <div class="project-options-body">
+      <section class="project-option-card project-duration"><h3><span class="ui-icon icon-clock" aria-hidden="true"></span>目标时长<span>自动保存</span></h3><div class="project-target-input"><label for="project-target-seconds">成品时长</label><input id="project-target-seconds" type="number" min="1" max="21600" step="0.1" placeholder="不限"><span>秒</span></div><div class="project-target-presets" role="group" aria-label="目标时长快捷设置"><button data-project-target="">不限</button><button data-project-target="15">15 秒</button><button data-project-target="30">30 秒</button><button data-project-target="60">60 秒</button><button data-project-target="90">90 秒</button></div><p id="project-duration-estimate" aria-live="polite"></p></section>
+      <section class="project-option-card"><h3><span class="ui-icon icon-moon" aria-hidden="true"></span>长篇托管</h3><p>预约时间，自动分批生成，完成后逐段保存。</p><button id="project-managed" class="project-option-action" type="button"><span class="ui-icon icon-moon" aria-hidden="true"></span>设置托管配音<span class="ui-icon icon-arrow-right" aria-hidden="true"></span></button></section>
+      <section class="project-option-card"><h3><span class="ui-icon icon-folder" aria-hidden="true"></span>分段备份</h3><p>按当前处理范围，单独打包已有音频片段。</p><div class="project-segment-actions"><select id="project-export-format" aria-label="项目音频导出格式"><option value="mp3">MP3</option><option value="wav">WAV</option></select><button id="project-export" class="button" type="button"><span class="ui-icon icon-download" aria-hidden="true"></span>导出分段</button></div></section>
+    </div><div class="project-options-footer"><button id="project-options-done" class="primary" type="button"><span class="ui-icon icon-check" aria-hidden="true"></span>完成</button></div>
+  </dialog>
+  <dialog id="project-mix-dialog" class="project-dialog" aria-labelledby="project-mix-heading" aria-describedby="project-mix-description">
+    <form id="project-mix-form">
+      <header class="mix-dialog-heading"><span class="role-heading-mark"><span class="ui-icon icon-music" aria-hidden="true"></span></span><div><span class="role-eyebrow">让声音和音乐，刚好合拍</span><h2 id="project-mix-heading">背景音乐与混音</h2><p id="project-mix-description">选一首音乐，调好分寸，听听效果再保存。</p></div><button id="project-mix-close" class="role-close-button" type="button" aria-label="关闭混音设置"><span class="ui-icon icon-x" aria-hidden="true"></span></button></header>
+      <div class="mix-dialog-body">
+        <section class="mix-music-panel" aria-labelledby="mix-music-heading">
+          <div class="mix-cover"><img src="assets/mix-cover.svg" alt="" width="240" height="180"><button id="project-mix-preview" type="button" class="mix-action mix-preview-button" aria-label="试听混音"><span class="ui-icon icon-play" aria-hidden="true"></span></button><span class="mix-cover-tag"><span class="ui-icon icon-music" aria-hidden="true"></span>我的本地音乐</span></div>
+          <h3 id="mix-music-heading">给配音加一点氛围</h3><p id="project-mix-music-info">从电脑导入一首喜欢的音乐</p>
+          <label for="project-mix-music">选择背景音乐</label><select id="project-mix-music" aria-label="背景音乐"></select>
+          <div class="mix-import-actions"><button id="project-mix-import" class="mix-action mix-import-button" type="button"><span class="ui-icon icon-folder" aria-hidden="true"></span><span id="project-mix-import-label">导入本地音乐</span></button><button id="project-mix-remove" class="mix-icon-button" type="button" aria-label="移除本项目背景音乐" title="仅移除本项目音乐，原始文件保留"><span class="ui-icon icon-trash-2" aria-hidden="true"></span></button></div>
+          <p class="mix-file-hint">WAV / MP3 / FLAC / OGG<br>最多 80 MB、20 分钟 · 文件保存在本机</p>
+          <div class="mix-voice-note"><span class="ui-icon icon-mic" aria-hidden="true"></span><span>人声优先<small>保留已有配音的音量与波形编辑</small></span><span class="ui-icon icon-shield-check" aria-hidden="true"></span></div>
+        </section>
+        <div class="mix-settings-column">
+          <section class="mix-control-card" aria-labelledby="mix-balance-heading"><div class="mix-section-heading"><h3 id="mix-balance-heading"><span class="ui-icon icon-sliders-horizontal" aria-hidden="true"></span>混音调节</h3><button id="project-mix-reset" type="button"><span class="ui-icon icon-refresh-cw" aria-hidden="true"></span>恢复推荐</button></div>
+            <div class="mix-control-label"><label for="project-mix-gain-range"><span class="ui-icon icon-volume-2" aria-hidden="true"></span>音乐音量</label><div class="mix-number"><input id="project-mix-gain" type="number" min="-60" max="0" step="any" required aria-label="音乐音量（dB）"><span>dB</span></div></div>
+            <input id="project-mix-gain-range" class="mix-slider" type="range" min="-60" max="0" step="any" aria-label="拖动调整音乐音量"><div class="mix-range-labels"><span>更轻</span><span>更响</span></div>
+            <div class="mix-presets" aria-label="音乐音量快捷设置"><button type="button" data-mix-gain="-30">轻轻铺底</button><button type="button" data-mix-gain="-20">自然衬托</button><button type="button" data-mix-gain="-12">更有氛围</button></div>
+            <div class="mix-control-label mix-offset-label"><label for="project-mix-offset-range"><span class="ui-icon icon-clock" aria-hidden="true"></span>音乐开始时间</label><div class="mix-number"><input id="project-mix-offset" type="number" min="0" max="3600" step="0.001" required aria-label="音乐开始时间（秒）"><span>秒</span></div></div>
+            <input id="project-mix-offset-range" class="mix-slider" type="range" min="0" max="60" step="0.001" aria-label="拖动调整音乐开始时间"><div class="mix-range-labels"><span>同步开始</span><span id="project-mix-offset-end">60 秒</span></div>
+            <div class="mix-presets" aria-label="音乐开始时间快捷设置"><button type="button" data-mix-offset="0">同步开始</button><button type="button" data-mix-offset="3">延后 3 秒</button><button type="button" data-mix-offset="5">延后 5 秒</button></div>
+            <p class="mix-field-hint">从成品开头起算，可拖动滑杆，也可输入精确数值。</p>
+          </section>
+          <section class="mix-control-card mix-toggle-card" aria-label="音乐播放方式">
+            <label class="mix-switch-row" for="project-mix-loop"><span class="mix-switch-icon"><span class="ui-icon icon-repeat" aria-hidden="true"></span></span><span class="mix-switch-copy"><strong>循环背景音乐</strong><small>音乐较短时，循环铺满人声</small></span><input id="project-mix-loop" type="checkbox" checked></label>
+            <label class="mix-switch-row" for="project-mix-duck"><span class="mix-switch-icon"><span class="ui-icon icon-volume-1" aria-hidden="true"></span></span><span class="mix-switch-copy"><strong>说话时自动压低音乐</strong><small>让配音更清楚，音乐不抢戏</small></span><input id="project-mix-duck" type="checkbox" checked></label>
+          </section>
+          <div class="mix-timeline"><span class="ui-icon icon-headphones" aria-hidden="true"></span><input id="project-mix-seek" class="mix-slider" type="range" min="0" max="1000" value="0" step="1" disabled aria-label="混音试听进度"><span id="project-mix-time">0:00 / 0:30</span></div>
+          <p class="mix-duration-note"><span class="ui-icon icon-circle-help" aria-hidden="true"></span>音乐随人声结束，不会延长成品和字幕。</p>
+        </div>
+      </div>
+      <footer class="mix-dialog-footer"><p id="project-mix-error" class="project-form-error" role="alert"></p><p id="project-mix-status" class="project-mix-status" role="status" aria-live="polite"></p><div class="mix-dialog-actions"><button id="project-mix-stop" class="mix-icon-button" type="button" aria-label="停止混音试听" title="停止并回到开头" disabled><span class="ui-icon icon-square" aria-hidden="true"></span></button><div class="mix-save-actions"><button id="project-mix-cancel" type="button" class="button">取消</button><button id="project-mix-apply" type="submit" class="primary"><span class="ui-icon icon-check" aria-hidden="true"></span><span id="project-mix-apply-label">保存混音</span></button></div></div></footer>
+    </form>
+  </dialog>
+  <dialog id="project-role-dialog" class="project-dialog" aria-labelledby="project-role-heading" aria-describedby="project-role-subtitle">
+    <form id="project-role-form">
+      <header class="role-dialog-heading">
+        <span class="role-heading-mark"><span class="ui-icon icon-users" aria-hidden="true"></span></span>
+        <div><span class="role-eyebrow">给角色一个好声音</span><h2 id="project-role-heading">新增角色</h2><p id="project-role-subtitle">设置一次，角色的所有台词默认跟随。</p></div>
+        <button id="project-role-close" class="role-close-button" type="button" aria-label="关闭角色设置"><span class="ui-icon icon-x" aria-hidden="true"></span></button>
+      </header>
+      <div class="role-dialog-body">
+        <section class="role-voice-panel" aria-label="角色声音">
+          <div class="role-voice-hero"><div id="project-role-portrait"></div><div class="role-voice-copy"><span id="project-role-voice-kind">配音声音</span><strong id="project-role-voice-name">选一个喜欢的声音</strong><small>先听一听，再决定</small></div></div>
+          <label for="project-role-voice">更换配音声音</label>
+          <div class="project-role-voice-field"><select id="project-role-voice" data-select-kind="voice" aria-label="角色配音声音"></select></div>
+          <button id="project-role-preview" type="button" class="role-action role-preview-button"><span class="ui-icon icon-play" aria-hidden="true"></span><span id="project-role-preview-label">试听声音示例</span></button>
+          <button id="project-role-installed" type="button" class="role-action role-installed-button" hidden><span class="ui-icon icon-arrow-right-left" aria-hidden="true"></span><span id="project-role-installed-label">改用已安装音色</span></button>
+          <div id="project-role-lock-fields" class="role-lock-panel" hidden>
+            <label class="role-lock-toggle" for="project-role-lock-voice"><span><strong><span class="ui-icon icon-shield-check" aria-hidden="true"></span>固定人物声音</strong><small>跨台词保持同一声线</small></span><input type="checkbox" id="project-role-lock-voice" checked></label>
+            <div class="role-anchor-heading"><span id="project-role-anchor-state" class="role-anchor-state">待确定声音</span><button id="project-role-reset-voice" type="button" class="role-reset-button"><span class="ui-icon icon-refresh-cw" aria-hidden="true"></span>重新定声</button></div>
+            <button id="project-role-prepare-voice" type="button" class="role-action role-prepare-button"><span class="ui-icon icon-audio-lines" aria-hidden="true"></span><span id="project-role-prepare-label">确定并试听声音</span></button>
+          </div>
+          <div class="role-voice-note"><span class="ui-icon icon-circle-help" aria-hidden="true"></span><p id="project-role-voice-note"></p></div>
+        </section>
+        <div class="role-details-column">
+          <section class="role-form-section" aria-labelledby="role-info-heading">
+            <h3 id="role-info-heading"><span class="ui-icon icon-users" aria-hidden="true"></span>角色信息</h3>
+            <div class="field-grid"><div><label for="project-role-name">角色名称</label><input id="project-role-name" maxlength="32" required placeholder="例如：旁白、小兔子"></div><div><label for="project-role-aliases">导入别名 <span>· 选填</span></label><input id="project-role-aliases" placeholder="小兔、兔兔"></div></div>
+            <p class="role-field-hint">导入剧本时，别名会自动对应到这个角色；多个名称用顿号分隔。</p>
+          </section>
+          <section class="role-form-section" aria-labelledby="role-expression-heading">
+            <h3 id="role-expression-heading"><span class="ui-icon icon-audio-lines" aria-hidden="true"></span>默认表达<span class="role-section-caption">台词可单独调整</span></h3>
+            <div id="project-role-reference-fields" class="role-reference-fields" hidden><label for="project-role-reference-style">录音声音的表达方式</label><select id="project-role-reference-style"><option value="original">沿用录音表达</option><option value="expressive">调整语气与情绪 · 可选资源</option></select><p class="role-field-hint">选择不会下载资源。首次生成前可查看大小，再决定是否下载。</p></div>
+            <div class="field-grid"><div><label for="project-role-emotion">默认语气</label><select id="project-role-emotion" data-select-kind="emotion"></select></div><div><label for="project-role-pace">默认节奏</label><select id="project-role-pace"><option value="slow">慢一些</option><option value="normal">自然</option><option value="fast">快一些</option></select></div></div>
+            <p id="project-role-performance-note" class="role-performance-note" hidden>参考声音会沿用录音中的表达。</p>
+          </section>
+          <details class="project-role-advanced">
+            <summary><span class="ui-icon icon-sliders-horizontal" aria-hidden="true"></span><span>更多角色表达设置<small>声线描述、表演要求与强度</small></span><span class="ui-icon icon-chevron-down" aria-hidden="true"></span></summary>
+            <div class="role-advanced-body">
+              <div id="project-role-description-field"><label for="project-role-description">人物声线描述</label><textarea id="project-role-description" rows="3" maxlength="500" placeholder="描述年龄、音色和说话特点"></textarea></div>
+              <label for="project-role-instruction">表演要求 <span>· 选填</span></label><textarea id="project-role-instruction" rows="2" maxlength="500" placeholder="例如：说话有精神，像在和朋友聊天"></textarea>
+              <label for="project-role-intensity" class="role-intensity-label">情绪强度<output id="project-role-intensity-value" for="project-role-intensity">50%</output></label><input id="project-role-intensity" type="range" min="0" max="100" value="50" step="5"><div class="role-range-labels"><span>轻一点</span><span>强一点</span></div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <footer class="role-dialog-footer"><p id="project-role-error" class="project-form-error" role="alert"></p><div class="dialog-actions"><button type="button" id="project-role-delete" class="role-delete-button"><span class="ui-icon icon-trash-2" aria-hidden="true"></span>删除角色</button><button type="button" class="button" data-close="project-role-dialog">取消</button><button class="primary" type="submit"><span class="ui-icon icon-check" aria-hidden="true"></span>保存角色</button></div></footer>
+    </form>
+  </dialog>
+  <dialog id="project-import-dialog" class="project-import-dialog" aria-labelledby="project-import-heading" aria-describedby="project-import-subtitle" data-step="source">
+    <div class="project-modal-heading import-dialog-heading">
+      <span class="import-heading-mark" aria-hidden="true"><span class="ui-icon icon-book-open"></span></span>
+      <div><h2 id="project-import-heading">导入文案</h2><p id="project-import-subtitle">放入你的文字，让故事有声有色。</p></div>
+      <button class="import-close-button" data-close="project-import-dialog" aria-label="关闭导入文案"><span class="ui-icon icon-x" aria-hidden="true"></span></button>
+    </div>
+    <ol class="import-stepper" aria-label="导入进度">
+      <li data-import-step="source" aria-current="step"><span class="import-step-number">1<span class="ui-icon icon-check" aria-hidden="true"></span></span><span>放入文案<small>选择类型，添加原稿</small></span></li>
+      <li data-import-step="preview"><span class="import-step-number">2</span><span>核对与导入<small>确认角色与台词</small></span></li>
+    </ol>
+    <div class="import-dialog-body">
+      <div id="project-import-source" class="import-source-layout">
+        <div class="import-source-main">
+          <button id="project-import-file" class="import-file-button" type="button">
+            <span class="import-file-art" aria-hidden="true"><span>TXT</span><span>DOC</span><span class="ui-icon icon-folder"></span></span>
+            <span class="import-file-copy"><strong>从本机选择文件<span class="ui-icon icon-arrow-right" aria-hidden="true"></span></strong><small>TXT · CSV · TSV · DOCX · PPTX</small></span>
+            <span class="import-file-badge">本地读取</span>
+          </button>
+          <div class="import-or"><span>或直接粘贴文字</span></div>
+          <div class="import-editor">
+            <div class="import-editor-heading"><label for="project-import-text">文案内容</label><button id="project-import-example" class="text-button" type="button"><span class="ui-icon icon-sparkles" aria-hidden="true"></span>试试故事示例</button></div>
+            <textarea id="project-import-text" rows="8" maxlength="500000" aria-describedby="project-import-mode-hint" placeholder="在这里粘贴课程讲稿、广告文案，或想要朗读的故事……&#10;&#10;每个段落将成为一条配音台词。&#10;章节可写成「第1章 标题」或「# 标题」。"></textarea>
+            <div class="import-editor-meta"><span id="project-import-filename"></span><span id="project-import-char-count">0 字</span></div>
+          </div>
+        </div>
+        <aside class="import-source-options" aria-label="文稿导入设置">
+          <fieldset class="import-kind-options"><legend>文稿类型</legend>
+            <label class="import-kind-card"><input type="radio" name="project-import-kind" value="narration" checked><span class="import-kind-icon"><span class="ui-icon icon-mic" aria-hidden="true"></span></span><span><strong>单人讲稿</strong><small>课程 · 广告 · 小说朗读</small></span><span class="import-kind-check" aria-hidden="true"></span></label>
+            <label class="import-kind-card"><input type="radio" name="project-import-kind" value="dialogue"><span class="import-kind-icon"><span class="ui-icon icon-users" aria-hidden="true"></span></span><span><strong>多角色剧本</strong><small>有声故事 · 对话 · 广播剧</small></span><span class="import-kind-check" aria-hidden="true"></span></label>
+          </fieldset>
+          <div hidden><select id="project-import-script-mode" aria-label="文稿类型"><option value="narration">单人讲稿（课程、广告、小说朗读）</option><option value="dialogue">多角色剧本（角色名：台词）</option></select></div>
+          <p id="project-import-mode-hint" class="import-option-hint">保留正文中的冒号和引号，整篇文案由同一角色朗读。</p>
+          <div class="import-splitting-field"><label for="project-import-splitting">台词拆分</label><select id="project-import-splitting" aria-label="导入台词拆分方式"><option value="paragraph">保留原文段落</option><option value="sentence">按句末标点拆句（。！？）</option></select></div>
+          <div class="import-format-card"><div><span class="ui-icon icon-circle-help" aria-hidden="true"></span><strong>怎样写，效果更好？</strong></div><div id="project-import-format-example" class="import-format-example"><span>第1章 森林里的早晨</span><p>小兔子推开窗，看见了明亮的太阳。</p><p>新的一天，就这样开始了。</p></div><p id="project-import-format-hint">用空行分隔段落，用章节标题整理长文。</p><details><summary>文件读取与格式说明</summary><p>DOCX 读取正文和表格。PPTX 逐页优先读取备注，无备注时读取页面文字；不识别图片中的字。旧版 DOC / PPT 请另存为 DOCX / PPTX。</p><p>CSV / TSV 支持：文本、角色、情绪、文件名、章节。</p><p>多角色剧本中，普通无标注段落归为旁白；含引号的未标注对白保留为待分配，导入前可逐条核对。</p></details></div>
+        </aside>
+      </div>
+      <div id="project-import-preview-panel" hidden>
+        <div class="import-preview-top"><button id="project-import-edit" class="text-button" type="button"><span class="ui-icon icon-arrow-left" aria-hidden="true"></span>返回修改文案</button><p id="project-import-file-info" class="microcopy" hidden></p></div>
+        <div class="import-statistics" aria-label="文稿识别结果"><div><span class="ui-icon icon-book-open" aria-hidden="true"></span><strong id="project-import-chapter-count">0</strong><span>个章节</span></div><div><span class="ui-icon icon-message-circle" aria-hidden="true"></span><strong id="project-import-line-count">0</strong><span>条台词</span></div><div><span class="ui-icon icon-users" aria-hidden="true"></span><strong id="project-import-role-count">0</strong><span>个角色</span></div></div>
+        <div id="project-import-summary" class="project-import-summary" role="status"></div>
+        <section class="import-mapping-card" aria-labelledby="import-mapping-heading"><div class="import-section-heading"><span class="import-section-icon"><span class="ui-icon icon-users" aria-hidden="true"></span></span><div><h3 id="import-mapping-heading">给角色，找到合适的声音</h3><p>沿用已有角色，也可以为新角色选一个声音。</p></div><span class="import-optional-badge">可稍后设置</span></div><div class="project-import-map-heading"><strong>文案里的角色</strong><span>对应项目角色</span><span>新角色的声音</span></div><div id="project-import-mappings"></div><p class="import-mapping-note"><span class="ui-icon icon-circle-help" aria-hidden="true"></span>已有角色沿用原声音。新角色也可以先导入，再集中配置。</p></section>
+        <details class="import-lines-card" open><summary><span class="ui-icon icon-list" aria-hidden="true"></span>核对全部台词<span class="ui-icon icon-chevron-down" aria-hidden="true"></span></summary><div class="import-filter-row"><label for="project-import-filter">查看范围</label><select id="project-import-filter"><option value="all">全部台词</option><option value="review">待分配或新识别的角色</option></select></div><div id="project-import-sample"></div><div class="project-import-pagination"><button id="project-import-prev" type="button" class="button">上一页</button><span id="project-import-page" role="status"></span><button id="project-import-next" type="button" class="button">下一页</button></div></details>
+        <div class="project-import-mode"><span class="ui-icon icon-folder" aria-hidden="true"></span><label for="project-import-mode">放到哪里</label><select id="project-import-mode"><option value="chapters">按文案章节导入，保留已有内容</option><option value="append">追加到当前章节</option><option value="replace">替换当前章节（可以撤销）</option></select></div>
+      </div>
+      <p id="project-import-error" class="project-form-error" role="alert"></p>
+    </div>
+    <footer class="import-dialog-footer"><p><span class="ui-icon icon-shield-check" aria-hidden="true"></span>文案仅在本机处理</p><div class="dialog-actions"><button class="button" data-close="project-import-dialog">取消</button><button class="primary" id="project-import-preview">下一步，预览台词<span class="ui-icon icon-arrow-right" aria-hidden="true"></span></button><button class="primary" id="project-import-apply" hidden disabled>确认导入，下一步配角色<span class="ui-icon icon-check" aria-hidden="true"></span></button></div></footer>
+  </dialog>
+  <dialog id="project-confirm-dialog" class="project-dialog" aria-labelledby="project-confirm-heading"><h2 id="project-confirm-heading"></h2><p id="project-confirm-description"></p><div class="dialog-actions"><button class="button" data-close="project-confirm-dialog">取消</button><button class="primary" id="project-confirm-apply">确认删除</button></div></dialog>
+  <dialog id="delete-dialog" aria-labelledby="delete-heading" aria-describedby="delete-description">
+    <div class="delete-dialog-mark"><span class="ui-icon icon-trash-2" aria-hidden="true"></span></div>
+    <h2 id="delete-heading">删除这条作品？</h2><p id="delete-description"></p><div id="delete-item-name"></div><p id="delete-error" class="hidden" role="alert"></p>
+    <div class="dialog-actions"><button id="delete-cancel" class="button">取消</button><button id="delete-confirm" class="primary">确认删除</button></div>
+  </dialog>
+  <dialog id="recording-dialog" aria-labelledby="recording-heading">
+    <div class="recording-dialog-heading"><div><div class="eyebrow">把你的声音，留在这里</div><h2 id="recording-heading">录一段熟悉的声音</h2></div><button id="recording-close" aria-label="关闭录音"><span class="ui-icon icon-x" aria-hidden="true"></span></button></div>
+    <p class="recording-guide">找个安静的地方，靠近麦克风，自然说一段话。录音仅保存在这台电脑上。</p>
+    <div class="recording-script"><textarea id="recording-text" aria-label="录音文案" rows="3" maxlength="1000" placeholder="可以直接朗读这段文案，也可以修改成你想说的话。"></textarea><button id="recording-example" class="text-button">随机文案</button></div>
+    <div id="recording-stage" class="recording-stage" data-state="idle">
+      <div id="recording-level" class="recording-visual">
+        <img src="assets/illustrations/recording-control.webp" width="680" height="278" alt="" draggable="false">
+        <div class="recording-wave-bars recording-wave-bars-left" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="recording-wave-bars recording-wave-bars-right" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <button id="recording-start" class="recording-trigger" aria-label="开始录音" title="开始录音"></button>
+        <button id="recording-stop" class="recording-trigger hidden" aria-label="停止录音" title="停止录音"><span class="ui-icon icon-pause" aria-hidden="true"></span></button>
+      </div>
+      <button id="recording-prompt" class="recording-prompt" type="button" aria-controls="recording-start">点击开始录音，朗读上方文案</button>
+      <div class="recording-time hidden"><strong id="recording-time">0:00</strong><span> / 0:30</span></div>
+      <p id="recording-status" role="status" aria-live="polite">录制 3–30 秒，30 秒时自动停止</p>
+      <audio id="recording-preview" class="hidden" controls preload="metadata" aria-label="试听刚录好的声音"></audio>
+      <button id="recording-redo" class="text-button hidden">重新录一段</button>
+    </div>
+    <div id="recording-save-fields" class="hidden"><label for="recording-name">给这个声音起个名字</label><input id="recording-name" maxlength="48" placeholder="例如：我的声音、爸爸讲故事" value="我的声音"></div>
+    <div class="dialog-actions"><button id="recording-discard" class="button">取消</button><button id="recording-save" class="primary" disabled>保存并使用这个声音<span class="ui-icon icon-arrow-right" aria-hidden="true"></span></button></div>
+  </dialog>
+  </div>
+  <dialog id="voice-details-dialog" aria-labelledby="voice-details-heading"><form id="voice-details-form"><h2 id="voice-details-heading">编辑声音资料</h2><label for="voice-details-name">声音名称</label><input id="voice-details-name" maxlength="48" required><label for="voice-details-note">备注</label><textarea id="voice-details-note" maxlength="240" placeholder="例如：温暖女声，用于楼盘介绍"></textarea><p id="voice-details-error" class="project-form-error" role="alert"></p><div class="dialog-actions"><button id="voice-details-cancel" class="button" type="button">取消</button><button class="primary" type="submit">保存</button></div></form></dialog>
+  <div id="toast" class="hidden" role="alert"></div>
+  <script src="playback.js"></script><script src="preflight.js"></script><script src="documents.js"></script><script src="csv.js"></script><script src="progress.js"></script><script src="recorder.js"></script><script src="history.js"></script><script src="select.js"></script><script src="activation-wave.js"></script><script src="activation.js"></script><script src="templates.js"></script><script src="home.js"></script><script src="text.js"></script><script src="projects.js"></script><script src="mix-dialog.js"></script><script src="project-workspace.js"></script><script src="lab-core.js"></script><script src="lab-media.js"></script><script src="laboratory.js"></script><script src="audio-studio.js"></script><script src="reference-import.js"></script><script src="onboarding.js"></script><script src="app.js"></script>
+</body>
+</html>
