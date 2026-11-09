@@ -2725,3 +2725,37 @@ html[lang="en"] .range-heading strong small { font-size: 10px; }
 @media (max-width: 374px) {
   html[lang="en"] .hero h1 { font-size: 27px; }
 }
+
+/* Repository entry shared by home, download and guide pages. */
+.github-link { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 9px; min-height: 42px; padding: 9px 11px; border: 1px solid #e0d9e8; border-radius: 10px; color: #51475f; background: #fffaf680; font-size: 12px; font-weight: 650; white-space: nowrap; }
+.github-link:hover { color: #7650bc; border-color: #a88ae9; background: #b696f011; }
+.github-stars { display: inline-flex; align-items: center; gap: 5px; padding-left: 9px; border-left: 1px solid #e0d9e8; font-size: 11px; font-variant-numeric: tabular-nums; }
+.github-stars > svg { color: #9a7d50; }
+github-star-count { display: inline-block; min-width: 1ch; }
+.dark-intro .github-link { color: #e5dff0; background: #ffffff05; border-color: #ffffff20; }
+.dark-intro .github-link:hover { color: #e5d3ff; background: #b696f014; border-color: #a88ae980; }
+.dark-intro .github-stars { border-color: #ffffff20; }
+.dark-intro .github-stars > svg { color: #d3b78a; }
+.site-header .nav-download { margin-left: 0; }
+.github-link-repository { border: 0; padding: 0; min-height: 42px; background: none; font-weight: 550; }
+.github-link-repository:hover { background: none; }
+@media (max-width: 1150px) {
+  .site-header { gap: 12px; }
+  .site-header .nav-links { gap: 14px; }
+}
+@media (max-width: 1000px) {
+  .site-header > .github-link { margin-left: auto; }
+}
+@media (max-width: 700px) {
+  .site-header { gap: 10px; }
+  .site-header .menu-button { margin-left: 0; }
+  .site-header > .github-link, .reader-header > .github-link { gap: 6px; padding: 8px; }
+  .site-header > .github-link .github-label, .reader-header > .github-link .github-label { display: none; }
+  .site-header > .github-link .github-stars, .reader-header > .github-link .github-stars { padding-left: 6px; gap: 4px; }
+  .reader-header > .github-link { margin-left: auto; }
+  .reader-header .language-switcher { margin-left: 0; }
+}
+@media (max-width: 374px) {
+  .site-header { gap: 7px; }
+  .site-header > .github-link { gap: 4px; padding: 7px; }
+}

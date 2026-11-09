@@ -149,3 +149,13 @@ test("all ten static pages include no paid checkout or activation sales claims, 
     assert.ok(!html.includes('id="purchase"') && !html.includes('href="#purchase"'), page.path);
   }
 });
+
+test('all ten static pages expose the real repository and a progressive star counter in both header and footer', () => {
+  for (const { page, html } of documents) {
+    assert.equal((html.match(/href="https:\/\/github\.com\/litefreeteam\/voice-studio"/g) || []).length, 2, page.path);
+    assert.equal((html.match(/<github-star-count\b/g) || []).length, 2, page.path);
+    assert.equal((html.match(/src="\/assets\/github-stars\.js"/g) || []).length, 1, page.path);
+    assert.ok(html.includes('litefreeteam/voice-studio'), page.path);
+    assert.match(html, /<github-star-count[^>]*>Star<\/github-star-count>/);
+  }
+});

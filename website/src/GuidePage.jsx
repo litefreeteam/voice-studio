@@ -2,6 +2,7 @@ import release from "./release.json";
 import { guides as chineseGuides, englishGuides } from "./guide-links.mjs";
 import { createTranslator, localizedPath, contactHref } from "./i18n.mjs";
 import { LanguageSwitcher } from "./LanguageSwitcher.jsx";
+import { GitHubLink } from "./GitHubLink.jsx";
 import { updated } from "./site-content.mjs";
 function Header({
   page
@@ -11,6 +12,7 @@ function Header({
   return <header className="reader-header container">
     <a className="brand" href={localizedPath("/", locale)} aria-label={t("声悦配音首页")}><img src="/assets/brand-wave.svg" width="44" height="44" alt="" /><span><strong>{t("声悦")}<span className="brand-product">{t("配音")}</span></strong><small>{t("好声音，让表达更动人")}</small></span></a>
     <nav aria-label={t("主导航")}><a href={localizedPath("/", locale) + "#voices"}>{t("声音试听")}</a><a href={localizedPath("/", locale) + "#guides"}>{t("使用指南")}</a><a href={contactHref(locale)}>{t("联系我们")}</a><a className="button primary" href={localizedPath("/download/", locale)}>{t("下载安装")}</a></nav>
+    <GitHubLink locale={locale} />
     <LanguageSwitcher locale={locale} path={page.sourcePath} />
   </header>;
 }
@@ -21,7 +23,7 @@ function Footer({
   const t = createTranslator(locale);
   const current = page.path;
   const guides = locale === "en" ? englishGuides : chineseGuides;
-  return <footer className="reader-footer container"><nav aria-label={t("相关内容")}><a href={localizedPath("/", locale)}>{t("声悦配音首页")}</a><a href={localizedPath("/download/", locale)}>{t("桌面版下载")}</a>{guides.filter(guide => guide.path !== current).map(guide => <a key={guide.path} href={guide.path}>{guide.label}</a>)}<a href={contactHref(locale)}>{t("联系我们")}</a></nav><p>© {new Date().getFullYear()}{t(" 声悦配音 · v")}{release.version}{t(" · 好声音，让表达更动人")}</p></footer>;
+  return <footer className="reader-footer container"><nav aria-label={t("相关内容")}><GitHubLink locale={locale} showRepository /><a href={localizedPath("/", locale)}>{t("声悦配音首页")}</a><a href={localizedPath("/download/", locale)}>{t("桌面版下载")}</a>{guides.filter(guide => guide.path !== current).map(guide => <a key={guide.path} href={guide.path}>{guide.label}</a>)}<a href={contactHref(locale)}>{t("联系我们")}</a></nav><p>© {new Date().getFullYear()}{t(" 声悦配音 · v")}{release.version}{t(" · 好声音，让表达更动人")}</p></footer>;
 }
 export function GuidePage({
   page

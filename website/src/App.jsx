@@ -8,6 +8,7 @@ import { VoiceBloom } from "./VoiceBloom";
 import { guides as chineseGuides } from "./guide-links.mjs";
 import { createTranslator, localizeVoice, localizedPath, contactHref, contactQr } from "./i18n.mjs";
 import { LanguageSwitcher } from "./LanguageSwitcher.jsx";
+import { GitHubLink } from "./GitHubLink.jsx";
 import { englishGuides } from "./guide-links.mjs";
 function createContent(locale) {
   const t = createTranslator(locale);
@@ -339,6 +340,7 @@ export function App({
                 {label}
               </a>)}
           </nav>
+          <GitHubLink locale={locale} />
           <a href={localizedPath("/download/", locale)} className="button primary nav-download" onClick={event => {
           event.preventDefault();
           openDownload();
@@ -713,6 +715,7 @@ export function App({
           </a>
         </div>
         <nav className="container footer-guide-links" aria-label={t("使用指南")}>
+          <GitHubLink locale={locale} showRepository />
           <a href={localizedPath("/download/", locale)}>{t("桌面版下载")}</a>
           <a href={contactHref(locale)}>{t("联系我们")}</a>
           {guides.map(guide => <a key={guide.path} href={guide.path}>{guide.label}</a>)}

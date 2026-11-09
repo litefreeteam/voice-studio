@@ -11,6 +11,7 @@ npm run build
 npm run test:sites
 npm run test:seo
 npm run test:analytics
+npm run test:github
 
 release_version="$(node -p "require('./src/release.json').version")"
 # Seed a private staging directory from the nearest existing installers so rsync

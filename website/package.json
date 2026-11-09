@@ -15,7 +15,8 @@
     "test:seo:live": "node scripts/verify-live-seo.mjs",
     "seo:submit": "node scripts/submit-indexnow.mjs",
     "seo:submit:baidu": "node scripts/submit-baidu.mjs",
-    "prepare:downloads": "node scripts/prepare-downloads.mjs"
+    "prepare:downloads": "node scripts/prepare-downloads.mjs",
+    "test:github": "node --test tests/github-stars.test.mjs"
   },
   "dependencies": {
     "@fontsource-variable/manrope": "^5.3.0",

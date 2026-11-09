@@ -86,6 +86,7 @@ ${latinFont ? `<link rel="preload" href="/assets/${latinFont}" as="font" type="f
 ${verificationTags(searchConfig)}
 ${analytics}
 <script src="/assets/language-menu.js" defer></script>
+<script src="/assets/github-stars.js" defer></script>
 ${page.sourcePath === "/" ? scripts : ""}
 </head>
 <body><div id="root">${renderPage(page)}</div></body>

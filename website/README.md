@@ -120,3 +120,9 @@ mv -Tf /var/www/shengyue/rollback.next /var/www/shengyue/current
 公开邮箱为 `freeteamlite@gmail.com`，在首页联系模块、导航、页脚与购买激活说明中提供。点击邮件入口调用访客的邮件客户端；首页另有复制邮箱按钮。官网购买区现已提供订单表单与 PayPal 托管付款入口；当前不发送邮件、自动回复或自动发码。
 
 下载上传先进入服务器的 `staging/<release_id>`，从已有安装包复制传输基底并通过 rsync 校验与增量更新。六个文件全部通过 SHA-256 校验后才移动到公开下载目录，再原子切换网站版本。中断的上传不会作为新版本公开；旧包继续保留以支持历史链接和回滚。
+
+## GitHub 开源入口与星标
+
+官网中英文首页、下载页和指南的导航与页脚均链接到 [litefreeteam/voice-studio](https://github.com/litefreeteam/voice-studio)。`src/GitHubLink.jsx` 统一呈现入口；`public/assets/github-stars.js` 从 GitHub 公开仓库接口读取 `stargazers_count`，同一页面共用一次请求，结果在浏览器缓存一小时。请求不带凭据或页面来源；网络失败、限流或禁用脚本时保留 “Star” 提示和可点击的仓库链接，不显示虚构数字。
+
+计数器使用独立的 Shadow DOM，不改动 React 管理的内容，同时适用于有 hydration 的首页和静态指南。移动端导航保留 GitHub 图标、星标与计数，语言按钮继续位于最右侧。

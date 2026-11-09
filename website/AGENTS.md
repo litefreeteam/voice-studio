@@ -136,3 +136,7 @@ The user rejected the slow, unnatural Nanxu experiment and selected round 2 cand
 ## Free release (2026-11-09)
 
 The user changed the current release to a free edition. This supersedes all paid activation and checkout requirements above: desktop, Python engine and CLI require no purchase, device code or activation. First launch checks configuration and offers model/runtime downloads, including a light option for 8 GB computers. Remove purchase navigation, PayPal checkout, license-price calculators and paid claims from both language variants, downloads, guides and SEO metadata. Keep historical payment records and fulfillment intact. Rebuild all six customer artifacts as v0.4.8, pin their actual SHA-256 values and deploy using the existing ECS workflow. Preserve existing user data, original contact QR, audio and search ownership configuration.
+
+## Open-source repository and stars (2026-11-09)
+
+The user wants the public GitHub repository `https://github.com/litefreeteam/voice-studio` linked from the website with its star count. Keep the shared GitHub entry in headers and footers across Chinese and English pages. Fetch real counts from GitHub's public repository API and cache for one hour; show a neutral “Star” fallback on failures, never invent a count. Preserve a working link without JavaScript, compact mobile controls, and the language picker at the far right. The shared counter renders in a shadow root so updates cannot interfere with homepage React hydration.
